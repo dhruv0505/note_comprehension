@@ -1,0 +1,13 @@
+poll 1: 0/14000 pages, stage setup_python, cost $0.24, 0 new picks
+poll 2: 0/14000 pages, stage fetch_mathwriting,fetch_quickdraw, cost $0.26, 0 new picks
+poll 3: 0/14000 pages, stage build_caches, cost $0.27, 0 new picks
+poll 4: 0/14000 pages, stage build_caches, cost $0.28, 0 new picks
+poll 5: 0/14000 pages, stage build_caches, cost $0.30, 0 new picks
+poll 6: 0/14000 pages, stage synth_train, cost $0.31, 0 new picks
+poll 7: 2000/14000 pages, stage synth_train, cost $0.33, 2 new picks
+poll 8: 4800/14000 pages, stage synth_train, cost $0.35, 2 new picks
+poll 9: 8000/14000 pages, stage synth_train, cost $0.37, 2 new picks
+poll 10: 9600/14000 pages, stage synth_train, cost $0.39, 2 new picks
+poll 11: 11600/14000 pages, stage synth_val, cost $0.41, 5 new picks
+poll 12: 14000/14000 pages, stage -, cost $0.44, 5 new picks
+PAUSE ok: finished

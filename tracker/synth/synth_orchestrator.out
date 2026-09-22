@@ -1,0 +1,514 @@
+[2026-09-13 18:25:04] waiting for a run request
+[2026-09-13 18:30:24] starting 20260913-183024-sample: 100 train, 50 val pages
+[2026-09-13 18:30:39] resuming the dataset VM 505707
+[2026-09-13 18:31:57] watching 20260913-183024-sample
+[2026-09-13 18:34:20] 20260913-183024-sample finished: finished; the VM is paused
+[2026-09-13 18:34:20] waiting for a run request
+[2026-09-13 18:37:54] waiting for a run request
+[2026-09-13 18:40:58] starting 20260913-184058-sample: 900 train, 100 val pages
+[2026-09-13 18:41:07] resuming the dataset VM 505777
+[2026-09-13 18:42:24] watching 20260913-184058-sample
+[2026-09-13 18:47:31] 20260913-184058-sample finished: finished; the VM is paused
+[2026-09-13 18:47:31] waiting for a run request
+[2026-09-13 18:50:51] starting 20260913-185051-sample: 900 train, 100 val pages
+[2026-09-13 18:50:59] resuming the dataset VM 505783
+[2026-09-13 18:52:13] watching 20260913-185051-sample
+[2026-09-13 18:58:24] 20260913-185051-sample finished: finished; the VM is paused
+[2026-09-13 18:58:24] waiting for a run request
+[2026-09-13 19:43:32] waiting for a run request
+[2026-09-13 19:44:04] starting 20260913-194404-full: 30,000 train, 2,000 val, 2,000 test pages
+[2026-09-13 19:44:14] resuming the dataset VM 505784 at 32 vCPUs / 128 GB
+[2026-09-13 19:44:23] 32 vCPUs could not be had (l resume 505784 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-13 19:45:34] watching 20260913-194404-full
+[2026-09-13 20:17:18] status unavailable (1/5): no output
+[2026-09-13 20:18:44] 20260913-194404-full stopped: kill requested; the VM is paused
+[2026-09-13 20:18:44] waiting for a run request
+[2026-09-13 20:18:50] starting 20260913-201850-full: 30,000 train, 2,000 val, 2,000 test pages
+[2026-09-13 20:19:00] resuming the dataset VM 505795 at 32 vCPUs / 128 GB
+[2026-09-13 20:19:11] 32 vCPUs could not be had (l resume 505795 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-13 20:20:31] watching 20260913-201850-full
+[2026-09-13 20:26:22] status unavailable (1/5): no output
+[2026-09-13 20:27:44] 20260913-201850-full stopped: kill requested; the VM is paused
+[2026-09-13 20:27:45] waiting for a run request
+[2026-09-13 20:31:45] waiting for a run request
+[2026-09-13 20:31:55] starting 20260913-203155-sample: 5 train, 5 val pages
+[2026-09-13 20:32:04] resuming the dataset VM 505804 at 16 vCPUs / 64 GB
+[2026-09-13 20:33:20] watching 20260913-203155-sample
+[2026-09-13 20:35:34] 20260913-203155-sample finished: finished; the VM is paused
+[2026-09-13 20:35:34] waiting for a run request
+[2026-09-13 20:35:48] starting 20260913-203548-full: 30,000 train, 2,000 val, 2,000 test pages
+[2026-09-13 20:35:56] resuming the dataset VM 505810 at 32 vCPUs / 128 GB
+[2026-09-13 20:36:07] 32 vCPUs could not be had (l resume 505810 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-13 20:37:20] watching 20260913-203548-full
+[2026-09-13 21:05:32] status unavailable (1/5): no output
+[2026-09-13 21:06:49] 20260913-203548-full stopped: kill requested; the VM is paused
+[2026-09-13 21:06:49] waiting for a run request
+[2026-09-13 21:23:07] starting 20260913-212307-sample: 5 train, 5 val pages
+[2026-09-13 21:23:16] resuming the dataset VM 505815 at 16 vCPUs / 64 GB
+[2026-09-13 21:26:06] 20260913-212307-sample failed: stage failed: resume_vm; the VM is paused
+[2026-09-13 21:26:06] waiting for a run request
+[2026-09-13 21:26:28] starting 20260913-212628-sample: 5 train, 5 val pages
+[2026-09-13 21:26:37] resuming the dataset VM 505842 at 16 vCPUs / 64 GB
+[2026-09-13 21:42:44] 20260913-212628-sample failed: stage failed: resume_vm; the VM is paused
+[2026-09-13 21:42:44] waiting for a run request
+[2026-09-13 21:50:10] waiting for a run request
+[2026-09-13 21:50:15] starting 20260913-215014-sample: 5 train, 5 val pages
+[2026-09-13 21:50:22] resuming the dataset VM 505846 at 16 vCPUs / 64 GB
+[2026-09-13 21:51:34] watching 20260913-215014-sample
+[2026-09-13 21:53:44] 20260913-215014-sample finished: finished; the VM is paused
+[2026-09-13 21:53:44] waiting for a run request
+[2026-09-13 21:56:36] waiting for a run request
+[2026-09-13 21:56:40] starting 20260913-215640-sample: 20 train, 20 val pages
+[2026-09-13 21:56:50] resuming the dataset VM 505861 at 16 vCPUs / 64 GB
+[2026-09-13 21:58:02] watching 20260913-215640-sample
+[2026-09-13 22:00:16] 20260913-215640-sample finished: finished; the VM is paused
+[2026-09-13 22:00:16] waiting for a run request
+[2026-09-13 22:16:16] starting 20260913-221616-full: 30,000 train, 2,000 val, 2,000 test pages
+[2026-09-13 22:16:26] resuming the dataset VM 505864 at 32 vCPUs / 128 GB
+[2026-09-13 22:16:37] 32 vCPUs could not be had (l resume 505864 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-13 22:17:55] watching 20260913-221616-full
+[2026-09-13 22:20:56] status unavailable (1/5): jl exec timed out after 180s
+[2026-09-13 22:24:56] status unavailable (2/5): jl exec timed out after 180s
+[2026-09-13 22:28:56] status unavailable (3/5): jl exec timed out after 180s
+[2026-09-13 22:32:56] status unavailable (4/5): jl exec timed out after 180s
+[2026-09-13 22:33:31] watching 20260913-221616-full
+[2026-09-13 22:57:40] status unavailable (1/5): no output
+[2026-09-13 22:59:00] 20260913-221616-full stopped: kill requested; the VM is paused
+[2026-09-13 22:59:00] waiting for a run request
+[2026-09-13 22:59:06] starting 20260913-225906-full: 30,000 train, 2,000 val, 2,000 test pages
+[2026-09-13 22:59:16] resuming the dataset VM 505873 at 32 vCPUs / 128 GB
+[2026-09-13 22:59:27] 32 vCPUs could not be had (l resume 505873 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-13 23:00:43] watching 20260913-225906-full
+[2026-09-13 23:09:33] picks were not copied this time: jl exec timed out after 300s
+[2026-09-13 23:13:33] status unavailable (1/5): jl exec timed out after 180s
+[2026-09-13 23:17:33] status unavailable (2/5): jl exec timed out after 180s
+[2026-09-13 23:19:08] watching 20260913-225906-full
+[2026-09-14 00:01:43] 20260913-225906-full finished: finished; the VM is paused
+[2026-09-14 00:01:43] waiting for a run request
+[2026-09-14 14:42:17] started by tracker_server.py
+[2026-09-14 14:42:18] waiting for a run request
+[2026-09-14 14:58:54] started by tracker_server.py
+[2026-09-14 14:58:55] waiting for a run request
+[2026-09-14 14:58:59] started by tracker_server.py
+[2026-09-14 14:59:44] started by tracker_server.py
+[2026-09-14 14:59:44] waiting for a run request
+[2026-09-14 15:31:41] starting 20260914-153141-sample: 20 train, 20 val pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-14 15:31:53] resuming the dataset VM 505946 at 16 vCPUs / 64 GB
+[2026-09-14 15:33:17] watching 20260914-153141-sample
+[2026-09-14 15:41:27] 20260914-153141-sample finished: finished; the VM is paused
+[2026-09-14 15:41:27] waiting for a run request
+[2026-09-14 16:52:50] started by tracker_server.py
+[2026-09-14 16:52:51] waiting for a run request
+[2026-09-14 16:54:37] started by tracker_server.py
+[2026-09-14 16:54:39] waiting for a run request
+[2026-09-14 16:56:49] starting 20260914-165648-sample: 20 train, 20 val pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-14 16:57:05] resuming the dataset VM 506476 at 16 vCPUs / 64 GB
+[2026-09-14 16:58:24] watching 20260914-165648-sample
+[2026-09-14 17:00:47] 20260914-165648-sample finished: finished; the VM is paused
+[2026-09-14 17:00:47] waiting for a run request
+[2026-09-14 17:24:10] starting 20260914-172410-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-14 17:24:20] resuming the dataset VM 506499 at 32 vCPUs / 128 GB
+[2026-09-14 17:24:34] 32 vCPUs could not be had (l resume 506499 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-14 17:25:55] watching 20260914-172410-full
+[2026-09-14 17:55:58] 20260914-172410-full stopped: kill requested; the VM is paused
+[2026-09-14 17:55:58] waiting for a run request
+[2026-09-14 18:17:29] starting 20260914-181729-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-14 18:17:39] resuming the dataset VM 506509 at 32 vCPUs / 128 GB
+[2026-09-14 18:17:50] 32 vCPUs could not be had (l resume 506509 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-14 18:19:07] watching 20260914-181729-full
+[2026-09-14 19:26:15] 20260914-181729-full finished: finished; the VM is paused
+[2026-09-14 19:26:15] waiting for a run request
+[2026-09-14 20:32:41] started by tracker_server.py
+[2026-09-14 20:32:41] waiting for a run request
+[2026-09-14 23:43:00] started by tracker_server.py
+[2026-09-14 23:43:12] waiting for a run request
+[2026-09-14 23:43:59] started by tracker_server.py
+[2026-09-14 23:44:04] waiting for a run request
+[2026-09-14 23:44:40] started by tracker_server.py
+[2026-09-14 23:44:53] waiting for a run request
+[2026-09-14 23:45:14] started by tracker_server.py
+[2026-09-14 23:45:22] waiting for a run request
+[2026-09-15 00:23:04] started by tracker_server.py
+[2026-09-15 00:23:14] waiting for a run request
+[2026-09-15 00:23:44] started by tracker_server.py
+[2026-09-15 00:23:44] waiting for a run request
+[2026-09-15 00:24:06] started by tracker_server.py
+[2026-09-15 00:24:08] waiting for a run request
+[2026-09-15 00:24:46] started by tracker_server.py
+[2026-09-15 00:24:46] waiting for a run request
+[2026-09-15 00:38:48] starting 20260915-003848-recognition: 30,000 train, 2,000 val pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-15 00:39:05] resuming the dataset VM 506606 at 32 vCPUs / 128 GB
+[2026-09-15 00:39:16] 32 vCPUs could not be had (l resume 506606 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-15 00:40:33] watching 20260915-003848-recognition
+[2026-09-15 00:42:13] 20260915-003848-recognition failed: stage failed: recog_train; the VM is paused
+[2026-09-15 00:42:13] waiting for a run request
+[2026-09-15 00:44:51] starting 20260915-004451-recognition: 30,000 train, 2,000 val pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-15 00:45:00] resuming the dataset VM 506765 at 32 vCPUs / 128 GB
+[2026-09-15 00:45:11] 32 vCPUs could not be had (l resume 506765 --vcpus 32 --ram 128 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 32 cores available on server N9001. (code=404)"}); resuming at the VM's last size
+[2026-09-15 00:46:38] watching 20260915-004451-recognition
+[2026-09-15 01:44:55] class counts were not copied: download /home/ubuntu/regen/20260915-004451-recognition/class_counts.json failed: Downloading from 506776: 
+/home/ubuntu/regen/20260915-004451-recognition/class_counts.json -> 
+C:\Users\propr\Desktop\
+[2026-09-15 01:45:22] 20260915-004451-recognition finished: finished; the VM is paused
+[2026-09-15 01:45:22] waiting for a run request
+[2026-09-15 01:46:44] started by tracker_server.py
+[2026-09-15 01:46:44] waiting for a run request
+[2026-09-15 02:13:40] started by tracker_server.py
+[2026-09-15 02:13:41] waiting for a run request
+[2026-09-15 02:50:28] starting 20260915-025028-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-15 02:50:49] resuming the dataset VM 506776 at 32 vCPUs / 128 GB
+[2026-09-15 02:50:59] 32 vCPUs could not be had (jl resume 506776 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}); resuming at the VM's last size
+[2026-09-15 02:52:31] 20260915-025028-full failed: stage failed: resume_vm; the VM is paused
+[2026-09-15 02:52:31] waiting for a run request
+[2026-09-15 03:05:54] started by tracker_server.py
+[2026-09-15 03:05:54] waiting for a run request
+[2026-09-15 03:06:07] starting 20260915-030607-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-15 03:06:20] resuming the dataset VM 506776 at 32 vCPUs / 128 GB
+[2026-09-15 03:06:31] could not resume at 32 vCPUs / 128 GB: jl resume 506776 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 03:06:31] resuming the dataset VM 506776 at its last size
+[2026-09-15 03:07:57] watching 20260915-030607-full
+[2026-09-15 03:09:16] 20260915-030607-full failed: stage failed: check_cache; the VM is paused
+[2026-09-15 03:09:16] waiting for a run request
+[2026-09-15 03:14:29] starting 20260915-031429-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on, mark crops box, 0 tuned settings
+[2026-09-15 03:14:40] resuming the dataset VM 506929 at 32 vCPUs / 128 GB
+[2026-09-15 03:14:51] could not resume at 32 vCPUs / 128 GB: jl resume 506929 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 03:14:51] resuming the dataset VM 506929 at its last size
+[2026-09-15 03:16:15] watching 20260915-031429-full
+[2026-09-15 04:32:54] 20260915-031429-full failed: stage failed: swap_dataset; the VM is paused
+[2026-09-15 04:32:54] waiting for a run request
+[2026-09-15 04:37:32] started by tracker_server.py
+[2026-09-15 04:37:32] waiting for a run request
+[2026-09-15 04:38:00] carrying on 20260915-031429-full from where it stopped
+[2026-09-15 04:38:11] resuming the dataset VM 506940 at 32 vCPUs / 128 GB
+[2026-09-15 04:38:21] could not resume at 32 vCPUs / 128 GB: jl resume 506940 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 04:38:21] resuming the dataset VM 506940 at its last size
+[2026-09-15 04:39:37] watching 20260915-031429-full
+[2026-09-15 04:41:30] 20260915-031429-full finished: finished; the VM is paused
+[2026-09-15 04:41:30] waiting for a run request
+[2026-09-15 11:47:30] started by tracker_server.py
+[2026-09-15 11:47:31] waiting for a run request
+[2026-09-15 12:53:28] started by tracker_server.py
+[2026-09-15 12:53:28] waiting for a run request
+[2026-09-15 15:39:13] started by tracker_server.py
+[2026-09-15 15:39:14] waiting for a run request
+[2026-09-15 15:40:18] starting 20260915-154018-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 15:40:33] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:40:41] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:40:41] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:40:52] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:40:52] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:41:08] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:41:08] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:41:26] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:43:26] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:43:36] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:43:36] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:43:46] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:43:46] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:43:56] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:43:56] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:44:06] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:46:06] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:46:13] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:46:13] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:46:22] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:46:22] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:46:31] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:46:31] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:46:41] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:48:41] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:48:47] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:48:47] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:48:55] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:48:55] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:49:01] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:49:01] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:49:11] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:51:11] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:51:18] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:51:18] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:51:26] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:51:26] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:51:33] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:51:33] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:51:42] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:53:42] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:53:48] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:53:48] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:53:57] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:53:57] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:54:03] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:54:03] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:54:12] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:56:12] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:56:20] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:56:20] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:56:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:56:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:56:36] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:56:36] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:56:46] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 15:58:46] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 15:58:52] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 15:58:52] resuming the dataset VM 507039 at its last size
+[2026-09-15 15:59:00] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 15:59:00] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 15:59:06] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 15:59:06] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 15:59:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:01:15] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:01:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:01:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:01:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:01:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:01:35] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:01:35] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:01:44] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:03:44] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:03:50] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:03:50] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:03:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:03:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:04:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:04:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:04:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:06:14] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:06:22] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:06:22] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:06:30] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:06:30] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:06:36] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:06:36] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:06:44] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:08:44] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:08:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:08:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:08:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:08:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:09:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:09:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:09:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:11:14] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:11:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:11:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:11:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:11:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:11:36] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:11:36] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:11:45] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:13:45] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:13:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:13:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:13:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:13:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:14:06] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:14:06] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:14:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:16:14] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:16:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:16:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:16:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:16:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:16:36] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:16:36] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:16:45] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:18:45] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:18:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:18:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:18:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:18:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:19:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:19:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:19:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:21:15] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:21:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:21:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:21:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:21:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:21:35] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:21:35] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:21:44] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:23:44] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:23:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:23:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:23:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:23:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:24:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:24:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:24:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:25:30] 20260915-154018-additions failed: stage failed: resume_vm; the VM is paused
+[2026-09-15 16:25:30] waiting for a run request
+[2026-09-15 16:25:33] started by tracker_server.py
+[2026-09-15 16:25:34] waiting for a run request
+[2026-09-15 16:25:34] starting 20260915-162534-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 16:25:43] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:25:50] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:25:50] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:25:58] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:25:58] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:26:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:26:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:26:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:28:14] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:28:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:28:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:28:29] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:28:29] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:28:35] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:28:35] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:28:45] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:30:45] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:30:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:30:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:30:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:30:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:31:06] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:31:06] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:31:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:33:14] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:33:21] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:33:21] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:33:30] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:33:30] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:33:36] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:33:36] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:33:45] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:35:45] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:35:52] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:35:52] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:36:00] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:36:00] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:36:08] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:36:08] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:36:17] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:38:17] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:38:24] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:38:24] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:38:33] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:38:33] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:38:40] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:38:40] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:38:50] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:39:35] 20260915-162534-additions stopped: kill requested; the VM is paused
+[2026-09-15 16:39:35] waiting for a run request
+[2026-09-15 16:39:38] started by tracker_server.py
+[2026-09-15 16:39:38] waiting for a run request
+[2026-09-15 16:40:36] starting 20260915-164036-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 16:40:44] resuming the dataset VM 507039 at 32 vCPUs / 128 GB
+[2026-09-15 16:40:51] could not resume at 32 vCPUs / 128 GB: jl resume 507039 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:40:51] resuming the dataset VM 507039 at its last size
+[2026-09-15 16:40:59] could not resume at its last size: jl resume 507039 --yes: exit 1: {"error": "Instance creation failed: CPUs not available at this moment, please try again later (code=404)"}
+[2026-09-15 16:40:59] resuming the dataset VM 507039 at 16 vCPUs / 64 GB
+[2026-09-15 16:41:05] could not resume at 16 vCPUs / 64 GB: jl resume 507039 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available right now."}
+[2026-09-15 16:41:05] resuming the dataset VM 507039 at 8 vCPUs / 32 GB
+[2026-09-15 16:41:14] could not resume at 8 vCPUs / 32 GB: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {"error": "Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)"}
+[2026-09-15 16:41:14] resuming the dataset VM 507039 at 4 vCPUs / 16 GB
+[2026-09-15 16:42:25] watching 20260915-164036-additions
+[2026-09-15 16:44:56] status unavailable (1/5): Connection timed out during banner exchange
+[2026-09-15 16:46:14] status unavailable (2/5): Connection timed out during banner exchange
+[2026-09-15 16:47:32] status unavailable (3/5): Connection timed out during banner exchange
+[2026-09-15 16:48:50] status unavailable (4/5): Connection timed out during banner exchange
+[2026-09-15 16:50:09] status unavailable (5/5): Connection timed out during banner exchange
+[2026-09-15 16:51:31] 20260915-164036-additions failed: VM unreachable for 5 polls; the VM is paused
+[2026-09-15 16:51:31] waiting for a run request
+[2026-09-15 16:51:37] starting 20260915-165137-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 16:51:44] resuming the dataset VM 507417 at 32 vCPUs / 128 GB
+[2026-09-15 16:51:50] could not resume at 32 vCPUs / 128 GB: jl resume 507417 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 16:51:50] resuming the dataset VM 507417 at its last size
+[2026-09-15 16:52:59] watching 20260915-165137-additions
+[2026-09-15 17:14:28] status unavailable (1/5): Connection timed out during banner exchange
+[2026-09-15 17:15:45] status unavailable (2/5): Connection timed out during banner exchange
+[2026-09-15 17:17:03] status unavailable (3/5): Connection timed out during banner exchange
+[2026-09-15 17:18:21] status unavailable (4/5): Connection timed out during banner exchange
+[2026-09-15 17:19:39] status unavailable (5/5): Connection timed out during banner exchange
+[2026-09-15 17:21:01] 20260915-165137-additions failed: VM unreachable for 5 polls; the VM is paused
+[2026-09-15 17:21:01] waiting for a run request
+[2026-09-15 17:21:31] starting 20260915-172131-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:21:38] resuming the dataset VM 507418 at 32 vCPUs / 128 GB
+[2026-09-15 17:21:44] could not resume at 32 vCPUs / 128 GB: jl resume 507418 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 17:21:44] resuming the dataset VM 507418 at its last size
+[2026-09-15 17:22:52] watching 20260915-172131-additions
+[2026-09-15 17:29:21] status unavailable (1/5): no output
+[2026-09-15 17:30:39] status unavailable (2/5): Connection timed out during banner exchange
+[2026-09-15 17:31:56] status unavailable (3/5): Connection timed out during banner exchange
+[2026-09-15 17:33:14] status unavailable (4/5): Connection timed out during banner exchange
+[2026-09-15 17:34:32] status unavailable (5/5): Connection timed out during banner exchange
+[2026-09-15 17:35:54] 20260915-172131-additions failed: VM unreachable for 5 polls; the VM is paused
+[2026-09-15 17:35:54] waiting for a run request
+[2026-09-15 17:36:04] starting 20260915-173604-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:36:12] resuming the dataset VM 507423 at 32 vCPUs / 128 GB
+[2026-09-15 17:36:19] could not resume at 32 vCPUs / 128 GB: jl resume 507423 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 17:36:20] resuming the dataset VM 507423 at its last size
+[2026-09-15 17:37:29] watching 20260915-173604-additions
+[2026-09-15 17:40:01] status unavailable (1/5): Connection timed out during banner exchange
+[2026-09-15 17:41:18] status unavailable (2/5): Connection timed out during banner exchange
+[2026-09-15 17:42:36] status unavailable (3/5): Connection timed out during banner exchange
+[2026-09-15 17:43:56] status unavailable (4/5): Connection timed out during banner exchange
+[2026-09-15 17:45:23] status unavailable (5/5): Connection timed out during banner exchange
+[2026-09-15 17:46:53] 20260915-173604-additions failed: VM unreachable for 5 polls; the VM is paused
+[2026-09-15 17:46:53] waiting for a run request
+[2026-09-15 17:46:58] started by tracker_server.py
+[2026-09-15 17:46:58] waiting for a run request
+[2026-09-15 17:47:07] starting 20260915-174706-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:47:15] resuming the dataset VM 507429 at 32 vCPUs / 128 GB
+[2026-09-15 17:47:23] could not resume at 32 vCPUs / 128 GB: jl resume 507429 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 17:47:23] resuming the dataset VM 507429 at its last size
+[2026-09-15 17:48:39] watching 20260915-174706-additions
+[2026-09-15 17:48:46] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 17:49:18] 20260915-174706-additions stopped: kill requested; the VM is paused
+[2026-09-15 17:49:18] waiting for a run request
+[2026-09-15 17:49:43] starting 20260915-174943-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:50:30] started by tracker_server.py
+[2026-09-15 17:50:31] 20260915-174943-additions failed: orchestrator restarted during setup; the VM is paused
+[2026-09-15 17:50:31] waiting for a run request
+[2026-09-15 17:50:43] starting 20260915-175043-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:50:50] resuming the dataset VM 507433 at 32 vCPUs / 128 GB
+[2026-09-15 17:50:57] could not resume at 32 vCPUs / 128 GB: jl resume 507433 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 17:50:57] resuming the dataset VM 507433 at its last size
+[2026-09-15 17:52:11] watching 20260915-175043-additions
+[2026-09-15 17:52:18] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 17:53:34] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 17:54:51] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 17:56:32] 20260915-175043-additions failed: the run stopped on the VM and did not restart; the VM is paused
+[2026-09-15 17:56:32] waiting for a run request
+[2026-09-15 17:56:42] starting 20260915-175642-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 17:56:51] resuming the dataset VM 507434 at 32 vCPUs / 128 GB
+[2026-09-15 17:56:59] could not resume at 32 vCPUs / 128 GB: jl resume 507434 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 17:56:59] resuming the dataset VM 507434 at its last size
+[2026-09-15 17:58:17] watching 20260915-175642-additions
+[2026-09-15 17:58:26] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 17:59:44] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 18:01:01] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 18:02:46] 20260915-175642-additions failed: the run stopped on the VM and did not restart; the VM is paused
+[2026-09-15 18:02:46] waiting for a run request
+[2026-09-15 18:02:50] starting 20260915-180250-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 18:03:02] resuming the dataset VM 507437 at 32 vCPUs / 128 GB
+[2026-09-15 18:03:11] could not resume at 32 vCPUs / 128 GB: jl resume 507437 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 18:03:11] resuming the dataset VM 507437 at its last size
+[2026-09-15 18:04:26] watching 20260915-180250-additions
+[2026-09-15 18:04:35] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 18:05:22] the run is not going on the VM: starting it again (done stages are skipped)
+[2026-09-15 18:05:59] 20260915-180250-additions stopped: kill requested; the VM is paused
+[2026-09-15 18:05:59] waiting for a run request
+[2026-09-15 18:06:07] started by tracker_server.py
+[2026-09-15 18:06:08] waiting for a run request
+[2026-09-15 18:06:08] starting 20260915-180608-additions: 30,000 train pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-09-15 18:06:17] resuming the dataset VM 507442 at 32 vCPUs / 128 GB
+[2026-09-15 18:06:26] could not resume at 32 vCPUs / 128 GB: jl resume 507442 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available right now."}
+[2026-09-15 18:06:26] resuming the dataset VM 507442 at its last size
+[2026-09-15 18:07:44] watching 20260915-180608-additions
+[2026-09-15 18:43:32] class counts were not copied: download /home/ubuntu/regen/20260915-180608-additions/class_counts.json failed: Downloading from 507446: 
+/home/ubuntu/regen/20260915-180608-additions/class_counts.json -> 
+C:\Users\propr\Desktop\whit
+[2026-09-15 18:43:54] 20260915-180608-additions finished: finished; the VM is paused
+[2026-09-15 18:43:54] waiting for a run request
+[2026-09-15 18:53:37] started by tracker_server.py
+[2026-09-15 18:53:38] waiting for a run request
+[2026-09-15 18:54:09] started by tracker_server.py
+[2026-09-15 18:54:10] waiting for a run request
+[2026-09-15 19:09:21] started by tracker_server.py
+[2026-09-15 19:09:22] waiting for a run request
+[2026-09-15 19:09:48] started by tracker_server.py
+[2026-09-15 19:09:48] waiting for a run request
+[2026-09-15 19:27:50] started by tracker_server.py
+[2026-09-15 19:27:51] waiting for a run request

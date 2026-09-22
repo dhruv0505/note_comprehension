@@ -1,0 +1,21 @@
+{
+ "mode": "recognition",
+ "run_id": "20260915-004451-recognition",
+ "region": "IN2",
+ "vm": "16 vCPU / 64 GB / 100 GB SSD",
+ "machine_id": 506776,
+ "hourly": 0.4105,
+ "budget": 4.0,
+ "started": 1789458300.7141118,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ]
+  },
+  "tuning": {},
+  "mark_crop": "box"
+ }
+}

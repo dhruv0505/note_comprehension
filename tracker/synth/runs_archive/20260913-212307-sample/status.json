@@ -1,0 +1,76 @@
+{
+ "polled_at": 1789359966.7291753,
+ "poll": 0,
+ "cost": 0.0194,
+ "budget": 1.0,
+ "hourly": 0.4105,
+ "machine_id": 505842,
+ "started": 1789359796.1973875,
+ "status": {
+  "now": 1789359966.7291753,
+  "targets": {
+   "train": 5,
+   "val": 5
+  },
+  "mode": "sample",
+  "picks": [],
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "failed",
+    "start": 1789359787.700113,
+    "end": 1789359944.8748486,
+    "log": [
+     "JLError: jl exec timed out after 120s"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "pending"
+   },
+   {
+    "name": "check_cache",
+    "state": "pending"
+   },
+   {
+    "name": "prepare_output",
+    "state": "pending"
+   },
+   {
+    "name": "synth_train",
+    "state": "pending"
+   },
+   {
+    "name": "synth_val",
+    "state": "pending"
+   },
+   {
+    "name": "count_classes",
+    "state": "pending"
+   },
+   {
+    "name": "all_done",
+    "state": "pending"
+   }
+  ],
+  "splits": {
+   "train": {
+    "target": 5,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "val": {
+    "target": 5,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   }
+  }
+ },
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "mode": "sample"
+}

@@ -1,0 +1,39 @@
+== drawing_00.png
+prompt: What is drawn in this image?
+   1. eye
+
+== drawing_01.png
+prompt: What is drawn in this image?
+   1. cat
+
+== drawing_02.png
+prompt: What is drawn in this image?
+   1. bicycle
+
+== drawing_03.png
+prompt: What is drawn in this image?
+   1. apple
+
+== drawing_04.png
+prompt: What is drawn in this image?
+   1. clock
+
+== drawing_05.png
+prompt: What is drawn in this image?
+   1. star
+
+== drawing_06.png
+prompt: What is drawn in this image?
+   1. fish
+
+== drawing_07.png
+prompt: What is drawn in this image?
+   1. house
+
+== drawing_08.png
+prompt: What is drawn in this image?
+   1. book
+
+== drawing_09.png
+prompt: What is drawn in this image?
+   1. cup

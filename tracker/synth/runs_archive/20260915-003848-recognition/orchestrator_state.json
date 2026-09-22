@@ -1,0 +1,62 @@
+{
+ "run_id": "20260915-003848-recognition",
+ "mode": "recognition",
+ "phase": "failed",
+ "requested_at": 1789457928.7145011,
+ "hourly": 0.4105,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ]
+  },
+  "tuning": {},
+  "mark_crop": "box"
+ },
+ "budget": 4.0,
+ "pages": {
+  "train": 30000,
+  "val": 2000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_times",
+  "prepare_output",
+  "recog_train",
+  "recog_val",
+  "swap_recognition",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1789457928.7293768,
+   "end": 1789457993.640963,
+   "log": [
+    "VM 506765 running with 16 vCPUs, $0.41/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1789457993.655193,
+   "end": 1789458033.932873,
+   "log": [
+    "246 KB"
+   ]
+  }
+ ],
+ "poll": 2,
+ "pulled": [],
+ "machine_id": 506765,
+ "billing_started": 1789457945.3927069,
+ "home": "/home/ubuntu",
+ "billing_ended": 1789458133.3957202,
+ "pause_reason": "stage failed: recog_train",
+ "paused": true,
+ "finished_at": 1789458133.3957202
+}

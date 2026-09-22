@@ -1,0 +1,161 @@
+[06:07:30] prepare remote
+Executing on 505521: sh -lc 'rm -rf ~/C: ~/parts ~/bundle.tgz; mkdir -p 
+~/parts; echo ready'
+ready
+[06:07:59] uploaded bundle.part.000
+[06:08:17] retry bundle.part.001 (attempt 1): oard-note -synth\cc89e6a0-09cc-45cd-af6c-3acb488528f8\scratchpad\parts\bundle.part.001 -> /home/ubuntu/parts/bundle.part.001 client_loop: send disconnect: Connection reset by peer lost connection 
+[06:08:44] uploaded bundle.part.001
+[06:09:00] retry bundle.part.002 (attempt 1): oard-note -synth\cc89e6a0-09cc-45cd-af6c-3acb488528f8\scratchpad\parts\bundle.part.002 -> /home/ubuntu/parts/bundle.part.002 client_loop: send disconnect: Connection reset by peer lost connection 
+[06:09:24] retry bundle.part.002 (attempt 2): oard-note -synth\cc89e6a0-09cc-45cd-af6c-3acb488528f8\scratchpad\parts\bundle.part.002 -> /home/ubuntu/parts/bundle.part.002 client_loop: send disconnect: Connection reset by peer lost connection 
+[06:09:51] uploaded bundle.part.002
+[06:10:07] retry bundle.part.003 (attempt 1): d-note -synth\cc89e6a0-09cc-45cd-af6c-3acb488528f8\scratchpad\parts\bundle.part.003 -> /home/ubuntu/parts/bundle.part.003 Connection to 217.18.55.96 closed by remote host. scp: Connection closed 
+[06:10:29] retry bundle.part.003 (attempt 2): oard-note -synth\cc89e6a0-09cc-45cd-af6c-3acb488528f8\scratchpad\parts\bundle.part.003 -> /home/ubuntu/parts/bundle.part.003 client_loop: send disconnect: Connection reset by peer lost connection 
+[06:10:55] uploaded bundle.part.003
+[06:11:40] switched to 5 MB parts (79); removing old 25 MB parts 003+ on the VM
+Executing on 505521: sh -lc 'cd ~/parts 2>/dev/null && for i in $(seq -w 3 18);
+do rm -f bundle.part.0$i; done; ls ~/parts'
+bundle.part.000
+bundle.part.001
+bundle.part.002
+[06:11:50] resume: checking parts already on the VM
+[06:12:17] uploaded bundle.part.003.000
+[06:12:36] uploaded bundle.part.003.001
+[06:12:55] uploaded bundle.part.003.002
+[06:13:13] uploaded bundle.part.003.003
+[06:13:32] uploaded bundle.part.003.004
+[06:13:50] uploaded bundle.part.003.005
+[06:14:09] uploaded bundle.part.003.006
+[06:14:27] uploaded bundle.part.003.007
+[06:14:44] retry bundle.part.003.008 (attempt 1)
+[06:15:10] uploaded bundle.part.003.008
+[06:15:26] uploaded bundle.part.003.009
+[06:15:43] uploaded bundle.part.003.010
+[06:16:01] uploaded bundle.part.003.011
+[06:16:18] retry bundle.part.003.012 (attempt 1)
+[06:16:41] uploaded bundle.part.003.012
+[06:16:57] uploaded bundle.part.003.013
+[06:17:16] uploaded bundle.part.003.014
+[06:17:32] uploaded bundle.part.003.015
+[06:17:49] uploaded bundle.part.003.016
+[06:18:08] uploaded bundle.part.003.017
+[06:18:25] uploaded bundle.part.003.018
+[06:18:40] retry bundle.part.003.019 (attempt 1)
+[06:19:03] uploaded bundle.part.003.019
+[06:19:21] uploaded bundle.part.003.020
+[06:19:39] uploaded bundle.part.003.021
+[06:19:56] uploaded bundle.part.003.022
+[06:20:14] uploaded bundle.part.003.023
+[06:20:31] uploaded bundle.part.003.024
+[06:20:48] uploaded bundle.part.003.025
+[06:21:03] retry bundle.part.003.026 (attempt 1)
+[06:21:26] uploaded bundle.part.003.026
+[06:21:43] uploaded bundle.part.003.027
+[06:22:00] uploaded bundle.part.003.028
+[06:22:18] uploaded bundle.part.003.029
+[06:22:37] uploaded bundle.part.003.030
+[06:22:53] retry bundle.part.003.031 (attempt 1)
+[06:23:15] uploaded bundle.part.003.031
+[06:23:32] uploaded bundle.part.003.032
+[06:23:49] uploaded bundle.part.003.033
+[06:24:07] uploaded bundle.part.003.034
+[06:24:24] uploaded bundle.part.003.035
+[06:24:40] uploaded bundle.part.003.036
+[06:24:58] uploaded bundle.part.003.037
+[06:25:16] uploaded bundle.part.003.038
+[06:25:32] retry bundle.part.003.039 (attempt 1)
+[06:25:53] retry bundle.part.003.039 (attempt 2)
+[06:26:14] uploaded bundle.part.003.039
+[06:26:31] uploaded bundle.part.003.040
+[06:26:47] uploaded bundle.part.003.041
+[06:27:03] uploaded bundle.part.003.042
+[06:27:22] uploaded bundle.part.003.043
+[06:27:40] uploaded bundle.part.003.044
+[06:27:59] uploaded bundle.part.003.045
+[06:28:17] uploaded bundle.part.003.046
+[06:28:34] uploaded bundle.part.003.047
+[06:28:50] retry bundle.part.003.048 (attempt 1)
+[06:29:14] uploaded bundle.part.003.048
+[06:29:32] uploaded bundle.part.003.049
+[06:29:50] uploaded bundle.part.003.050
+[06:30:07] uploaded bundle.part.003.051
+[06:30:24] retry bundle.part.003.052 (attempt 1)
+[06:30:47] uploaded bundle.part.003.052
+[06:31:04] uploaded bundle.part.003.053
+[06:31:21] retry bundle.part.003.054 (attempt 1)
+[06:31:44] uploaded bundle.part.003.054
+[06:32:13] uploaded bundle.part.003.055
+[06:32:31] uploaded bundle.part.003.056
+[06:32:51] uploaded bundle.part.003.057
+[06:33:09] uploaded bundle.part.003.058
+[06:33:25] retry bundle.part.003.059 (attempt 1)
+[06:33:48] uploaded bundle.part.003.059
+[06:34:06] uploaded bundle.part.003.060
+[06:34:24] uploaded bundle.part.003.061
+[06:34:42] uploaded bundle.part.003.062
+[06:34:59] retry bundle.part.003.063 (attempt 1)
+[06:35:22] uploaded bundle.part.003.063
+[06:35:39] uploaded bundle.part.003.064
+[06:35:57] uploaded bundle.part.003.065
+[06:36:15] uploaded bundle.part.003.066
+[06:36:32] uploaded bundle.part.003.067
+[06:36:50] uploaded bundle.part.003.068
+[06:37:08] uploaded bundle.part.003.069
+[06:37:27] uploaded bundle.part.003.070
+[06:37:44] uploaded bundle.part.003.071
+[06:38:03] uploaded bundle.part.003.072
+[06:38:21] uploaded bundle.part.003.073
+[06:38:37] retry bundle.part.003.074 (attempt 1)
+[06:39:00] uploaded bundle.part.003.074
+[06:39:17] uploaded bundle.part.003.075
+[06:39:17] verify and assemble
+Executing on 505521: sh -lc 'cd ~/parts && for e in bundle.part.000:26214400 
+bundle.part.001:26214400 bundle.part.002:26214400 bundle.part.003.000:5242880 
+bundle.part.003.001:5242880 bundle.part.003.002:5242880 
+bundle.part.003.003:5242880 bundle.part.003.004:5242880 
+bundle.part.003.005:5242880 bundle.part.003.006:5242880 
+bundle.part.003.007:5242880 bundle.part.003.008:5242880 
+bundle.part.003.009:5242880 bundle.part.003.010:5242880 
+bundle.part.003.011:5242880 bundle.part.003.012:5242880 
+bundle.part.003.013:5242880 bundle.part.003.014:5242880 
+bundle.part.003.015:5242880 bundle.part.003.016:5242880 
+bundle.part.003.017:5242880 bundle.part.003.018:5242880 
+bundle.part.003.019:5242880 bundle.part.003.020:5242880 
+bundle.part.003.021:5242880 bundle.part.003.022:5242880 
+bundle.part.003.023:5242880 bundle.part.003.024:5242880 
+bundle.part.003.025:5242880 bundle.part.003.026:5242880 
+bundle.part.003.027:5242880 bundle.part.003.028:5242880 
+bundle.part.003.029:5242880 bundle.part.003.030:5242880 
+bundle.part.003.031:5242880 bundle.part.003.032:5242880 
+bundle.part.003.033:5242880 bundle.part.003.034:5242880 
+bundle.part.003.035:5242880 bundle.part.003.036:5242880 
+bundle.part.003.037:5242880 bundle.part.003.038:5242880 
+bundle.part.003.039:5242880 bundle.part.003.040:5242880 
+bundle.part.003.041:5242880 bundle.part.003.042:5242880 
+bundle.part.003.043:5242880 bundle.part.003.044:5242880 
+bundle.part.003.045:5242880 bundle.part.003.046:5242880 
+bundle.part.003.047:5242880 bundle.part.003.048:5242880 
+bundle.part.003.049:5242880 bundle.part.003.050:5242880 
+bundle.part.003.051:5242880 bundle.part.003.052:5242880 
+bundle.part.003.053:5242880 bundle.part.003.054:5242880 
+bundle.part.003.055:5242880 bundle.part.003.056:5242880 
+bundle.part.003.057:5242880 bundle.part.003.058:5242880 
+bundle.part.003.059:5242880 bundle.part.003.060:5242880 
+bundle.part.003.061:5242880 bundle.part.003.062:5242880 
+bundle.part.003.063:5242880 bundle.part.003.064:5242880 
+bundle.part.003.065:5242880 bundle.part.003.066:5242880 
+bundle.part.003.067:5242880 bundle.part.003.068:5242880 
+bundle.part.003.069:5242880 bundle.part.003.070:5242880 
+bundle.part.003.071:5242880 bundle.part.003.072:5242880 
+bundle.part.003.073:5242880 bundle.part.003.074:5242880 
+bundle.part.003.075:2014775 ; do n=${e%%:*}; s=${e##*:}; [ "$(stat -c %s $n 
+2>/dev/null)" = "$s" ] || { echo SIZE_MISMATCH $n; exit 3; }; done; cat 
+bundle.part.* > ~/bundle.tgz && sha256sum ~/bundle.tgz | cut -d'"'"' '"'"' -f1 
+> ~/bundle.sha && cat ~/bundle.sha'
+85ab1eb6798b606a55b1711e8cd4b0b8a172aa9f28dd92ba7b1feecef348ffe7
+[06:39:44] checksum ok 85ab1eb6798b606a55b1711e8cd4b0b8a172aa9f28dd92ba7b1feecef348ffe7
+Executing on 505521: sh -lc 'cd ~ && rm -rf ~/run && tar xzf bundle.tgz && 
+mkdir -p ~/run/logs && chmod +x ~/run/run_remote.sh && rm -rf ~/parts && 
+(setsid nohup bash ~/run/run_remote.sh > ~/run/logs/runner.log 2>&1 < /dev/null
+&) && sleep 3 && pgrep -f run_remote.sh >/dev/null && echo RUNNER_STARTED'
+RUNNER_STARTED
+[06:39:58] LAUNCHED

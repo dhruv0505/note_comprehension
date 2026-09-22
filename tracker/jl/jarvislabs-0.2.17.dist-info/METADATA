@@ -1,0 +1,229 @@
+Metadata-Version: 2.4
+Name: jarvislabs
+Version: 0.2.17
+Summary: CLI and SDK for JarvisLabs.ai GPU cloud
+Keywords: gpu,cloud,jarvislabs,cli,sdk
+Author: Team Jarvislabs.ai
+Author-email: Team Jarvislabs.ai <hello@jarvislabs.ai>
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: httpx>=0.27,<1
+Requires-Dist: pydantic>=2.10
+Requires-Dist: typer>=0.12
+Requires-Dist: click>=8.1
+Requires-Dist: rich>=13.0
+Requires-Dist: platformdirs>=4.0
+Requires-Dist: tomli-w>=1.0
+Requires-Dist: tomli>=2.0 ; python_full_version < '3.11'
+Requires-Dist: questionary>=2.1.1
+Requires-Python: >=3.10
+Project-URL: Homepage, https://jarvislabs.ai
+Project-URL: Repository, https://github.com/jarvislabsai/jarvislabs
+Description-Content-Type: text/markdown
+
+# jarvislabs
+
+[![Python](https://img.shields.io/pypi/pyversions/jarvislabs)](https://pypi.org/project/jarvislabs/)
+[![License](https://img.shields.io/pypi/l/jarvislabs)](https://github.com/jarvislabsai/jarvislabs/blob/main/LICENSE)
+
+CLI and Python SDK for managing GPU instances on [JarvisLabs.ai](https://jarvislabs.ai).
+
+See the docs on [Jarvislabs Docs](https://docs.jarvislabs.ai/cli/)
+
+## Installation
+
+### As a CLI tool (recommended)
+
+```bash
+uv tool install jarvislabs
+```
+
+To upgrade:
+
+```bash
+uv tool upgrade jarvislabs
+```
+
+### As a library
+
+```bash
+pip install jarvislabs
+```
+
+Or with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv pip install jarvislabs
+```
+
+Requires Python 3.10+.
+
+## Authentication
+
+Get your API key at [jarvislabs.ai/settings/api-keys](https://jarvislabs.ai/settings/api-keys).
+
+```bash
+jl setup
+```
+
+Or set an environment variable:
+
+```bash
+export JL_API_KEY="your_api_key"
+```
+
+## CLI Quick Start
+
+```bash
+# See available GPUs and pricing
+jl gpus
+
+# See available CPU VM sizes and pricing
+jl cpus
+
+# Create a container instance (pre-configured with PyTorch, Jupyter, IDE)
+jl create --gpu A100 --name "my-instance"
+
+# Create a VM instance (bare-metal SSH access)
+jl create --gpu A100-80GB --vm --name "my-vm"
+
+# Create an instance and expose a custom HTTP port
+jl create --gpu L4 --http-ports 7860
+
+# SSH into it
+jl ssh <machine_id>
+
+# Pause when done (stops compute billing, data persists)
+jl pause <machine_id>
+
+# Resume later — optionally with different hardware
+jl resume <machine_id> --gpu H100
+
+# Destroy when no longer needed
+jl destroy <machine_id>
+```
+
+### Managed Runs
+
+Run scripts on GPU instances without manual setup. Code is uploaded, a virtual environment is created (with template packages like torch visible by default), and logs are tracked automatically.
+
+For humans, the default mode stays attached to the run, streams logs, and can auto-pause or auto-destroy the instance after the run finishes. For agents, `--json` is meant for detached workflows and returns immediately, so use `--keep` and have the agent pause or destroy the instance after the run.
+
+```bash
+# Run a training script on a fresh GPU (instance auto-pauses when done)
+jl run train.py --gpu L4
+
+# Start a long-running web app on a fresh GPU and expose port 8000
+jl run app.py --gpu L4 --http-ports 8000 --keep --no-follow
+
+# Pass script arguments
+jl run train.py --gpu L4 -- --epochs 50 --lr 0.001
+
+# Sync a project directory and run a script inside it
+jl run . --script train.py --gpu A100 --requirements requirements.txt
+
+# Run on an existing instance
+jl run train.py --on <machine_id>
+
+# Check on a run
+jl run logs <run_id> --follow
+jl run status <run_id>
+jl run stop <run_id>
+```
+
+### More Commands
+
+```bash
+jl status                   # Account info and balance
+jl cpus                     # CPU VM availability and pricing
+jl templates                # Available framework templates
+jl list            # List all instances
+jl exec <id> -- nvidia-smi   # Run a command remotely
+jl upload <id> ./data        # Upload files
+jl download <id> /home/results.csv  # Download files
+jl ssh-key add ~/.ssh/id_ed25519.pub --name "my-key"
+jl scripts add ./setup.sh --name "install-deps"
+jl filesystem create --name "datasets" --storage 200
+jl vpc create my-net --cidr 10.50.0.0/24 --region IN1
+jl get <id>                  # Shows Jupyter + exposed port URLs
+```
+
+Every command supports `--help`, `--json` (machine-readable output), and `--yes` (skip confirmations).
+
+## Python SDK
+
+```python
+from jarvislabs import Client
+
+with Client() as client:
+    # Create a GPU instance (blocks until running)
+    inst = client.instances.create(gpu_type="A100", name="my-run")
+    print(f"SSH: {inst.ssh_command}")
+    print(f"URL: {inst.url}")
+
+    # When done
+    client.instances.pause(inst.machine_id)
+```
+
+```python
+from jarvislabs import Client
+
+with Client() as client:
+    # List and filter instances
+    running = [i for i in client.instances.list() if i.status == "Running"]
+
+    # Check GPU availability and pricing
+    for gpu in client.account.gpu_availability():
+        print(f"{gpu.gpu_type}: {gpu.num_free_devices} free, ${gpu.price_per_hour}/hr")
+
+    # Manage filesystems
+    fs_id = client.filesystems.create(fs_name="data", storage=100)
+
+    # Manage startup scripts
+    client.scripts.add(script="#!/bin/bash\npip install wandb", name="setup")
+```
+
+### VPCs (private networking for VMs)
+
+VMs in supported regions get a private IP inside a VPC, so they can talk to
+each other privately. A VM and its VPC must be in the same region. Containers
+do not support VPCs.
+
+```bash
+jl vpc list                                        # All your VPCs (every region)
+jl vpc create my-net --cidr 10.50.0.0/24 --region IN1
+jl vpc ips <vpc-id>                                # Private IPs and the machines holding them
+jl create --gpu A100-80GB --vm --vpc-id <vpc-id>   # Launch a VM into a VPC
+jl resume <machine-id> --vpc-id <vpc-id>           # Move a paused VM into another VPC
+jl vpc delete <vpc-id>                             # Delete an empty VPC
+```
+
+```python
+from jarvislabs import Client
+
+with Client() as client:
+    vpc = client.vpcs.create(name="my-net", cidr="10.50.0.0/24", region="IN1")
+    vm = client.instances.create(gpu_type="A100-80GB", template="vm", vpc_id=vpc.vpc_id)
+    print(vm.private_ip)
+
+    for ip in client.vpcs.ips(vpc.vpc_id):
+        print(ip.private_ip, ip.machine_id)
+```
+
+## Development
+
+```bash
+uv pip install -e ".[dev]"
+uv run ruff format . && uv run ruff check --fix .
+uv run pytest
+```
+
+## License
+
+[MIT](LICENSE)

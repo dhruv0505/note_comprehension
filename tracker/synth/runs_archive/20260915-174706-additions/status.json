@@ -1,0 +1,92 @@
+{
+ "polled_at": 1789519758.9026473,
+ "poll": 1,
+ "cost": 0.0032,
+ "budget": 2.5,
+ "hourly": 0.1129,
+ "machine_id": 507433,
+ "started": 1789519657.627511,
+ "status": {
+  "now": 1789519726.3268523,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000
+  },
+  "mode": "additions",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1789519627.0152876,
+    "end": 1789519678.8312051,
+    "log": [
+     "VM 507433 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1789519678.8428214,
+    "end": 1789519719.058621,
+    "log": [
+     "252 KB"
+    ]
+   },
+   {
+    "state": "pending",
+    "name": "check_cache"
+   },
+   {
+    "state": "pending",
+    "name": "cache_rebuild"
+   },
+   {
+    "state": "pending",
+    "name": "prepare_output"
+   },
+   {
+    "state": "pending",
+    "name": "synth_geometry"
+   },
+   {
+    "state": "pending",
+    "name": "recog_pool_train"
+   },
+   {
+    "state": "pending",
+    "name": "swap_additions"
+   },
+   {
+    "state": "pending",
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 2400,
+    "samples": 4800,
+    "rows": 4800,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 478.4,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 24,
+    "target": 30000,
+    "geometry_samples": 4800
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   0.7,
+   0.3,
+   0.1
+  ],
+  "cpus": 4,
+  "disk_used_gb": 57.8,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "kill requested",
+ "paused": true,
+ "mode": "additions"
+}

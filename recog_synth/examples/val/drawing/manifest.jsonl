@@ -1,0 +1,10 @@
+{"image": "drawing_00.png", "prompt": "What is drawn in this image?", "target": "eye", "task": "drawing", "items": ["qd:6717952940310528"]}
+{"image": "drawing_01.png", "prompt": "What is drawn in this image?", "target": "cat", "task": "drawing", "items": ["qd:6196755135725568"]}
+{"image": "drawing_02.png", "prompt": "What is drawn in this image?", "target": "bicycle", "task": "drawing", "items": ["qd:6187667635044352"]}
+{"image": "drawing_03.png", "prompt": "What is drawn in this image?", "target": "apple", "task": "drawing", "items": ["qd:6510060014403584"]}
+{"image": "drawing_04.png", "prompt": "What is drawn in this image?", "target": "clock", "task": "drawing", "items": ["qd:5175982988197888"]}
+{"image": "drawing_05.png", "prompt": "What is drawn in this image?", "target": "star", "task": "drawing", "items": ["qd:4829450464133120"]}
+{"image": "drawing_06.png", "prompt": "What is drawn in this image?", "target": "fish", "task": "drawing", "items": ["qd:5613006501183488"]}
+{"image": "drawing_07.png", "prompt": "What is drawn in this image?", "target": "house", "task": "drawing", "items": ["qd:5515902256676864"]}
+{"image": "drawing_08.png", "prompt": "What is drawn in this image?", "target": "book", "task": "drawing", "items": ["qd:4923762363334656"]}
+{"image": "drawing_09.png", "prompt": "What is drawn in this image?", "target": "cup", "task": "drawing", "items": ["qd:5685851595997184"]}

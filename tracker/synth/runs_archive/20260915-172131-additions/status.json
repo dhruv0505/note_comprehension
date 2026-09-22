@@ -1,0 +1,104 @@
+{
+ "polled_at": 1789518954.557875,
+ "poll": 9,
+ "cost": 0.0263,
+ "budget": 2.5,
+ "hourly": 0.1129,
+ "machine_id": 507423,
+ "started": 1789518117.4584446,
+ "status": {
+  "now": 1789518380.1924791,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000
+  },
+  "mode": "additions",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1789518091.5176463,
+    "end": 1789518137.145198,
+    "log": [
+     "VM 507423 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1789518137.1525185,
+    "end": 1789518172.5564444,
+    "log": [
+     "252 KB"
+    ]
+   },
+   {
+    "start": 1789518169.0220346,
+    "state": "done",
+    "end": 1789518169.0511851,
+    "name": "check_cache"
+   },
+   {
+    "start": 1789518169.0702648,
+    "state": "done",
+    "end": 1789518169.1151996,
+    "name": "cache_rebuild"
+   },
+   {
+    "start": 1789518169.1337993,
+    "state": "done",
+    "end": 1789518170.6990438,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1789518170.7179663,
+    "state": "running",
+    "name": "synth_geometry",
+    "log": [
+     "  shard 35: 0 pages in 19s | 0/30000 pages, 0.00 pages/s, ~0 min left",
+     "  shard 39: 0 pages in 19s | 0/30000 pages, 0.00 pages/s, ~0 min left",
+     "  shard 36: 0 pages in 22s | 0/30000 pages, 0.00 pages/s, ~0 min left"
+    ]
+   },
+   {
+    "state": "pending",
+    "name": "recog_pool_train"
+   },
+   {
+    "state": "pending",
+    "name": "swap_additions"
+   },
+   {
+    "state": "pending",
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 3800,
+    "samples": 7600,
+    "rows": 7600,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 758.6,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 38,
+    "target": 30000,
+    "geometry_samples": 7600
+   }
+  },
+  "picks": [],
+  "runner_alive": true,
+  "load": [
+   4.0,
+   2.1,
+   0.9
+  ],
+  "cpus": 4,
+  "disk_used_gb": 58.0,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "VM unreachable for 5 polls",
+ "paused": true,
+ "mode": "additions"
+}

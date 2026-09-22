@@ -1,0 +1,52 @@
+{
+ "run_id": "20260915-174943-additions",
+ "mode": "additions",
+ "phase": "failed",
+ "requested_at": 1789519783.0687692,
+ "hourly": 0.8073,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 2.5,
+ "pages": {
+  "train": 30000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_geometry",
+  "recog_pool_train",
+  "swap_additions",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "running",
+   "start": 1789519783.0803962
+  },
+  {
+   "name": "upload_code",
+   "state": "pending"
+  }
+ ],
+ "poll": 0,
+ "pulled": [],
+ "machine_id": null,
+ "billing_started": null,
+ "pause_reason": "orchestrator restarted during setup",
+ "paused": true,
+ "finished_at": 1789519831.1788158
+}

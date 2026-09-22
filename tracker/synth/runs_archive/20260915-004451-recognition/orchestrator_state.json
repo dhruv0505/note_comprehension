@@ -1,0 +1,85 @@
+{
+ "run_id": "20260915-004451-recognition",
+ "mode": "recognition",
+ "phase": "finished",
+ "requested_at": 1789458291.6877773,
+ "hourly": 0.4105,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ]
+  },
+  "tuning": {},
+  "mark_crop": "box"
+ },
+ "budget": 4.0,
+ "pages": {
+  "train": 30000,
+  "val": 2000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_times",
+  "prepare_output",
+  "recog_train",
+  "recog_val",
+  "swap_recognition",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1789458291.6988032,
+   "end": 1789458350.6209278,
+   "log": [
+    "VM 506776 running with 16 vCPUs, $0.41/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1789458350.6318383,
+   "end": 1789458398.8870866,
+   "log": [
+    "246 KB"
+   ]
+  }
+ ],
+ "poll": 48,
+ "pulled": [
+  "train/recog_formula/10051",
+  "train/recog_formula/15051",
+  "train/recog_formula/20048",
+  "train/recog_formula/25049",
+  "train/recog_formula/50",
+  "train/recog_formula/5051",
+  "train/recog_textline/10051",
+  "train/recog_textline/15048",
+  "train/recog_textline/20054",
+  "train/recog_textline/25051",
+  "train/recog_textline/48",
+  "train/recog_textline/5049",
+  "val/recog_formula/1050",
+  "val/recog_formula/1350",
+  "val/recog_formula/350",
+  "val/recog_formula/52",
+  "val/recog_formula/750",
+  "val/recog_textline/1045",
+  "val/recog_textline/1343",
+  "val/recog_textline/348",
+  "val/recog_textline/50",
+  "val/recog_textline/750"
+ ],
+ "machine_id": 506776,
+ "billing_started": 1789458300.7141118,
+ "home": "/home/ubuntu",
+ "billing_ended": 1789461922.3349028,
+ "pause_reason": "finished",
+ "paused": true,
+ "finished_at": 1789461922.3349028
+}

@@ -1,0 +1,96 @@
+{
+ "polled_at": 1789465951.4801323,
+ "poll": 0,
+ "cost": 0.0228,
+ "budget": 4.0,
+ "hourly": 0.8073,
+ "machine_id": 506776,
+ "started": 1789465849.9348252,
+ "status": {
+  "now": 1789465951.4801323,
+  "targets": {
+   "train": 30000,
+   "val": 2000,
+   "test": 2000
+  },
+  "mode": "full",
+  "picks": [],
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "failed",
+    "start": 1789465828.2917275,
+    "end": 1789465866.3623068,
+    "log": [
+     "JLError: jl resume 506776 --yes: exit 1: {\"error\": \"Instance creation failed: No contiguous block of 16 cores available on server N9001. (code=404)\"}"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "pending"
+   },
+   {
+    "name": "check_cache",
+    "state": "pending"
+   },
+   {
+    "name": "cache_rebuild",
+    "state": "pending"
+   },
+   {
+    "name": "prepare_output",
+    "state": "pending"
+   },
+   {
+    "name": "synth_train",
+    "state": "pending"
+   },
+   {
+    "name": "synth_val",
+    "state": "pending"
+   },
+   {
+    "name": "synth_test",
+    "state": "pending"
+   },
+   {
+    "name": "swap_dataset",
+    "state": "pending"
+   },
+   {
+    "name": "count_classes",
+    "state": "pending"
+   },
+   {
+    "name": "all_done",
+    "state": "pending"
+   }
+  ],
+  "splits": {
+   "train": {
+    "target": 30000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "val": {
+    "target": 2000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "test": {
+    "target": 2000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   }
+  }
+ },
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "mode": "full"
+}

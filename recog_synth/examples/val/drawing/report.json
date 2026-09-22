@@ -1,0 +1,22 @@
+{
+ "task": "drawing",
+ "split": "val",
+ "prompt": "What is drawn in this image?",
+ "target_separator": null,
+ "pool_items": 16,
+ "samples": 10,
+ "rows": 10,
+ "uses_per_item": 0.625,
+ "canvas": 768,
+ "pen": [
+  3.0,
+  9.0
+ ],
+ "worker_seconds": 0.9,
+ "seconds_per_sample": 0.088,
+ "categories": 16,
+ "items_per_category": {
+  "min": 1,
+  "max": 1
+ }
+}

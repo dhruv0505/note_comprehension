@@ -1,0 +1,20 @@
+{
+ "checkpoint": "last (end of training)",
+ "step": 10900,
+ "source": "/home/ubuntu/train/run/last (GPU VM 506589)",
+ "saved_at": "2026-09-14 21:39",
+ "run_id": 1789444636.147639,
+ "base_model": "mark separation CNN (training/marks_cnn)",
+ "val_mean_f1": 0.9812870260316365,
+ "best_step": 7848,
+ "total_steps": 10900,
+ "epochs": 50.0,
+ "best_val_mean_f1": 0.9829195120212535,
+ "train_config": {
+  "gpus": "1 x H100",
+  "batch_size": 256,
+  "lr": 0.002,
+  "warmup_steps": 200,
+  "train_crops": 55742
+ }
+}

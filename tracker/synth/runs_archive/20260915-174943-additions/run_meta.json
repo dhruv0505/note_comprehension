@@ -1,0 +1,23 @@
+{
+ "mode": "additions",
+ "run_id": "20260915-174943-additions",
+ "region": "IN2",
+ "vm": "32 vCPU / 128 GB / 100 GB SSD",
+ "machine_id": null,
+ "hourly": 0.8073,
+ "budget": 2.5,
+ "started": 1789519783.0687692,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ }
+}

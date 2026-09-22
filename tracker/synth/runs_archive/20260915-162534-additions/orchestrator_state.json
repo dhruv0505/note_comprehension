@@ -1,0 +1,56 @@
+{
+ "run_id": "20260915-162534-additions",
+ "mode": "additions",
+ "phase": "stopped",
+ "requested_at": 1789514734.331742,
+ "hourly": 0.8073,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 2.5,
+ "pages": {
+  "train": 30000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_geometry",
+  "recog_pool_train",
+  "swap_additions",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "failed",
+   "start": 1789514734.341077,
+   "end": 1789515575.4073787,
+   "log": [
+    "Stopped: stopped from the tracker"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "pending"
+  }
+ ],
+ "poll": 0,
+ "pulled": [],
+ "machine_id": 507039,
+ "billing_started": null,
+ "pause_reason": "kill requested",
+ "paused": true,
+ "finished_at": 1789515575.4350598
+}

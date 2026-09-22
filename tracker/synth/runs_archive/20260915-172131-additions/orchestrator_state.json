@@ -1,0 +1,63 @@
+{
+ "run_id": "20260915-172131-additions",
+ "mode": "additions",
+ "phase": "failed",
+ "requested_at": 1789518091.5077195,
+ "hourly": 0.1129,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 2.5,
+ "pages": {
+  "train": 30000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_geometry",
+  "recog_pool_train",
+  "swap_additions",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1789518091.5176463,
+   "end": 1789518137.145198,
+   "log": [
+    "VM 507423 running with 4 vCPUs, $0.11/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1789518137.1525185,
+   "end": 1789518172.5564444,
+   "log": [
+    "252 KB"
+   ]
+  }
+ ],
+ "poll": 9,
+ "pulled": [],
+ "machine_id": 507423,
+ "billing_started": 1789518117.4584446,
+ "home": "/home/ubuntu",
+ "billing_ended": 1789518954.5537438,
+ "pause_reason": "VM unreachable for 5 polls",
+ "paused": true,
+ "finished_at": 1789518954.5537438
+}

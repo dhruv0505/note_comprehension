@@ -1,0 +1,2223 @@
+tracker at http://127.0.0.1:8765
+[2026-09-14 14:42:17] synth orchestrator: restarting it (pid 18848): its code changed
+[2026-09-14 14:42:17] tracker at http://127.0.0.1:8765
+[2026-09-14 14:42:17] synth orchestrator: started it (pid 9936)
+[2026-09-14 14:42:17] seg orchestrator: restarting it (pid 11852): its code changed
+[2026-09-14 14:42:18] seg orchestrator: started it (pid 26912)
+[2026-09-14 14:42:18] marks orchestrator: started it (pid 14448)
+[2026-09-14 14:43:23] the server exited with code 4294967295; starting it again
+[2026-09-14 14:43:26] tracker at http://127.0.0.1:8765
+[2026-09-14 14:43:35] its code changed: restarting the server
+[2026-09-14 14:43:37] tracker at http://127.0.0.1:8765
+[2026-09-14 14:51:25] its code changed: restarting the server
+[2026-09-14 14:51:26] tracker at http://127.0.0.1:8765
+[2026-09-14 14:58:53] its code changed: restarting the server
+[2026-09-14 14:58:54] synth orchestrator: restarting it (pid 9936): its code changed
+[2026-09-14 14:58:54] tracker at http://127.0.0.1:8765
+[2026-09-14 14:58:54] synth orchestrator: started it (pid 9728)
+[2026-09-14 14:58:59] synth orchestrator: restarting it (pid 9728): its code changed
+[2026-09-14 14:59:00] its code changed: restarting the server
+[2026-09-14 14:59:00] tracker at http://127.0.0.1:8765
+[2026-09-14 14:59:03] its code changed: restarting the server
+[2026-09-14 14:59:04] tracker at http://127.0.0.1:8765
+[2026-09-14 14:59:43] its code changed: restarting the server
+[2026-09-14 14:59:44] tracker at http://127.0.0.1:8765
+[2026-09-14 14:59:44] synth orchestrator: started it (pid 31268)
+[2026-09-14 14:59:50] its code changed: restarting the server
+[2026-09-14 14:59:50] tracker at http://127.0.0.1:8765
+[2026-09-14 14:59:56] its code changed: restarting the server
+[2026-09-14 14:59:57] tracker at http://127.0.0.1:8765
+[2026-09-14 15:00:00] its code changed: restarting the server
+[2026-09-14 15:00:00] tracker at http://127.0.0.1:8765
+[2026-09-14 15:00:05] seg orchestrator: restarting it (pid 26912): its code changed
+[2026-09-14 15:00:06] seg orchestrator: started it (pid 20996)
+[2026-09-14 15:00:06] marks orchestrator: restarting it (pid 14448): its code changed
+[2026-09-14 15:00:06] marks orchestrator: started it (pid 13304)
+[2026-09-14 15:00:11] seg orchestrator: restarting it (pid 20996): its code changed
+[2026-09-14 15:00:12] seg orchestrator: started it (pid 9224)
+[2026-09-14 15:00:12] marks orchestrator: restarting it (pid 13304): its code changed
+[2026-09-14 15:00:12] marks orchestrator: started it (pid 19044)
+[2026-09-14 15:00:17] seg orchestrator: restarting it (pid 9224): its code changed
+[2026-09-14 15:00:18] seg orchestrator: started it (pid 30360)
+[2026-09-14 15:00:18] marks orchestrator: restarting it (pid 19044): its code changed
+[2026-09-14 15:00:18] marks orchestrator: started it (pid 32428)
+[2026-09-14 15:00:45] its code changed: restarting the server
+[2026-09-14 15:00:46] tracker at http://127.0.0.1:8765
+[2026-09-14 15:02:52] its code changed: restarting the server
+[2026-09-14 15:02:53] tracker at http://127.0.0.1:8765
+[2026-09-14 15:02:56] its code changed: restarting the server
+[2026-09-14 15:02:56] tracker at http://127.0.0.1:8765
+[2026-09-14 15:11:30] its code changed: restarting the server
+[2026-09-14 15:11:30] tracker at http://127.0.0.1:8765
+[2026-09-14 15:11:41] seg orchestrator: restarting it (pid 30360): its code changed
+[2026-09-14 15:11:41] seg orchestrator: started it (pid 32004)
+[2026-09-14 15:11:41] marks orchestrator: restarting it (pid 32428): its code changed
+[2026-09-14 15:11:41] marks orchestrator: started it (pid 21344)
+[2026-09-14 15:11:45] its code changed: restarting the server
+[2026-09-14 15:11:46] tracker at http://127.0.0.1:8765
+[2026-09-14 15:11:52] its code changed: restarting the server
+[2026-09-14 15:11:53] tracker at http://127.0.0.1:8765
+[2026-09-14 15:11:59] its code changed: restarting the server
+[2026-09-14 15:12:00] tracker at http://127.0.0.1:8765
+[2026-09-14 15:12:06] its code changed: restarting the server
+[2026-09-14 15:12:07] tracker at http://127.0.0.1:8765
+[2026-09-14 15:12:10] its code changed: restarting the server
+[2026-09-14 15:12:10] tracker at http://127.0.0.1:8765
+[2026-09-14 15:12:13] its code changed: restarting the server
+[2026-09-14 15:12:14] tracker at http://127.0.0.1:8765
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53856)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51701)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-14 15:12:49] seg orchestrator: restarting it (pid 32004): its code changed
+[2026-09-14 15:12:50] seg orchestrator: started it (pid 9412)
+[2026-09-14 15:12:50] marks orchestrator: restarting it (pid 21344): its code changed
+[2026-09-14 15:12:50] marks orchestrator: started it (pid 27536)
+[2026-09-14 15:13:21] seg orchestrator: restarting it (pid 9412): its code changed
+[2026-09-14 15:13:21] seg orchestrator: started it (pid 29904)
+[2026-09-14 15:13:21] marks orchestrator: restarting it (pid 27536): its code changed
+[2026-09-14 15:13:22] marks orchestrator: started it (pid 12296)
+[2026-09-14 15:50:29] its code changed: restarting the server
+[2026-09-14 15:50:32] tracker at http://127.0.0.1:8765
+[2026-09-14 15:50:37] seg orchestrator: restarting it (pid 29904): its code changed
+[2026-09-14 15:50:37] seg orchestrator: started it (pid 23172)
+[2026-09-14 15:50:37] marks orchestrator: restarting it (pid 12296): its code changed
+[2026-09-14 15:50:38] marks orchestrator: started it (pid 32632)
+[2026-09-14 16:18:15] its code changed: restarting the server
+[2026-09-14 16:18:17] tracker at http://127.0.0.1:8765
+[2026-09-14 16:24:50] its code changed: restarting the server
+[2026-09-14 16:24:51] tracker at http://127.0.0.1:8765
+[2026-09-14 16:24:54] its code changed: restarting the server
+[2026-09-14 16:24:54] tracker at http://127.0.0.1:8765
+[2026-09-14 16:24:59] seg orchestrator: restarting it (pid 23172): its code changed
+[2026-09-14 16:25:00] seg orchestrator: started it (pid 31068)
+[2026-09-14 16:25:00] marks orchestrator: restarting it (pid 32632): its code changed
+[2026-09-14 16:25:00] marks orchestrator: started it (pid 27668)
+[2026-09-14 16:25:00] its code changed: restarting the server
+[2026-09-14 16:25:01] tracker at http://127.0.0.1:8765
+[2026-09-14 16:25:13] its code changed: restarting the server
+[2026-09-14 16:25:13] tracker at http://127.0.0.1:8765
+[2026-09-14 16:42:45] its code changed: restarting the server
+[2026-09-14 16:42:46] tracker at http://127.0.0.1:8765
+[2026-09-14 16:42:56] seg orchestrator: restarting it (pid 31068): its code changed
+[2026-09-14 16:42:56] seg orchestrator: started it (pid 31396)
+[2026-09-14 16:42:56] marks orchestrator: restarting it (pid 27668): its code changed
+[2026-09-14 16:42:57] marks orchestrator: started it (pid 20732)
+[2026-09-14 16:43:40] its code changed: restarting the server
+[2026-09-14 16:43:40] tracker at http://127.0.0.1:8765
+[2026-09-14 16:43:50] seg orchestrator: restarting it (pid 31396): its code changed
+[2026-09-14 16:43:51] seg orchestrator: started it (pid 29856)
+[2026-09-14 16:43:51] marks orchestrator: restarting it (pid 20732): its code changed
+[2026-09-14 16:43:51] marks orchestrator: started it (pid 9904)
+[2026-09-14 16:44:46] its code changed: restarting the server
+[2026-09-14 16:44:47] tracker at http://127.0.0.1:8765
+[2026-09-14 16:44:52] seg orchestrator: restarting it (pid 29856): its code changed
+[2026-09-14 16:44:53] seg orchestrator: started it (pid 24148)
+[2026-09-14 16:44:53] marks orchestrator: restarting it (pid 9904): its code changed
+[2026-09-14 16:44:53] marks orchestrator: started it (pid 14172)
+[2026-09-14 16:45:32] its code changed: restarting the server
+[2026-09-14 16:45:33] tracker at http://127.0.0.1:8765
+[2026-09-14 16:45:38] seg orchestrator: restarting it (pid 24148): its code changed
+[2026-09-14 16:45:38] seg orchestrator: started it (pid 27264)
+[2026-09-14 16:45:38] marks orchestrator: restarting it (pid 14172): its code changed
+[2026-09-14 16:45:39] marks orchestrator: started it (pid 12164)
+[2026-09-14 16:45:51] its code changed: restarting the server
+[2026-09-14 16:45:51] tracker at http://127.0.0.1:8765
+[2026-09-14 16:46:17] seg orchestrator: restarting it (pid 27264): its code changed
+[2026-09-14 16:46:17] seg orchestrator: started it (pid 10040)
+[2026-09-14 16:46:17] marks orchestrator: restarting it (pid 12164): its code changed
+[2026-09-14 16:46:17] marks orchestrator: started it (pid 31796)
+[2026-09-14 16:46:30] its code changed: restarting the server
+[2026-09-14 16:46:31] tracker at http://127.0.0.1:8765
+[2026-09-14 16:46:46] its code changed: restarting the server
+[2026-09-14 16:46:47] tracker at http://127.0.0.1:8765
+[2026-09-14 16:46:47] seg orchestrator: restarting it (pid 10040): its code changed
+[2026-09-14 16:46:47] seg orchestrator: started it (pid 12520)
+[2026-09-14 16:46:47] marks orchestrator: restarting it (pid 31796): its code changed
+[2026-09-14 16:46:47] marks orchestrator: started it (pid 20368)
+[2026-09-14 16:47:03] seg orchestrator: restarting it (pid 12520): its code changed
+[2026-09-14 16:47:03] seg orchestrator: started it (pid 25132)
+[2026-09-14 16:47:03] marks orchestrator: restarting it (pid 20368): its code changed
+[2026-09-14 16:47:03] marks orchestrator: started it (pid 23376)
+[2026-09-14 16:47:19] seg orchestrator: restarting it (pid 25132): its code changed
+[2026-09-14 16:47:19] seg orchestrator: started it (pid 32540)
+[2026-09-14 16:47:19] marks orchestrator: restarting it (pid 23376): its code changed
+[2026-09-14 16:47:19] marks orchestrator: started it (pid 30448)
+[2026-09-14 16:47:40] seg orchestrator: restarting it (pid 32540): its code changed
+[2026-09-14 16:47:40] seg orchestrator: started it (pid 3972)
+[2026-09-14 16:47:40] marks orchestrator: restarting it (pid 30448): its code changed
+[2026-09-14 16:47:40] marks orchestrator: started it (pid 21960)
+[2026-09-14 16:48:00] seg orchestrator: restarting it (pid 3972): its code changed
+[2026-09-14 16:48:01] seg orchestrator: started it (pid 31184)
+[2026-09-14 16:48:01] marks orchestrator: restarting it (pid 21960): its code changed
+[2026-09-14 16:48:01] marks orchestrator: started it (pid 29188)
+[2026-09-14 16:52:41] its code changed: restarting the server
+[2026-09-14 16:52:42] tracker at http://127.0.0.1:8765
+[2026-09-14 16:52:44] its code changed: restarting the server
+[2026-09-14 16:52:45] tracker at http://127.0.0.1:8765
+[2026-09-14 16:52:50] synth orchestrator: restarting it (pid 31268): its code changed
+[2026-09-14 16:52:51] synth orchestrator: started it (pid 23488)
+[2026-09-14 16:54:18] its code changed: restarting the server
+[2026-09-14 16:54:20] tracker at http://127.0.0.1:8765
+[2026-09-14 16:54:23] its code changed: restarting the server
+[2026-09-14 16:54:27] tracker at http://127.0.0.1:8765
+[2026-09-14 16:54:37] synth orchestrator: restarting it (pid 23488): its code changed
+[2026-09-14 16:54:37] synth orchestrator: started it (pid 12480)
+[2026-09-14 17:20:55] its code changed: restarting the server
+[2026-09-14 17:20:56] tracker at http://127.0.0.1:8765
+[2026-09-14 17:21:23] its code changed: restarting the server
+[2026-09-14 17:21:23] tracker at http://127.0.0.1:8765
+Exception in thread Thread-2172 (pause_now):
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 158, in pause_now
+    result = subprocess.run([JL, "pause", str(machine_id), "--yes"], capture_output=True, text=True,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1630, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\tracker\\jl\\bin\\jl.exe', 'pause', '506509', '--yes']' timed out after 300 seconds
+[2026-09-14 19:28:14] its code changed: restarting the server
+[2026-09-14 19:28:15] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:25] seg orchestrator: restarting it (pid 31184): its code changed
+[2026-09-14 19:28:25] seg orchestrator: started it (pid 9708)
+[2026-09-14 19:28:25] marks orchestrator: restarting it (pid 29188): its code changed
+[2026-09-14 19:28:25] marks orchestrator: started it (pid 17564)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53735)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53389)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-14 19:28:33] its code changed: restarting the server
+[2026-09-14 19:28:34] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:43] its code changed: restarting the server
+[2026-09-14 19:28:43] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:46] its code changed: restarting the server
+[2026-09-14 19:28:47] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:50] its code changed: restarting the server
+[2026-09-14 19:28:50] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:53] its code changed: restarting the server
+[2026-09-14 19:28:54] tracker at http://127.0.0.1:8765
+[2026-09-14 19:28:57] its code changed: restarting the server
+[2026-09-14 19:28:58] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:01] its code changed: restarting the server
+[2026-09-14 19:29:01] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:16] its code changed: restarting the server
+[2026-09-14 19:29:17] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:20] its code changed: restarting the server
+[2026-09-14 19:29:21] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:24] its code changed: restarting the server
+[2026-09-14 19:29:24] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:30] its code changed: restarting the server
+[2026-09-14 19:29:31] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:34] its code changed: restarting the server
+[2026-09-14 19:29:35] tracker at http://127.0.0.1:8765
+[2026-09-14 19:29:38] its code changed: restarting the server
+[2026-09-14 19:29:38] tracker at http://127.0.0.1:8765
+[2026-09-14 19:32:20] seg orchestrator: restarting it (pid 9708): its code changed
+[2026-09-14 19:32:21] seg orchestrator: started it (pid 31036)
+[2026-09-14 19:36:25] its code changed: restarting the server
+[2026-09-14 19:36:25] tracker at http://127.0.0.1:8765
+[2026-09-14 19:36:36] seg orchestrator: restarting it (pid 31036): its code changed
+[2026-09-14 19:36:36] seg orchestrator: started it (pid 26720)
+[2026-09-14 19:37:57] marks orchestrator: restarting it (pid 17564): its code changed
+[2026-09-14 19:37:58] marks orchestrator: started it (pid 15604)
+[2026-09-14 20:32:30] its code changed: restarting the server
+[2026-09-14 20:32:30] tracker at http://127.0.0.1:8765
+[2026-09-14 20:32:40] synth orchestrator: restarting it (pid 12480): its code changed
+[2026-09-14 20:32:41] synth orchestrator: started it (pid 26876)
+[2026-09-14 20:32:51] seg orchestrator: restarting it (pid 26720): its code changed
+[2026-09-14 20:32:51] seg orchestrator: started it (pid 6320)
+[2026-09-14 20:32:51] marks orchestrator: restarting it (pid 15604): its code changed
+[2026-09-14 20:32:52] marks orchestrator: started it (pid 21964)
+[2026-09-14 20:33:42] seg orchestrator: restarting it (pid 6320): its code changed
+[2026-09-14 20:33:43] seg orchestrator: started it (pid 22288)
+[2026-09-14 20:33:43] marks orchestrator: restarting it (pid 21964): its code changed
+[2026-09-14 20:33:43] marks orchestrator: started it (pid 14944)
+[2026-09-14 20:56:08] seg orchestrator: restarting it (pid 22288): its code changed
+[2026-09-14 20:56:09] seg orchestrator: started it (pid 25784)
+[2026-09-14 20:56:09] marks orchestrator: restarting it (pid 14944): its code changed
+[2026-09-14 20:56:09] marks orchestrator: started it (pid 1536)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54618)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-14 22:31:06] its code changed: restarting the server
+[2026-09-14 22:31:07] tracker at http://127.0.0.1:8765
+[2026-09-14 22:31:31] its code changed: restarting the server
+[2026-09-14 22:31:31] tracker at http://127.0.0.1:8765
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56543)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56482)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49672)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-14 23:42:09] its code changed: restarting the server
+[2026-09-14 23:42:44] tracker at http://127.0.0.1:8765
+[2026-09-14 23:42:58] synth orchestrator: restarting it (pid 26876): its code changed
+[2026-09-14 23:43:08] synth orchestrator: started it (pid 25500)
+[2026-09-14 23:43:29] its code changed: restarting the server
+[2026-09-14 23:43:52] tracker at http://127.0.0.1:8765
+[2026-09-14 23:43:59] synth orchestrator: restarting it (pid 25500): its code changed
+[2026-09-14 23:44:02] synth orchestrator: started it (pid 19732)
+[2026-09-14 23:44:26] its code changed: restarting the server
+[2026-09-14 23:44:39] synth orchestrator: restarting it (pid 19732): its code changed
+[2026-09-14 23:44:41] tracker at http://127.0.0.1:8765
+[2026-09-14 23:44:45] synth orchestrator: started it (pid 31808)
+[2026-09-14 23:45:04] its code changed: restarting the server
+[2026-09-14 23:45:14] synth orchestrator: restarting it (pid 31808): its code changed
+[2026-09-14 23:45:14] tracker at http://127.0.0.1:8765
+[2026-09-14 23:45:16] synth orchestrator: started it (pid 31316)
+[2026-09-14 23:47:38] marks orchestrator: started it (pid 10664)
+----------------------------------------
+----------------------------------------Exception occurred during processing of request from 
+('127.0.0.1', 56194)
+Exception occurred during processing of request from ('127.0.0.1', 64270)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61687)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56156)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 60120)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64007)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+[2026-09-15 00:22:43] its code changed: restarting the server
+[2026-09-15 00:23:03] synth orchestrator: restarting it (pid 31316): its code changed
+[2026-09-15 00:23:06] tracker at http://127.0.0.1:8765
+[2026-09-15 00:23:12] synth orchestrator: started it (pid 26832)
+[2026-09-15 00:23:31] its code changed: restarting the server
+[2026-09-15 00:23:33] tracker at http://127.0.0.1:8765
+[2026-09-15 00:23:44] synth orchestrator: restarting it (pid 26832): its code changed
+[2026-09-15 00:23:44] synth orchestrator: started it (pid 18308)
+[2026-09-15 00:23:54] its code changed: restarting the server
+[2026-09-15 00:23:56] tracker at http://127.0.0.1:8765
+[2026-09-15 00:24:06] synth orchestrator: restarting it (pid 18308): its code changed
+[2026-09-15 00:24:07] synth orchestrator: started it (pid 22284)
+[2026-09-15 00:24:35] its code changed: restarting the server
+[2026-09-15 00:24:35] tracker at http://127.0.0.1:8765
+[2026-09-15 00:24:45] synth orchestrator: restarting it (pid 22284): its code changed
+[2026-09-15 00:24:46] synth orchestrator: started it (pid 11980)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50071)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-15 00:50:52] its code changed: restarting the server
+[2026-09-15 00:50:53] tracker at http://127.0.0.1:8765
+[2026-09-15 01:08:51] its code changed: restarting the server
+[2026-09-15 01:08:52] tracker at http://127.0.0.1:8765
+[2026-09-15 01:46:44] synth orchestrator: started it (pid 25228)
+[2026-09-15 02:13:31] its code changed: restarting the server
+[2026-09-15 02:13:31] tracker at http://127.0.0.1:8765
+[2026-09-15 02:13:34] its code changed: restarting the server
+[2026-09-15 02:13:35] tracker at http://127.0.0.1:8765
+[2026-09-15 02:13:40] synth orchestrator: restarting it (pid 25228): its code changed
+[2026-09-15 02:13:40] synth orchestrator: started it (pid 30420)
+[2026-09-15 02:35:22] its code changed: restarting the server
+[2026-09-15 02:35:23] tracker at http://127.0.0.1:8765
+[2026-09-15 03:05:32] its code changed: restarting the server
+[2026-09-15 03:05:33] tracker at http://127.0.0.1:8765
+[2026-09-15 03:05:36] its code changed: restarting the server
+[2026-09-15 03:05:37] tracker at http://127.0.0.1:8765
+[2026-09-15 03:05:43] its code changed: restarting the server
+[2026-09-15 03:05:44] tracker at http://127.0.0.1:8765
+[2026-09-15 03:05:54] synth orchestrator: restarting it (pid 30420): its code changed
+[2026-09-15 03:05:54] synth orchestrator: started it (pid 30140)
+[2026-09-15 03:33:52] its code changed: restarting the server
+[2026-09-15 03:33:53] tracker at http://127.0.0.1:8765
+[2026-09-15 04:08:49] seg orchestrator: restarting it (pid 25784): its code changed
+[2026-09-15 04:08:49] seg orchestrator: started it (pid 31624)
+[2026-09-15 04:09:15] marks orchestrator: started it (pid 496)
+[2026-09-15 04:37:17] its code changed: restarting the server
+[2026-09-15 04:37:18] tracker at http://127.0.0.1:8765
+[2026-09-15 04:37:21] its code changed: restarting the server
+[2026-09-15 04:37:22] tracker at http://127.0.0.1:8765
+[2026-09-15 04:37:32] synth orchestrator: restarting it (pid 30140): its code changed
+[2026-09-15 04:37:32] synth orchestrator: started it (pid 26756)
+[2026-09-15 05:20:44] seg orchestrator: restarting it (pid 31624): its code changed
+[2026-09-15 05:20:44] seg orchestrator: started it (pid 8788)
+[2026-09-15 05:20:44] marks orchestrator: restarting it (pid 496): its code changed
+[2026-09-15 05:20:44] marks orchestrator: started it (pid 25052)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55103)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-15 06:49:25] the server exited with code 1073807364; starting it again
+[2026-09-15 11:47:31] synth orchestrator: started it (pid 20460)
+[2026-09-15 11:47:31] tracker at http://127.0.0.1:8765
+[2026-09-15 11:47:31] seg orchestrator: started it (pid 15504)
+[2026-09-15 11:47:31] marks orchestrator: started it (pid 17904)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61542)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-15 12:04:32] seg orchestrator: exited with code 4294967295 after 1022 s
+[2026-09-15 12:08:30] seg orchestrator: started it (pid 17300)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55614)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59530)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55153)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-15 12:44:16] its code changed: restarting the server
+[2026-09-15 12:44:17] tracker at http://127.0.0.1:8765
+[2026-09-15 12:44:20] its code changed: restarting the server
+[2026-09-15 12:44:20] tracker at http://127.0.0.1:8765
+[2026-09-15 12:44:23] its code changed: restarting the server
+[2026-09-15 12:44:24] tracker at http://127.0.0.1:8765
+[2026-09-15 12:45:06] its code changed: restarting the server
+[2026-09-15 12:45:06] tracker at http://127.0.0.1:8765
+[2026-09-15 12:46:02] seg orchestrator: restarting it (pid 17300): its code changed
+[2026-09-15 12:46:03] seg orchestrator: started it (pid 19644)
+[2026-09-15 12:46:03] marks orchestrator: restarting it (pid 17904): its code changed
+[2026-09-15 12:46:03] marks orchestrator: started it (pid 17332)
+[2026-09-15 12:46:24] seg orchestrator: restarting it (pid 19644): its code changed
+[2026-09-15 12:46:24] seg orchestrator: started it (pid 19836)
+[2026-09-15 12:46:24] marks orchestrator: restarting it (pid 17332): its code changed
+[2026-09-15 12:46:24] marks orchestrator: started it (pid 21152)
+[2026-09-15 12:53:01] its code changed: restarting the server
+[2026-09-15 12:53:01] tracker at http://127.0.0.1:8765
+[2026-09-15 12:53:07] its code changed: restarting the server
+[2026-09-15 12:53:08] tracker at http://127.0.0.1:8765
+[2026-09-15 12:53:11] its code changed: restarting the server
+[2026-09-15 12:53:11] tracker at http://127.0.0.1:8765
+[2026-09-15 12:53:14] its code changed: restarting the server
+[2026-09-15 12:53:14] tracker at http://127.0.0.1:8765
+[2026-09-15 12:53:17] its code changed: restarting the server
+[2026-09-15 12:53:18] tracker at http://127.0.0.1:8765
+[2026-09-15 12:53:28] synth orchestrator: restarting it (pid 20460): its code changed
+[2026-09-15 12:53:28] synth orchestrator: started it (pid 1616)
+[2026-09-15 12:54:42] its code changed: restarting the server
+[2026-09-15 12:54:43] tracker at http://127.0.0.1:8765
+[2026-09-15 12:54:45] its code changed: restarting the server
+[2026-09-15 12:54:46] tracker at http://127.0.0.1:8765
+[2026-09-15 12:55:31] its code changed: restarting the server
+[2026-09-15 12:55:33] tracker at http://127.0.0.1:8765
+[2026-09-15 12:56:39] seg orchestrator: restarting it (pid 19836): its code changed
+[2026-09-15 12:56:39] seg orchestrator: started it (pid 19988)
+[2026-09-15 12:56:39] marks orchestrator: restarting it (pid 21152): its code changed
+[2026-09-15 12:56:39] marks orchestrator: started it (pid 10420)
+[2026-09-15 15:38:53] its code changed: restarting the server
+[2026-09-15 15:38:54] tracker at http://127.0.0.1:8765
+[2026-09-15 15:38:57] its code changed: restarting the server
+[2026-09-15 15:38:58] tracker at http://127.0.0.1:8765
+[2026-09-15 15:39:04] its code changed: restarting the server
+[2026-09-15 15:39:05] tracker at http://127.0.0.1:8765
+[2026-09-15 15:39:08] its code changed: restarting the server
+[2026-09-15 15:39:08] tracker at http://127.0.0.1:8765
+[2026-09-15 15:39:13] synth orchestrator: restarting it (pid 1616): its code changed
+[2026-09-15 15:39:14] synth orchestrator: started it (pid 4472)
+[2026-09-15 15:39:34] seg orchestrator: restarting it (pid 19988): its code changed
+[2026-09-15 15:39:34] seg orchestrator: started it (pid 11892)
+[2026-09-15 15:39:34] marks orchestrator: restarting it (pid 10420): its code changed
+[2026-09-15 15:39:34] marks orchestrator: started it (pid 14748)
+[2026-09-15 15:39:53] its code changed: restarting the server
+[2026-09-15 15:39:54] tracker at http://127.0.0.1:8765
+[2026-09-15 15:56:32] its code changed: restarting the server
+[2026-09-15 15:56:32] tracker at http://127.0.0.1:8765
+[2026-09-15 16:25:33] synth orchestrator: restarting it (pid 4472): its code changed
+[2026-09-15 16:25:34] synth orchestrator: started it (pid 20596)
+[2026-09-15 16:38:51] its code changed: restarting the server
+[2026-09-15 16:38:52] tracker at http://127.0.0.1:8765
+[2026-09-15 16:39:38] synth orchestrator: restarting it (pid 20596): its code changed
+[2026-09-15 16:39:38] synth orchestrator: started it (pid 2388)
+[2026-09-15 17:43:36] its code changed: restarting the server
+[2026-09-15 17:43:37] tracker at http://127.0.0.1:8765
+[2026-09-15 17:43:43] its code changed: restarting the server
+[2026-09-15 17:43:44] tracker at http://127.0.0.1:8765
+[2026-09-15 17:46:57] synth orchestrator: restarting it (pid 2388): its code changed
+[2026-09-15 17:46:58] synth orchestrator: started it (pid 10020)
+[2026-09-15 17:49:50] synth orchestrator: exited with code 4294967295 after 172 s
+[2026-09-15 17:50:30] synth orchestrator: started it (pid 20980)
+Exception in thread Thread-351 (pause_now):
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 207, in pause_now
+    result = subprocess.run([JL, "pause", str(machine_id), "--yes"], capture_output=True, text=True,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1630, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\tracker\\jl\\bin\\jl.exe', 'pause', '507433', '--yes']' timed out after 300 seconds
+[2026-09-15 18:06:07] synth orchestrator: restarting it (pid 20980): its code changed
+[2026-09-15 18:06:08] synth orchestrator: started it (pid 9360)
+Exception in thread Thread-912 (pause_now):
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 207, in pause_now
+    result = subprocess.run([JL, "pause", str(machine_id), "--yes"], capture_output=True, text=True,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1630, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\tracker\\jl\\bin\\jl.exe', 'pause', '507442', '--yes']' timed out after 300 seconds
+[2026-09-15 18:12:09] its code changed: restarting the server
+[2026-09-15 18:12:10] tracker at http://127.0.0.1:8765
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56919)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-15 18:53:26] its code changed: restarting the server
+[2026-09-15 18:53:27] tracker at http://127.0.0.1:8765
+[2026-09-15 18:53:37] synth orchestrator: restarting it (pid 9360): its code changed
+[2026-09-15 18:53:38] synth orchestrator: started it (pid 3312)
+[2026-09-15 18:53:38] seg orchestrator: restarting it (pid 11892): its code changed
+[2026-09-15 18:53:38] seg orchestrator: started it (pid 22112)
+[2026-09-15 18:53:38] marks orchestrator: restarting it (pid 14748): its code changed
+[2026-09-15 18:53:38] marks orchestrator: started it (pid 18628)
+[2026-09-15 18:54:09] synth orchestrator: restarting it (pid 3312): its code changed
+[2026-09-15 18:54:09] synth orchestrator: started it (pid 6220)
+[2026-09-15 18:54:09] seg orchestrator: restarting it (pid 22112): its code changed
+[2026-09-15 18:54:09] seg orchestrator: started it (pid 16392)
+[2026-09-15 18:54:09] marks orchestrator: restarting it (pid 18628): its code changed
+[2026-09-15 18:54:10] marks orchestrator: started it (pid 22472)
+[2026-09-15 19:00:42] its code changed: restarting the server
+[2026-09-15 19:00:43] tracker at http://127.0.0.1:8765
+[2026-09-15 19:09:04] its code changed: restarting the server
+[2026-09-15 19:09:05] tracker at http://127.0.0.1:8765
+[2026-09-15 19:09:11] its code changed: restarting the server
+[2026-09-15 19:09:11] tracker at http://127.0.0.1:8765
+[2026-09-15 19:09:21] synth orchestrator: restarting it (pid 6220): its code changed
+[2026-09-15 19:09:21] synth orchestrator: started it (pid 17944)
+[2026-09-15 19:09:22] seg orchestrator: restarting it (pid 16392): its code changed
+[2026-09-15 19:09:22] seg orchestrator: started it (pid 21004)
+[2026-09-15 19:09:22] marks orchestrator: restarting it (pid 22472): its code changed
+[2026-09-15 19:09:22] marks orchestrator: started it (pid 4124)
+[2026-09-15 19:09:48] synth orchestrator: restarting it (pid 17944): its code changed
+[2026-09-15 19:09:48] synth orchestrator: started it (pid 9808)
+[2026-09-15 19:09:48] seg orchestrator: restarting it (pid 21004): its code changed
+[2026-09-15 19:09:48] seg orchestrator: started it (pid 8772)
+[2026-09-15 19:09:48] marks orchestrator: restarting it (pid 4124): its code changed
+[2026-09-15 19:09:49] marks orchestrator: started it (pid 22200)
+[2026-09-15 19:16:38] its code changed: restarting the server
+[2026-09-15 19:16:39] tracker at http://127.0.0.1:8765
+[2026-09-15 19:27:36] its code changed: restarting the server
+[2026-09-15 19:27:37] tracker at http://127.0.0.1:8765
+[2026-09-15 19:27:40] its code changed: restarting the server
+[2026-09-15 19:27:40] tracker at http://127.0.0.1:8765
+[2026-09-15 19:27:50] synth orchestrator: restarting it (pid 9808): its code changed
+[2026-09-15 19:27:51] synth orchestrator: started it (pid 12936)
+[2026-09-15 19:27:56] seg orchestrator: restarting it (pid 8772): its code changed
+[2026-09-15 19:27:56] seg orchestrator: started it (pid 4744)
+[2026-09-15 19:27:56] marks orchestrator: restarting it (pid 22200): its code changed
+[2026-09-15 19:27:56] marks orchestrator: started it (pid 19892)
+[2026-09-15 19:41:16] seg orchestrator: restarting it (pid 4744): its code changed
+[2026-09-15 19:41:16] seg orchestrator: started it (pid 4136)
+[2026-09-15 19:41:16] marks orchestrator: restarting it (pid 19892): its code changed
+[2026-09-15 19:41:16] marks orchestrator: started it (pid 21328)
+[2026-09-15 19:41:36] seg orchestrator: restarting it (pid 4136): its code changed
+[2026-09-15 19:41:37] seg orchestrator: started it (pid 13532)
+[2026-09-15 19:41:37] marks orchestrator: restarting it (pid 21328): its code changed
+[2026-09-15 19:41:37] marks orchestrator: started it (pid 22220)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54439)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58254)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53084)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53532)
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 91, in route
+    self.send(*(reply or (404, {"error": "not found"})))
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 65, in send
+    self.wfile.write(data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 96, in do_GET
+    self.route("GET")
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 93, in route
+    self.send(500, {"error": f"{type(error).__name__}: {error}"})
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 64, in send
+    self.end_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 538, in end_headers
+    self.flush_headers()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 542, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[2026-09-16 00:48:36] its code changed: restarting the server
+[2026-09-16 00:48:36] tracker at http://127.0.0.1:8765
+[2026-09-16 00:48:46] seg orchestrator: restarting it (pid 13532): its code changed
+[2026-09-16 00:48:47] seg orchestrator: started it (pid 15096)
+[2026-09-16 00:48:47] marks orchestrator: restarting it (pid 22220): its code changed
+[2026-09-16 00:48:47] marks orchestrator: started it (pid 22008)
+[2026-09-16 01:59:28] its code changed: restarting the server
+[2026-09-16 01:59:29] tracker at http://127.0.0.1:8765
+[2026-09-16 03:25:36] marks orchestrator: restarting it (pid 22008): its code changed
+[2026-09-16 03:25:36] marks orchestrator: started it (pid 23220)
+[2026-09-16 03:26:57] seg orchestrator: restarting it (pid 15096): its code changed
+[2026-09-16 03:26:58] seg orchestrator: started it (pid 17784)
+[2026-09-16 03:30:36] its code changed: restarting the server
+[2026-09-16 03:30:39] tracker at http://127.0.0.1:8765
+[2026-09-21 21:24:32] its code changed: restarting the server
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:24:53] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:25:14] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:25:37] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:25:58] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:26:20] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:26:41] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:27:03] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:27:25] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:27:46] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:28:07] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:28:28] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:28:50] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:29:10] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:29:31] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:29:52] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:30:13] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:30:33] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:30:55] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:31:16] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:31:36] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:31:57] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:32:18] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:32:40] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:33:03] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:33:25] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:33:45] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:34:06] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:34:26] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:34:47] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:35:08] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:35:29] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:35:50] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:36:11] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:36:32] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:36:53] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:37:14] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:37:34] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:37:55] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:38:15] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:38:36] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:38:57] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:39:17] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:39:38] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:39:58] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:40:19] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:40:39] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:41:00] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:41:21] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:41:45] the server exited with code 1; starting it again
+Traceback (most recent call last):
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\tracker_server.py", line 32, in <module>
+    import synth_api  # noqa: E402
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_api.py", line 21, in <module>
+    import synth_orchestrator as so
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 123, in <module>
+    class_tuning = _load_class_tuning()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\propr\Desktop\whiteboard\note_synth\tracker\synth\synth_orchestrator.py", line 117, in _load_class_tuning
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1132, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
+[2026-09-21 21:42:05] the server exited with code 1; starting it again
+[2026-09-21 21:42:26] tracker at http://127.0.0.1:8765

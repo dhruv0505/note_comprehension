@@ -1,0 +1,290 @@
+{
+ "polled_at": 1789308520.454892,
+ "poll": 12,
+ "cost": 0.437,
+ "budget": 3.0,
+ "hourly": 0.4105,
+ "machine_id": 505521,
+ "started": 1789304688.0,
+ "status": {
+  "now": 1789308530.5613532,
+  "targets": {
+   "train": 10000,
+   "val": 2000,
+   "test": 2000,
+   "workers": 16
+  },
+  "stages": [
+   {
+    "start": 1789306794.513821,
+    "state": "done",
+    "end": 1789306831.546167,
+    "name": "setup_python"
+   },
+   {
+    "start": 1789306831.56541,
+    "state": "done",
+    "end": 1789307037.0845072,
+    "name": "fetch_mathwriting"
+   },
+   {
+    "start": 1789306831.566529,
+    "state": "done",
+    "end": 1789306943.3720965,
+    "name": "fetch_quickdraw"
+   },
+   {
+    "start": 1789307037.1038551,
+    "state": "done",
+    "end": 1789307360.759733,
+    "name": "build_caches"
+   },
+   {
+    "start": 1789307360.7786305,
+    "state": "done",
+    "end": 1789308109.404418,
+    "name": "synth_train"
+   },
+   {
+    "start": 1789308109.423111,
+    "state": "done",
+    "end": 1789308301.3043125,
+    "name": "synth_val"
+   },
+   {
+    "start": 1789308301.3241408,
+    "state": "done",
+    "end": 1789308450.4682102,
+    "name": "synth_test"
+   },
+   {
+    "start": 1789308450.487081,
+    "state": "done",
+    "end": 1789308450.5056126,
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 10000,
+    "samples": 124139,
+    "rows": 134139,
+    "marks": 12374,
+    "rejected": 0,
+    "worker_seconds": 10689.7,
+    "max_item_uses_on_a_page": 4,
+    "shards_done": 100,
+    "target": 10000,
+    "classes": {
+     "iam": {
+      "items_used": 6735,
+      "uses": 191360,
+      "most_used_share": 0.00134,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 285953,
+      "uses": 383881,
+      "most_used_share": 2e-05,
+      "cap_share": 0.01
+     },
+     "ohfd": {
+      "items_used": 160,
+      "uses": 4285,
+      "most_used_share": 0.01144,
+      "cap_share": 0.01
+     },
+     "qd": {
+      "items_used": 10166,
+      "uses": 11631,
+      "most_used_share": 0.00043,
+      "cap_share": 0.01
+     }
+    }
+   },
+   "val": {
+    "pages": 2000,
+    "samples": 24693,
+    "rows": 26693,
+    "marks": 2345,
+    "rejected": 0,
+    "worker_seconds": 1877.3,
+    "max_item_uses_on_a_page": 3,
+    "shards_done": 20,
+    "target": 2000,
+    "classes": {
+     "iam": {
+      "items_used": 923,
+      "uses": 38235,
+      "most_used_share": 0.0063,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 14980,
+      "uses": 69655,
+      "most_used_share": 0.00022,
+      "cap_share": 0.01
+     },
+     "ohfd": {
+      "items_used": 51,
+      "uses": 894,
+      "most_used_share": 0.03915,
+      "cap_share": 0.03773584905660377
+     },
+     "qd": {
+      "items_used": 2094,
+      "uses": 2324,
+      "most_used_share": 0.00129,
+      "cap_share": 0.01
+     }
+    }
+   },
+   "test": {
+    "pages": 2000,
+    "samples": 0,
+    "rows": 0,
+    "marks": 2899,
+    "rejected": 0,
+    "worker_seconds": 1468.7,
+    "max_item_uses_on_a_page": 2,
+    "shards_done": 20,
+    "target": 2000,
+    "classes": {
+     "iam": {
+      "items_used": 904,
+      "uses": 40594,
+      "most_used_share": 0.0048,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 7611,
+      "uses": 68339,
+      "most_used_share": 0.00032,
+      "cap_share": 0.01
+     },
+     "ohfd": {
+      "items_used": 47,
+      "uses": 901,
+      "most_used_share": 0.04107,
+      "cap_share": 0.04081632653061224
+     },
+     "qd": {
+      "items_used": 2055,
+      "uses": 2284,
+      "most_used_share": 0.00175,
+      "cap_share": 0.01
+     }
+    }
+   }
+  },
+  "picks": [
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 9900,
+    "remote": {
+     "image": "/home/ubuntu/run/dataset/train/samples/images/00099/p0009900_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "53 48 183 180 textblock 498 43 725 321 textblock 771 242 935 389 textblock 46 248 190 406 textblock 238 306 442 486 textblock 54 428 182 719 textblock 213 717 464 939 textblock 499 720 730 953 textblock 50 768 172 935 textblock 785 803 950 947 textblock 800 50 921 202 drawing 219 554 462 646 drawing 776 544 926 639 geometry 235 44 445 284 flowchart 512 394 717 696 flowchart"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 9900,
+    "remote": {
+     "input": "/home/ubuntu/run/dataset/train/marks/images/00099/p0009900_m00_input.png",
+     "text": "/home/ubuntu/run/dataset/train/marks/images/00099/p0009900_m00_text.png",
+     "mark": "/home/ubuntu/run/dataset/train/marks/images/00099/p0009900_m00_mark.png"
+    },
+    "class": "line_mark",
+    "shape": "underline",
+    "text_label": "Yet we should",
+    "box": [
+     788,
+     371,
+     1125,
+     463
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 1900,
+    "remote": {
+     "image": "/home/ubuntu/run/dataset/val/samples/images/00019/p0001900_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "59 57 300 328 textblock 356 56 523 242 textblock 827 44 951 235 textblock 830 284 948 444 textblock 364 313 515 492 textblock 569 360 778 649 textblock 828 510 950 722 textblock 365 562 514 683 textblock 564 717 736 947 textblock 81 745 293 886 textblock 375 757 522 904 textblock 868 809 910 946 drawing 556 112 755 249 geometry 72 445 267 641 geometry"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 1900,
+    "remote": {
+     "image": "/home/ubuntu/run/dataset/val/pages/page0001900.png",
+     "json": "/home/ubuntu/run/dataset/val/pages/page0001900.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 1900,
+    "remote": {
+     "input": "/home/ubuntu/run/dataset/val/marks/images/00019/p0001900_m00_input.png",
+     "text": "/home/ubuntu/run/dataset/val/marks/images/00019/p0001900_m00_text.png",
+     "mark": "/home/ubuntu/run/dataset/val/marks/images/00019/p0001900_m00_mark.png"
+    },
+    "class": "line_mark",
+    "shape": "underline",
+    "text_label": "Office savings bank",
+    "box": [
+     85,
+     222,
+     418,
+     308
+    ]
+   },
+   {
+    "split": "test",
+    "kind": "page",
+    "page": 1900,
+    "remote": {
+     "image": "/home/ubuntu/run/dataset/test/pages/page0001900.png",
+     "json": "/home/ubuntu/run/dataset/test/pages/page0001900.json"
+    }
+   },
+   {
+    "split": "test",
+    "kind": "mark",
+    "page": 1902,
+    "remote": {
+     "input": "/home/ubuntu/run/dataset/test/marks/images/00019/p0001902_m00_input.png",
+     "text": "/home/ubuntu/run/dataset/test/marks/images/00019/p0001902_m00_text.png",
+     "mark": "/home/ubuntu/run/dataset/test/marks/images/00019/p0001902_m00_mark.png"
+    },
+    "class": "line_mark",
+    "shape": "underline",
+    "text_label": "not fastened to",
+    "box": [
+     1090,
+     290,
+     1436,
+     386
+    ]
+   }
+  ],
+  "load": [
+   1.7,
+   7.6,
+   7.8
+  ],
+  "cpus": 16,
+  "disk_used_gb": 22.8,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "finished",
+ "paused": true,
+ "pause_output": "\u2713 Instance 505521 paused.\n",
+ "paused_at": 1789308706.96366
+}

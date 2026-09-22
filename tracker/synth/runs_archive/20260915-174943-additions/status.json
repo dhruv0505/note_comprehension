@@ -1,0 +1,68 @@
+{
+ "polled_at": 1789519831.1927276,
+ "poll": 0,
+ "cost": 0.0,
+ "budget": 2.5,
+ "hourly": 0.8073,
+ "machine_id": null,
+ "started": 1789519783.0687692,
+ "status": {
+  "now": 1789519831.1927276,
+  "targets": {
+   "train": 30000
+  },
+  "mode": "additions",
+  "picks": [],
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "running",
+    "start": 1789519783.0803962
+   },
+   {
+    "name": "upload_code",
+    "state": "pending"
+   },
+   {
+    "name": "check_cache",
+    "state": "pending"
+   },
+   {
+    "name": "cache_rebuild",
+    "state": "pending"
+   },
+   {
+    "name": "prepare_output",
+    "state": "pending"
+   },
+   {
+    "name": "synth_geometry",
+    "state": "pending"
+   },
+   {
+    "name": "recog_pool_train",
+    "state": "pending"
+   },
+   {
+    "name": "swap_additions",
+    "state": "pending"
+   },
+   {
+    "name": "all_done",
+    "state": "pending"
+   }
+  ],
+  "splits": {
+   "train": {
+    "target": 30000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   }
+  }
+ },
+ "pause_reason": "orchestrator restarted during setup",
+ "paused": true,
+ "mode": "additions"
+}

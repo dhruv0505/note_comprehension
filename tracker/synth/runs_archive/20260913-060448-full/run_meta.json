@@ -1,0 +1,8 @@
+{
+ "region": "IN2",
+ "vm": "16 vCPU / 64 GB / 100 GB SSD",
+ "machine_id": 505521,
+ "hourly": 0.4105,
+ "budget": 3.0,
+ "started": 1789304688
+}

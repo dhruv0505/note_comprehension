@@ -1,0 +1,64 @@
+{
+ "run_id": "20260915-174706-additions",
+ "mode": "additions",
+ "phase": "stopped",
+ "requested_at": 1789519626.9955466,
+ "hourly": 0.1129,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 2.5,
+ "pages": {
+  "train": 30000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_geometry",
+  "recog_pool_train",
+  "swap_additions",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1789519627.0152876,
+   "end": 1789519678.8312051,
+   "log": [
+    "VM 507433 running with 4 vCPUs, $0.11/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1789519678.8428214,
+   "end": 1789519719.058621,
+   "log": [
+    "252 KB"
+   ]
+  }
+ ],
+ "poll": 1,
+ "pulled": [],
+ "machine_id": 507433,
+ "billing_started": 1789519657.627511,
+ "cores": 4,
+ "home": "/home/ubuntu",
+ "billing_ended": 1789519758.890196,
+ "pause_reason": "kill requested",
+ "paused": true,
+ "finished_at": 1789519758.890196
+}

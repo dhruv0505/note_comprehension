@@ -1,0 +1,205 @@
+{
+ "polled_at": 1789461922.3409042,
+ "poll": 48,
+ "cost": 0.413,
+ "budget": 4.0,
+ "hourly": 0.4105,
+ "machine_id": 506776,
+ "started": 1789458300.7141118,
+ "status": {
+  "now": 1789461836.5035722,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000,
+   "val": 2000
+  },
+  "mode": "recognition",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1789458291.6988032,
+    "end": 1789458350.6209278,
+    "log": [
+     "VM 506776 running with 16 vCPUs, $0.41/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1789458350.6318383,
+    "end": 1789458398.8870866,
+    "log": [
+     "246 KB"
+    ]
+   },
+   {
+    "start": 1789458395.285786,
+    "state": "done",
+    "end": 1789458395.3167398,
+    "name": "check_cache"
+   },
+   {
+    "start": 1789458395.3354533,
+    "state": "done",
+    "end": 1789458395.3777618,
+    "name": "cache_times"
+   },
+   {
+    "start": 1789458395.3965902,
+    "state": "done",
+    "end": 1789458395.4219072,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1789458395.4406235,
+    "state": "done",
+    "end": 1789461507.6756067,
+    "name": "recog_train"
+   },
+   {
+    "start": 1789461507.695982,
+    "state": "done",
+    "end": 1789461774.6528463,
+    "name": "recog_val"
+   },
+   {
+    "start": 1789461774.6723127,
+    "state": "done",
+    "end": 1789461776.7467163,
+    "name": "swap_recognition"
+   },
+   {
+    "start": 1789461776.766065,
+    "state": "done",
+    "end": 1789461776.7852216,
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 30000,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 48629.6,
+    "max_item_uses_on_a_page": 5,
+    "shards_done": 300,
+    "target": 30000,
+    "classes": {
+     "iam": {
+      "items_used": 6058,
+      "uses": 411872,
+      "most_used_share": 0.00165,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 512709,
+      "uses": 1102866,
+      "most_used_share": 1e-05,
+      "cap_share": 0.01
+     },
+     "ohfd": {
+      "items_used": 169,
+      "uses": 54324,
+      "most_used_share": 0.01011,
+      "cap_share": 0.01
+     },
+     "qd": {
+      "items_used": 8619,
+      "uses": 9659,
+      "most_used_share": 0.00041,
+      "cap_share": 0.01
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 54876,
+      "rows": 412049,
+      "short_samples": 26292,
+      "rows_with_other_lines": 34324,
+      "lines_without_times": 133239,
+      "shards_done": 300
+     },
+     "formula": {
+      "samples": 123982,
+      "rows": 1105429,
+      "short_samples": 26894,
+      "rows_with_other_lines": 1032,
+      "lines_without_times": 0,
+      "shards_done": 300
+     }
+    }
+   },
+   "val": {
+    "pages": 2000,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 2664.1,
+    "max_item_uses_on_a_page": 3,
+    "shards_done": 20,
+    "target": 2000,
+    "classes": {
+     "iam": {
+      "items_used": 817,
+      "uses": 30334,
+      "most_used_share": 0.00544,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 15028,
+      "uses": 75095,
+      "most_used_share": 0.00019,
+      "cap_share": 0.01
+     },
+     "ohfd": {
+      "items_used": 37,
+      "uses": 994,
+      "most_used_share": 0.04326,
+      "cap_share": 0.03773584905660377
+     },
+     "qd": {
+      "items_used": 612,
+      "uses": 631,
+      "most_used_share": 0.00317,
+      "cap_share": 0.01
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 3952,
+      "rows": 30340,
+      "short_samples": 1734,
+      "rows_with_other_lines": 3718,
+      "lines_without_times": 8255,
+      "shards_done": 20
+     },
+     "formula": {
+      "samples": 8398,
+      "rows": 75140,
+      "short_samples": 1775,
+      "rows_with_other_lines": 123,
+      "lines_without_times": 0,
+      "shards_done": 20
+     }
+    }
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   2.4,
+   8.8,
+   12.5
+  ],
+  "cpus": 16,
+  "disk_used_gb": 58.6,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "finished",
+ "paused": true,
+ "mode": "recognition"
+}

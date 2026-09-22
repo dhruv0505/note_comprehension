@@ -1,0 +1,129 @@
+== formula_00.png
+prompt: What is written in this image in LaTeX?
+   1. \hat{f}(k)
+   2. \tilde{\gamma}(0)=p
+   3. \int_{1}^{0}\frac{dt}{t}=-\infty
+   4. |\omega_{i}|=q^{1/2}
+   5. R=\int_{0}^{\tau}X(s)ds
+   6. \prod_{i=1}^{n}
+   7. f_{c}=\frac{1}{2\pi C(R+S)}
+   8. L_{X}dz=f(z)dz
+   9. \langle\psi^{jk}|\psi_{lm}\rangle=\delta_{jl}\delta_{km}
+  10. |0|<|1|+|-2|
+
+== formula_01.png
+prompt: What is written in this image in LaTeX?
+   1. \int_{E}f(x)\mu(dx)
+   2. T_{0}=2\pi\sqrt{\frac{l}{g}}
+   3. \frac{dP}{d\tau}
+   4. (\begin{matrix}[n]\\ 1\end{matrix})
+   5. (\begin{matrix}j\\ m+1\end{matrix})
+   6. V=|a\cdot(b\times c)|
+   7. [\begin{matrix}a\\ b\\ c\end{matrix}]
+   8. \rho(r)\sim e^{-2Z_{\alpha}r}
+   9. \tilde{C}_{8}
+  10. a\cdot(pb)\ne pa\cdot b
+
+== formula_02.png
+prompt: What is written in this image in LaTeX?
+   1. 1.3\frac{a}{d}\sqrt{n}
+   2. A_{\mu}\rightarrow A_{\mu}+\partial_{\mu}\phi(x)
+   3. pz\overline{z}+gz+\overline{gz}=q
+   4. \frac{\partial\varphi}{\partial t}(x,t)=F(\varphi).
+   5. V=(\begin{matrix}0&1\\ 1&0\end{matrix})
+   6. \tilde{E}=E\times\mathbb{Z}_{n}
+   7. [\begin{matrix}A&U\\ V&C\end{matrix}]
+   8. X:=\bigcup_{k=1}^{m}3B_{j_{k}}
+   9. (\begin{matrix}k-1\\ D-1\end{matrix})
+  10. o_{n}(R)
+
+== formula_03.png
+prompt: What is written in this image in LaTeX?
+   1. d\overline{v}=-\frac{e\cdot\overline{E}}{m}dt
+   2. [\begin{matrix}a&b\\ c&d\\ \end{matrix}]
+   3. \sum_{0\le k\le n}(\begin{matrix}n\\ k\end{matrix})=2^{n}
+   4. 1^{\prime}s
+   5. log\hat{\lambda}\approx Z\sqrt{4/D}
+   6. \rho(\nu)d\nu=\frac{u(\nu)d\nu}{V}
+   7. 4^{-N}(\begin{matrix}2N\\ N\end{matrix})\approx\frac{1}{\sqrt{\pi N}}
+   8. y=c_{1}e^{x}+xe^{x}
+   9. F_{x}[f(x)]
+  10. \frac{dC_{U}}{dC_{W}}
+
+== formula_04.png
+prompt: What is written in this image in LaTeX?
+   1. H_{n}(\underline{q},\underline{x})
+   2. \sum_{i=1}^{k}\sum_{w\in V}f_{i}(s_{i},w)
+   3. C[x,y]/(x,y)\cong C
+   4. \int v_{i}dm
+   5. r=a-|n|\lfloor\frac{a}{|n|}\rfloor
+   6. (l_{1}+l_{2})^{\theta}=l_{1}^{\theta}+l_{2}^{\theta}
+   7. R_{x}=(R_{2}/R_{1})\cdot R_{3}
+   8. T=(\begin{matrix}1&0\\ 1&0\end{matrix})
+   9. c\notin A
+  10. \xi_{[t]}=(\xi_{1},...,\xi_{t})
+
+== formula_05.png
+prompt: What is written in this image in LaTeX?
+   1. \frac{\pi}{2}(i-1)\le v_{i}<\frac{\pi}{2}i
+   2. \forall u(wR_{i}u\Rightarrow u\Vdash A)
+   3. X_{i}=(Y|Y>K)
+   4. \frac{d^{2}x}{dt^{2}}
+   5. (X,Y,Z,aZ^{4})
+   6. \int x\cdot dx
+   7. \frac{d^{2}u}{dx^{2}}-u=0
+   8. F_{r}=\frac{v}{\sqrt{g\frac{A}{B}}}
+   9. \int_{A}P_{A}dA=1
+  10. \overline{z}=1-i\sqrt{\nu}
+
+== formula_06.png
+prompt: What is written in this image in LaTeX?
+   1. [\begin{matrix}1&1\\ 0&1\end{matrix}]
+   2. \hat{\beta}=(\overline{y/x})
+   3. 10^{-12}W/\sqrt{Hz}
+   4. arctan\sqrt{2}=54.7^{\circ}
+   5. a\notin A
+   6. L>>(x+a/2)
+   7. G,\overline{G},\tilde{G}
+   8. lim_{\lambda\in\Lambda}||ae_{\lambda}-a||\rightarrow0
+   9. \frac{1}{\sqrt{d}_{u}}
+  10. P(e^{\prime})=\{a_{1},b_{4}\}
+
+== formula_07.png
+prompt: What is written in this image in LaTeX?
+   1. (\begin{matrix}0\\ 1\end{matrix})
+   2. F=Mg=\dot{m}\Delta v
+   3. X\frac{d}{dX}
+   4. [K^{j},P^{k}]=i\delta^{jk}H
+   5. K_{h_{\lambda}}(X_{0},X)
+   6. p\in Z(g^{*})
+   7. H_{i}=\langle h_{i},G^{\prime}\rangle
+   8. \int^{c\in C}F(c,c)
+   9. \int_{0}^{\infty}\frac{sin(x)}{x}dx
+  10. \int x^{s}\phi(x)dx
+
+== formula_08.png
+prompt: What is written in this image in LaTeX?
+   1. \int x^{k}d\mu(x)=m_{k}
+   2. S_{0}+h\nu_{ex}\rightarrow S_{1}
+   3. x=\sqrt[3]{u}+\sqrt[3]{v}
+   4. Q:=\bigcup_{\sigma\in\sigma(T_{0})}Q_{\sigma}
+   5. ;u
+   6. \tilde{X}\in T_{e}E
+   7. (\begin{matrix}n+1\\ 3\end{matrix})+1
+   8. \sqrt[3]{z}
+   9. [g^{ij}]=\frac{1}{g}\frac{\partial g}{\partial g_{ij}}
+  10. \int_{\gamma}f(z)dz
+
+== formula_09.png
+prompt: What is written in this image in LaTeX?
+   1. (\begin{matrix}0&1\\ -1&0\\ \end{matrix})
+   2. 2,\sqrt{5},\sqrt{6},3
+   3. F
+   4. v_{y}\sqrt{v_{x}^{2}+v_{y}^{2}}
+   5. 3k+1=2^{a}k^{\prime}
+   6. \mu_{G}(H_{1},H_{2})=(-1)^{k}p^{(\begin{matrix}k\\ 2\end{matrix})}
+   7. S=\int_{M}BF
+   8. \forall u(wR_{i}u\Rightarrow u\Vdash A)
+   9. pz\overline{z}+gz+\overline{gz}=q
+  10. L>>(x+a/2)

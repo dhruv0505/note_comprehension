@@ -1,0 +1,114 @@
+{
+ "polled_at": 1789523034.380966,
+ "poll": 32,
+ "cost": 0.0701,
+ "budget": 2.5,
+ "hourly": 0.1129,
+ "machine_id": 507446,
+ "started": 1789520799.6696413,
+ "status": {
+  "now": 1789522956.8699155,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000
+  },
+  "mode": "additions",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1789520768.5033772,
+    "end": 1789520822.3438344,
+    "log": [
+     "VM 507446 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1789520822.356477,
+    "end": 1789520864.0938044,
+    "log": [
+     "252 KB"
+    ]
+   },
+   {
+    "start": 1789520860.4955769,
+    "state": "done",
+    "end": 1789520860.523883,
+    "name": "check_cache"
+   },
+   {
+    "start": 1789520860.5429006,
+    "state": "done",
+    "end": 1789520860.587847,
+    "name": "cache_rebuild"
+   },
+   {
+    "start": 1789520860.6070118,
+    "state": "done",
+    "end": 1789520860.7595043,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1789520860.778839,
+    "state": "done",
+    "end": 1789522684.3547115,
+    "name": "synth_geometry"
+   },
+   {
+    "start": 1789522684.3755343,
+    "state": "done",
+    "end": 1789522943.8722086,
+    "name": "recog_pool_train"
+   },
+   {
+    "start": 1789522943.8911052,
+    "state": "done",
+    "end": 1789522944.1214638,
+    "name": "swap_additions"
+   },
+   {
+    "start": 1789522944.1414566,
+    "state": "done",
+    "end": 1789522944.1610384,
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 30000,
+    "samples": 60000,
+    "rows": 60000,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 5889.4,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 300,
+    "target": 30000,
+    "geometry_samples": 60000,
+    "recognition_pool": {
+     "textline": {
+      "samples": 10210,
+      "rows": 97485,
+      "pool_items": 9748,
+      "finished": true
+     }
+    }
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   1.5,
+   2.5,
+   2.6
+  ],
+  "cpus": 4,
+  "disk_used_gb": 62.2,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "finished",
+ "paused": true,
+ "mode": "additions"
+}

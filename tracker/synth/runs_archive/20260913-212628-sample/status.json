@@ -1,0 +1,76 @@
+{
+ "polled_at": 1789360964.3641028,
+ "poll": 0,
+ "cost": 0.1102,
+ "budget": 1.0,
+ "hourly": 0.4105,
+ "machine_id": 505846,
+ "started": 1789359997.8153687,
+ "status": {
+  "now": 1789360964.3641028,
+  "targets": {
+   "train": 5,
+   "val": 5
+  },
+  "mode": "sample",
+  "picks": [],
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "failed",
+    "start": 1789359988.840772,
+    "end": 1789360942.2627532,
+    "log": [
+     "RuntimeError: the dataset VM did not accept SSH within 15 minutes"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "pending"
+   },
+   {
+    "name": "check_cache",
+    "state": "pending"
+   },
+   {
+    "name": "prepare_output",
+    "state": "pending"
+   },
+   {
+    "name": "synth_train",
+    "state": "pending"
+   },
+   {
+    "name": "synth_val",
+    "state": "pending"
+   },
+   {
+    "name": "count_classes",
+    "state": "pending"
+   },
+   {
+    "name": "all_done",
+    "state": "pending"
+   }
+  ],
+  "splits": {
+   "train": {
+    "target": 5,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "val": {
+    "target": 5,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   }
+  }
+ },
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "mode": "sample"
+}

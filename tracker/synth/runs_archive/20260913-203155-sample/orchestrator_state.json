@@ -1,0 +1,73 @@
+{
+ "run_id": "20260913-203155-sample",
+ "mode": "sample",
+ "phase": "finished",
+ "requested_at": 1789356715.3551488,
+ "hourly": 0.4105,
+ "budget": 1.0,
+ "pages": {
+  "train": 5,
+  "val": 5
+ },
+ "shard_pages": 5,
+ "remote_stages": [
+  "check_cache",
+  "prepare_output",
+  "synth_train",
+  "synth_val",
+  "count_classes",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1789356715.3931117,
+   "end": 1789356761.4358377,
+   "log": [
+    "VM 505810 running with 16 vCPUs, $0.41/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1789356761.4780645,
+   "end": 1789356800.1824613,
+   "log": [
+    "205 KB"
+   ]
+  }
+ ],
+ "poll": 2,
+ "pulled": [
+  "train/mark/0",
+  "train/mark/1",
+  "train/mark/3",
+  "train/mark/4",
+  "train/sample/0",
+  "train/sample/1",
+  "train/sample/2",
+  "train/sample/3",
+  "train/sample/4",
+  "val/mark/0",
+  "val/mark/1",
+  "val/mark/2",
+  "val/page/0",
+  "val/page/1",
+  "val/page/2",
+  "val/page/3",
+  "val/page/4",
+  "val/sample/0",
+  "val/sample/1",
+  "val/sample/2",
+  "val/sample/3",
+  "val/sample/4"
+ ],
+ "machine_id": 505810,
+ "billing_started": 1789356724.9262636,
+ "home": "/home/ubuntu",
+ "billing_ended": 1789356934.1695523,
+ "pause_reason": "finished",
+ "paused": true,
+ "finished_at": 1789356934.1695523
+}

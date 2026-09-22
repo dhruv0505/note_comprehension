@@ -1,0 +1,10 @@
+{
+ "mode": "sample",
+ "run_id": "20260913-215014-sample",
+ "region": "IN2",
+ "vm": "16 vCPU / 64 GB / 100 GB SSD",
+ "machine_id": 505861,
+ "hourly": 0.4105,
+ "budget": 1.0,
+ "started": 1789361422.8447278
+}

@@ -1,0 +1,57 @@
+{
+ "run_id": "20260915-154018-additions",
+ "mode": "additions",
+ "phase": "failed",
+ "requested_at": 1789512018.7308152,
+ "hourly": 0.8073,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 2.5,
+ "pages": {
+  "train": 30000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_geometry",
+  "recog_pool_train",
+  "swap_additions",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "failed",
+   "start": 1789512018.7412148,
+   "end": 1789514654.6845665,
+   "log": [
+    "JLError: jl resume 507039 --vcpus 8 --ram 32 --yes: exit 1: {\"error\": \"Instance creation failed: No contiguous block of 8 cores available on server N9001. (code=404)\"}"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "pending"
+  }
+ ],
+ "poll": 0,
+ "pulled": [],
+ "machine_id": 507039,
+ "billing_started": 1789512033.250194,
+ "billing_ended": 1789514730.3125641,
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "finished_at": 1789514730.3125641
+}

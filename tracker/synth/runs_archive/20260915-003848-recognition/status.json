@@ -1,0 +1,148 @@
+{
+ "polled_at": 1789458133.4054043,
+ "poll": 2,
+ "cost": 0.0214,
+ "budget": 4.0,
+ "hourly": 0.4105,
+ "machine_id": 506765,
+ "started": 1789457945.3927069,
+ "status": {
+  "now": 1789458109.875985,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000,
+   "val": 2000
+  },
+  "mode": "recognition",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1789457928.7293768,
+    "end": 1789457993.640963,
+    "log": [
+     "VM 506765 running with 16 vCPUs, $0.41/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1789457993.655193,
+    "end": 1789458033.932873,
+    "log": [
+     "246 KB"
+    ]
+   },
+   {
+    "start": 1789458030.6360636,
+    "state": "done",
+    "end": 1789458030.6664236,
+    "name": "check_cache"
+   },
+   {
+    "start": 1789458030.6852047,
+    "state": "done",
+    "end": 1789458030.7276375,
+    "name": "cache_times"
+   },
+   {
+    "start": 1789458030.7462761,
+    "state": "done",
+    "end": 1789458030.7682464,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1789458030.7872334,
+    "state": "failed",
+    "end": 1789458043.327803,
+    "name": "recog_train",
+    "log": [
+     "  File \"/usr/lib/python3.12/multiprocessing/pool.py\", line 873, in next",
+     "    raise value",
+     "ValueError: a textline has ink without recorded times, which its colour needs: the page was built from split caches that lost them (rebuild them with split_pools.py)"
+    ]
+   },
+   {
+    "state": "pending",
+    "name": "recog_val"
+   },
+   {
+    "state": "pending",
+    "name": "swap_recognition"
+   },
+   {
+    "state": "pending",
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 0,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 0,
+    "target": 30000,
+    "recognition": {
+     "textline": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "shards_done": 0
+     },
+     "formula": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "shards_done": 0
+     }
+    }
+   },
+   "val": {
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 0,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 0,
+    "target": 2000,
+    "recognition": {
+     "textline": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "shards_done": 0
+     },
+     "formula": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "shards_done": 0
+     }
+    }
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   0.8,
+   0.5,
+   0.2
+  ],
+  "cpus": 16,
+  "disk_used_gb": 49.3,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "stage failed: recog_train",
+ "paused": true,
+ "mode": "recognition"
+}

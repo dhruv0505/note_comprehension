@@ -1,0 +1,10 @@
+{
+ "mode": "full",
+ "run_id": "20260913-225906-full",
+ "region": "IN2",
+ "vm": "16 vCPU / 64 GB / 100 GB SSD",
+ "machine_id": 505906,
+ "hourly": 0.4105,
+ "budget": 4.0,
+ "started": 1789365556.602133
+}

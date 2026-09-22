@@ -1,0 +1,44 @@
+{
+ "run_id": "20260913-212307-sample",
+ "mode": "sample",
+ "phase": "failed",
+ "requested_at": 1789359787.6839821,
+ "hourly": 0.4105,
+ "budget": 1.0,
+ "pages": {
+  "train": 5,
+  "val": 5
+ },
+ "shard_pages": 5,
+ "remote_stages": [
+  "check_cache",
+  "prepare_output",
+  "synth_train",
+  "synth_val",
+  "count_classes",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "failed",
+   "start": 1789359787.700113,
+   "end": 1789359944.8748486,
+   "log": [
+    "JLError: jl exec timed out after 120s"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "pending"
+  }
+ ],
+ "poll": 0,
+ "pulled": [],
+ "machine_id": 505842,
+ "billing_started": 1789359796.1973875,
+ "billing_ended": 1789359966.714492,
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "finished_at": 1789359966.714492
+}
