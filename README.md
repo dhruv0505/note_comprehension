@@ -119,11 +119,11 @@ Segmentation and recognition are both implemented end-to-end, from synthetic dat
 
 These are the validation scores of the saved model, [inference/comprehension/comprehension-v6](inference/comprehension/comprehension-v6/), the last of three LoRA fine-tunes (rank 32, alpha 64) of Florence-2-large, each on 8 × H100 with a global batch of 128 (8 per GPU × 2 accumulation steps) over the same 657,085 training rows:
 
-| Model | Trained from | Epochs | Peak lr (cosine decay) | Saved checkpoint | Cost |
+| Model | Trained from | Epochs | Peak lr (cosine decay) | Saved checkpoint |
 | --- | --- | --- | --- | --- | --- |
-| [comprehension-v4](inference/comprehension/comprehension-v4/) | pretrained Florence-2-large | 2 | 1e-4, 200-step warmup | step 8,000 of 10,267 | $63.29 |
-| [comprehension-v5](inference/comprehension/comprehension-v5/) | comprehension-v4 | 1 | 5e-5, 100-step warmup | step 5,133 of 5,133 | $37.66 |
-| **comprehension-v6** | comprehension-v5 | 2 | 5e-5, 100-step warmup | step 10,267 of 10,267 | $57.25 |
+| [comprehension-v4](inference/comprehension/comprehension-v4/) | pretrained Florence-2-large | 2 | 1e-4, 200-step warmup | step 8,000 of 10,267 |
+| [comprehension-v5](inference/comprehension/comprehension-v5/) | comprehension-v4 | 1 | 5e-5, 100-step warmup | step 5,133 of 5,133 | 
+| **comprehension-v6** | comprehension-v5 | 2 | 5e-5, 100-step warmup | step 10,267 of 10,267 |
 
 Five epochs in all, each continuation with a fresh optimizer and schedule; a half-epoch attempt between v5 and v6 was stopped before training ($4.03 of setup). The models were scored on 200 held-out validation pages and, teacher-forced, on 300 manifest rows. The numbers are in each model's `stats.json`, computed by [seg_eval.py](training/seg_eval.py) and [recog_eval.py](training/recog_eval.py), and are what the tracker's Models tab shows.
 
