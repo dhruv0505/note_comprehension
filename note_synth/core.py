@@ -2,7 +2,7 @@
 core.py — shared data structures + geometry utilities for synthetic note-page generation.
 
 Everything downstream (loaders, block generators, layout engine) works with these types,
-so every source dataset (IAMonDB, DeepWriting, MathWriting, QuickDraw, OHFD) just needs
+so every source dataset (IAMonDB, DeepWriting, MathWriting, QuickDraw, FC) just needs
 a loader function that returns Ink objects in this format. See loaders.py.
 """
 

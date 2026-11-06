@@ -1,0 +1,34 @@
+{
+ "gpu_type": "H100",
+ "num_gpus": 8,
+ "epochs": 2.0,
+ "budget": 36.74,
+ "lr": 0.0001,
+ "batch_size": 8,
+ "grad_accum": 2,
+ "warmup_steps": 200,
+ "val_every": 1000,
+ "save_every": 1000,
+ "page_val_max": 200,
+ "eval_batches": 25,
+ "samples": 8,
+ "log_every": 20,
+ "num_workers": 6,
+ "grad_checkpointing": false,
+ "vision_lora": false,
+ "lora_rank": 32,
+ "requested_at": 1793925327.2493637,
+ "lora_alpha": 64,
+ "save_to": {
+  "checkpoint": "best",
+  "name": "comprehension-v4"
+ },
+ "mark_model": {
+  "source": "inference",
+  "name": "marks",
+  "checkpoint": "last (end of training)",
+  "step": 10900,
+  "mean_f1": 0.9812870260316365,
+  "run_id": null
+ }
+}

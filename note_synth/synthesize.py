@@ -49,7 +49,7 @@ the usage cap, which is kept per worker).
 
 Reuse cap. Within a split, content is reused freely across pages — positional
 augmentation — but no single source item may take more than --cap-share of its
-class's appearances (IAM-OnDB lines, MathWriting expressions, OHFD charts,
+class's appearances (IAM-OnDB lines, MathWriting expressions, FC charts,
 QuickDraw drawings). A class whose pool is too small for that share gets
 CAP_MIN_MULTIPLE / pool size instead, the smallest cap a pool can meet, and the
 report says so. Items at their cap are kept off the next page: filtered out of
@@ -74,10 +74,21 @@ from collections import Counter
 
 SHARD_PAGES = 250
 DEFAULT_CAP_SHARE = 0.01
+# A class's cap, where it must be looser than --cap-share. FC charts: a cell takes only a chart whose captions stay
+# legible at its size (block_generators.make_diagram), and in a small cell that is a handful of the split's 180, which
+# reached a 1% cap within a few hundred pages; every flowchart cell after that came out as a textblock, and a dataset
+# run made 0.23 flowcharts a page against the 0.55 the OHFD one made. A 500-page simulation, flowcharts per page after
+# page 200: 0.06 at the 1.1% cap, 0.66 at 2%, 1.02 at 3% (no cap reached).
+CLASS_CAP_SHARE = {"fc": 0.02}
+# Val and test hold 35 FC charts each (dataset_splits: held-out writers AND layouts), of which only some 10-15 fit a
+# given flowchart cell legibly. A cap below one over that count can never be met by all of them at once, so every
+# usable chart sits at its cap and flowcharts all but vanish: 0.05 a val page at 5.7% (2 / 35), 1.27 at 10%; test
+# 0.70 and 1.31. 10% is the cap that keeps their flowcharts; train, with 180 charts, keeps 2% (0.55 a page).
+EVAL_CLASS_CAP_SHARE = {"fc": 0.10}
 CAP_MIN_MULTIPLE = 2.0
 FLAT_RETRIES = 5
 CLASSES = {"iam": "IAM-OnDB lines", "mw": "MathWriting expressions",
-           "ohfd": "OHFD flowcharts", "qd": "QuickDraw drawings"}
+           "fc": "FC flowcharts", "qd": "QuickDraw drawings"}
 MODES = {"train": ("samples", "marks"), "val": ("samples", "pages", "marks"), "test": ("pages", "marks")}
 RECOGNITION_SPLITS = ("train", "val")      # --recognition's samples; test recognition is only scored through the cascade
 RECOG_SYNTH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "recog_synth")
@@ -112,9 +123,10 @@ class Usage:
         self.split = split
         self.sizes = {"iam": len(pools.get("text_pool") or []),
                       "mw": len(math) if math is not None else 0,
-                      "ohfd": len(pools.get("ohfd_pool") or []),
+                      "fc": len(pools.get("flowchart_pool") or []),
                       "qd": len(pools.get("quickdraw_pool") or [])}
-        self.share = {cls: (max(cap_share, CAP_MIN_MULTIPLE / n) if n else 1.0)
+        floors = {**CLASS_CAP_SHARE, **(EVAL_CLASS_CAP_SHARE if split in ("val", "test") else {})}
+        self.share = {cls: (max(cap_share, floors.get(cls, 0.0), CAP_MIN_MULTIPLE / n) if n else 1.0)
                       for cls, n in self.sizes.items()}
         self.counts = {cls: Counter() for cls in CLASSES}
         self.totals = Counter()
@@ -152,7 +164,7 @@ class Usage:
         Called once at the start of each page, which also starts its MathWriting tally."""
         self.page_served = set()
         out = dict(pools)
-        for key in ("text_pool", "ohfd_pool", "quickdraw_pool"):
+        for key in ("text_pool", "flowchart_pool", "quickdraw_pool"):
             pool = pools.get(key)
             if pool:
                 out[key] = [ink for ink in pool if not self.capped(_item(ink))] or pool
@@ -444,7 +456,7 @@ def join_manifests(folder: str, shards, once_per_chart: bool = False):
     rows dropped).
 
     A flowchart's level-1 crop row names its chart (`level1_chart`, page_export.write_samples), which the joined
-    manifest leaves out. With `once_per_chart` (train) only the first such row of each chart is kept: an OHFD chart
+    manifest leaves out. With `once_per_chart` (train) only the first such row of each chart is kept: an FC chart
     comes back on many pages, and its level-1 sample is trained on once. The rest are dropped and their images
     deleted (a flowchart's crop has no other prompt). Decided here, after every shard, so no shard needs to know
     what the others placed, and a rerun drops the same rows."""

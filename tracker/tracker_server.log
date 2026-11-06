@@ -2221,3 +2221,60 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_synth\\note_synth\\class_tuning.py'
 [2026-09-21 21:42:05] the server exited with code 1; starting it again
 [2026-09-21 21:42:26] tracker at http://127.0.0.1:8765
+[2026-09-22 01:23:55] synth orchestrator: started it (pid 17140)
+[2026-09-22 01:23:55] tracker at http://127.0.0.1:8765
+[2026-09-22 01:23:55] seg orchestrator: started it (pid 13352)
+[2026-09-22 01:23:55] marks orchestrator: started it (pid 20028)
+[2026-09-30 19:00:11] synth orchestrator: started it (pid 17664)
+[2026-09-30 19:00:11] tracker at http://127.0.0.1:8765
+[2026-09-30 19:00:11] seg orchestrator: started it (pid 17792)
+[2026-09-30 19:00:11] marks orchestrator: started it (pid 14944)
+[2026-10-03 19:33:05] synth orchestrator: started it (pid 18024)
+[2026-10-03 19:33:05] tracker at http://127.0.0.1:8765
+[2026-10-03 19:33:05] seg orchestrator: started it (pid 13416)
+[2026-10-03 19:33:05] marks orchestrator: started it (pid 15192)
+[2026-10-08 11:14:43] synth orchestrator: started it (pid 4968)
+[2026-10-08 11:14:43] tracker at http://127.0.0.1:8765
+[2026-10-08 11:14:43] seg orchestrator: started it (pid 3344)
+[2026-10-08 11:14:43] marks orchestrator: started it (pid 14312)
+[2026-10-18 10:15:31] synth orchestrator: started it (pid 6628)
+[2026-10-18 10:15:31] tracker at http://127.0.0.1:8765
+[2026-10-18 10:15:31] seg orchestrator: started it (pid 20392)
+[2026-10-18 10:15:31] marks orchestrator: started it (pid 10228)
+[2026-10-19 21:34:34] synth orchestrator: started it (pid 10044)
+[2026-10-19 21:34:34] tracker at http://127.0.0.1:8765
+[2026-10-19 21:34:34] seg orchestrator: started it (pid 10212)
+[2026-10-19 21:34:35] marks orchestrator: started it (pid 11136)
+[2026-10-30 10:59:24] synth orchestrator: started it (pid 21440)
+[2026-10-30 10:59:24] tracker at http://127.0.0.1:8765
+[2026-10-30 10:59:24] seg orchestrator: started it (pid 15384)
+[2026-10-30 10:59:24] marks orchestrator: started it (pid 22180)
+[2026-11-02 11:11:55] synth orchestrator: started it (pid 19860)
+[2026-11-02 11:11:55] tracker at http://127.0.0.1:8765
+[2026-11-02 11:11:55] seg orchestrator: started it (pid 15000)
+[2026-11-02 11:11:55] marks orchestrator: started it (pid 3868)
+[2026-11-03 23:19:04] synth orchestrator: started it (pid 21396)
+[2026-11-03 23:19:04] tracker at http://127.0.0.1:8765
+[2026-11-03 23:19:04] seg orchestrator: started it (pid 21484)
+[2026-11-03 23:19:04] marks orchestrator: started it (pid 9704)
+[2026-11-04 18:25:25] its code changed: restarting the server
+[2026-11-04 18:25:26] tracker at http://127.0.0.1:8765
+[2026-11-04 18:25:36] synth orchestrator: restarting it (pid 21396): its code changed
+[2026-11-04 18:25:36] synth orchestrator: started it (pid 5908)
+[2026-11-04 18:25:36] seg orchestrator: restarting it (pid 21484): its code changed
+[2026-11-04 18:25:37] seg orchestrator: started it (pid 26396)
+[2026-11-04 18:25:37] marks orchestrator: restarting it (pid 9704): its code changed
+[2026-11-04 18:25:37] marks orchestrator: started it (pid 2940)
+[2026-11-04 18:34:50] its code changed: restarting the server
+[2026-11-04 18:34:51] tracker at http://127.0.0.1:8765
+[2026-11-04 18:35:01] synth orchestrator: restarting it (pid 5908): its code changed
+[2026-11-04 18:35:01] synth orchestrator: started it (pid 25920)
+[2026-11-04 18:35:01] seg orchestrator: restarting it (pid 26396): its code changed
+[2026-11-04 18:35:02] seg orchestrator: started it (pid 19848)
+[2026-11-04 18:35:02] marks orchestrator: restarting it (pid 2940): its code changed
+[2026-11-04 18:35:02] marks orchestrator: started it (pid 21628)
+[2026-11-04 19:44:03] its code changed: restarting the server
+[2026-11-04 19:44:04] tracker at http://127.0.0.1:8765
+[2026-11-04 19:45:15] synth orchestrator: started it (pid 10832)
+[2026-11-05 15:59:51] synth orchestrator: exited with code 1 after 72876 s
+[2026-11-05 16:00:33] synth orchestrator: started it (pid 35060)

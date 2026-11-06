@@ -1,0 +1,125 @@
+{
+ "step": "done",
+ "attempts": {
+  "bootstrap": 0,
+  "synth": 0,
+  "train": 0,
+  "training": 0
+ },
+ "history": [
+  {
+   "step": "ascii",
+   "done_at": "2026-11-04 18:18:08",
+   "detail": "0.3 MB of transcriptions"
+  },
+  {
+   "step": "splits",
+   "done_at": "2026-11-04 18:18:40",
+   "detail": "summary {\"iam_lines\": {\"train\": 9774, \"val\": 1202, \"test\": 1219}, \"iam_forms\": {\"train\": 1387, \"val\": 168, \"test\": 175}, \"fc_charts\": {\"train\": 432, \"val\": 120, \"test\": 120}, \"fc_templates\": {\"train\": 18, \"val\": 5, \"test\": 5}}; 0 IAM forms changed split from the last splits.json"
+  },
+  {
+   "step": "bootstrap",
+   "done_at": "2026-11-04 19:03:11",
+   "detail": "dataset VM 563911 set up for $0.06"
+  },
+  {
+   "step": "synth",
+   "done_at": "2026-11-05 07:13:11",
+   "detail": "dataset run 20261104-233925-full finished, $0.83"
+  },
+  {
+   "step": "synth",
+   "done_at": "2026-11-05 manual",
+   "detail": "previous dataset discarded: val had 0.03 flowcharts/page; rebuilding with chosen eval layouts and 10% val/test flowchart cap"
+  },
+  {
+   "step": "synth",
+   "done_at": "2026-11-05 16:33:13",
+   "detail": "dataset run 20261105-090235-full finished, $0.83"
+  },
+  {
+   "step": "marks",
+   "done_at": "2026-11-05 16:35:14",
+   "detail": "inference/mark_separation/marks"
+  },
+  {
+   "step": "train",
+   "done_at": "2026-11-05 16:35:37",
+   "detail": "Florence Tuning started: {\"num_gpus\": 4, \"epochs\": 2, \"budget\": 36.74, \"lr\": 0.0001, \"batch_size\": 8, \"grad_accum\": 4, \"warmup_steps\": 200, \"lora_rank\": 32, \"val_every\": 1000, \"page_val_max\": 200, \"save_every\": 1000, \"eval_batches\": 25, \"samples\": 8, \"log_every\": 20, \"num_workers\": 6, \"save_to\": {\"checkpoint\": \"best\", \"name\": \"comprehension-v4\"}}"
+  },
+  {
+   "step": "training",
+   "done_at": "2026-11-05 19:13:11",
+   "detail": "training ended (trained), $63.2877; saves: comprehension-v4 done"
+  },
+  {
+   "step": "done",
+   "done_at": "2026-11-05 20:05",
+   "detail": "user asked for the third epoch: back to train"
+  },
+  {
+   "step": "train",
+   "done_at": "2026-11-05 20:09:53",
+   "detail": "Florence Tuning started: {\"num_gpus\": 8, \"epochs\": 1, \"budget\": 34.2, \"lr\": 5e-05, \"batch_size\": 8, \"grad_accum\": 2, \"warmup_steps\": 100, \"lora_rank\": 32, \"val_every\": 1000, \"page_val_max\": 200, \"save_every\": 1000, \"eval_batches\": 25, \"samples\": 8, \"log_every\": 20, \"num_workers\": 6, \"save_to\": {\"checkpoint\": \"best\", \"name\": \"comprehension-v5\"}, \"min_balance\": 30, \"continue_run\": true}"
+  },
+  {
+   "step": "training",
+   "done_at": "2026-11-05 21:32:16",
+   "detail": "training ended (trained), $37.6564; saves: comprehension-v5 done"
+  },
+  {
+   "step": "done",
+   "done_at": "2026-11-05 21:40",
+   "detail": "user asked for 2 more epochs from v5: back to train"
+  },
+  {
+   "step": "train",
+   "done_at": "2026-11-05 21:54:36",
+   "detail": "Florence Tuning started: {\"num_gpus\": 8, \"epochs\": 2, \"budget\": 18.34, \"lr\": 5e-05, \"batch_size\": 8, \"grad_accum\": 2, \"warmup_steps\": 100, \"lora_rank\": 32, \"val_every\": 1000, \"page_val_max\": 200, \"save_every\": 1000, \"eval_batches\": 25, \"samples\": 8, \"log_every\": 20, \"num_workers\": 6, \"save_to\": {\"checkpoint\": \"best\", \"name\": \"comprehension-v6\"}, \"min_balance\": 10, \"continue_run\": true}"
+  },
+  {
+   "step": "train",
+   "done_at": "2026-11-05 22:01:20",
+   "detail": "Florence Tuning started: {\"num_gpus\": 4, \"epochs\": 0.5, \"budget\": 18.34, \"lr\": 5e-05, \"batch_size\": 8, \"grad_accum\": 4, \"warmup_steps\": 100, \"lora_rank\": 32, \"val_every\": 1000, \"page_val_max\": 200, \"save_every\": 1000, \"eval_batches\": 25, \"samples\": 8, \"log_every\": 20, \"num_workers\": 6, \"save_to\": {\"checkpoint\": \"best\", \"name\": \"comprehension-v6\"}, \"min_balance\": 15, \"init_model\": \"comprehension-v5\"}"
+  },
+  {
+   "step": "train",
+   "done_at": "2026-11-05 22:17:08",
+   "detail": "Florence Tuning started: {\"num_gpus\": 8, \"epochs\": 2, \"budget\": 60.29, \"lr\": 5e-05, \"batch_size\": 8, \"grad_accum\": 2, \"warmup_steps\": 100, \"lora_rank\": 32, \"val_every\": 1000, \"page_val_max\": 200, \"save_every\": 1000, \"eval_batches\": 25, \"samples\": 8, \"log_every\": 20, \"num_workers\": 6, \"save_to\": {\"checkpoint\": \"best\", \"name\": \"comprehension-v6\"}, \"min_balance\": 30, \"init_model\": \"comprehension-v5\"}"
+  },
+  {
+   "step": "training",
+   "done_at": "2026-11-06 00:21:27",
+   "detail": "training ended (trained), $57.2492; saves: comprehension-v6 done"
+  }
+ ],
+ "message": "everything is done",
+ "updated_at": "2026-11-06 00:23:20",
+ "error": null,
+ "iam_forms_moved": 0,
+ "bootstrap_failure_seen": 1793845391.255472,
+ "synth_requested_at": 1793923497.6448386,
+ "upsize_checked_at": 1793923543.0975173,
+ "synth_run_id": "20261105-090235-full",
+ "synth_resumes": 0,
+ "train_run_id": 1793945802.1359396,
+ "training": {
+  "phase": "trained",
+  "cost": 57.2492,
+  "step": 10267,
+  "total_steps": 10267,
+  "step_seconds": 0.3517264839172851,
+  "eta_s": 122.53356972500023,
+  "message": "saved best/ (step 10267) as inference/comprehension/comprehension-v6",
+  "error": null
+ },
+ "budget_short": 0.0,
+ "budget_projection": {
+  "need": 62.58,
+  "budget": 61.89,
+  "spent": 53.73,
+  "hourly": 27.9474,
+  "eta_h": 0.06,
+  "at": "2026-11-06 00:13:11"
+ }
+}

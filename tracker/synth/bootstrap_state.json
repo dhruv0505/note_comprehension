@@ -1,0 +1,14 @@
+{
+ "phase": "done",
+ "billed_seconds": 2003.6788907051086,
+ "error": null,
+ "pid": 3532,
+ "started_at": 1793846182.1227584,
+ "cost": 0.063,
+ "vcpus": 4,
+ "created_at": 1793845207.6759067,
+ "machine_id": 563911,
+ "running_since": null,
+ "home": "/home/ubuntu",
+ "uploaded": true
+}

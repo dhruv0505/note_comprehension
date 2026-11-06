@@ -1,0 +1,189 @@
+{
+ "heartbeat_at": 1793944863.231933,
+ "pid": 32320,
+ "run_id": 1793944028.4045744,
+ "scrapped": {
+  "at": 1793944028.4045744,
+  "archive": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\runs\\archive\\train-20261105-214708"
+ },
+ "phase": "failed",
+ "message": "restarting training: pausing everything and archiving the run's files",
+ "error": "JLError: jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}\nTraceback (most recent call last):\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\orchestrator.py\", line 1680, in run\n    self.provision()\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\orchestrator.py\", line 526, in provision\n    inst = self.jl.resume(inst[\"machine_id\"], num_gpus=cfg[\"num_gpus\"], gpu=swap)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\jlcmd.py\", line 96, in resume\n    return self.json(\"resume\", machine_id, *extra, \"--yes\", timeout=2400)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\jlcmd.py\", line 68, in json\n    raise JLError(f\"jl {' '.join(map(str, args))}: exit {result.returncode}: {json.dumps(doc)[-600:]}\")\njlcmd.JLError: jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}\n",
+ "pause_reason": null,
+ "config": {
+  "gpu_type": "H100",
+  "num_gpus": 8,
+  "epochs": 2.0,
+  "budget": 18.34,
+  "lr": 5e-05,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 100,
+  "val_every": 1000,
+  "save_every": 1000,
+  "page_val_max": 200,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "grad_checkpointing": false,
+  "vision_lora": false,
+  "lora_rank": 32,
+  "requested_at": 1793944466.9100556,
+  "lora_alpha": 64,
+  "continue_from": {
+   "checkpoint": "best",
+   "step": 5133,
+   "val_mean_f1": 0.9050384374081061,
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "run_id": 1793937892.8800106,
+   "archive": "train-20261105-214708"
+  },
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v6"
+  },
+  "mark_model": {
+   "source": "inference",
+   "name": "marks",
+   "checkpoint": "last (end of training)",
+   "step": 10900,
+   "mean_f1": 0.9812870260316365,
+   "run_id": null
+  }
+ },
+ "fake": false,
+ "cost": {
+  "total": 0.6642,
+  "gpu": 0.6547,
+  "data": 0.0095,
+  "hourly_now": 0,
+  "budget": 18.34
+ },
+ "machines": {
+  "data": {
+   "id": 564923,
+   "status": "Paused",
+   "private_ip": "10.0.0.2",
+   "public_ip": "217.18.55.218",
+   "user": "ubuntu",
+   "gpu_type": "CPU",
+   "num_gpus": 0,
+   "storage_gb": 100,
+   "name": "note-synth-dataset",
+   "hourly": 0.4105
+  },
+  "gpu": {
+   "id": 564857,
+   "status": "Paused",
+   "private_ip": "10.0.0.3",
+   "public_ip": "217.18.55.218",
+   "user": "ubuntu",
+   "gpu_type": "H100",
+   "num_gpus": 8,
+   "storage_gb": 200,
+   "name": "seg-train",
+   "hourly": 27.947400000000002
+  }
+ },
+ "stages": [
+  {
+   "name": "requested",
+   "label": "Start confirmed",
+   "where": "local",
+   "end": 1793944469.6956835,
+   "state": "done",
+   "detail": "8 x H100, budget $18.34, LoRA rank 32, continues the previous run's best/ checkpoint (step 5133), saves best/ as inference/comprehension/comprehension-v6 at the end, takes marks out with inference/mark_separation/marks"
+  },
+  {
+   "name": "resume_data_vm",
+   "label": "Resume the dataset VM",
+   "where": "local",
+   "start": 1793944469.7291212,
+   "state": "done",
+   "end": 1793944521.431814,
+   "detail": "VM 564923 running"
+  },
+  {
+   "name": "create_gpu_vm",
+   "label": "Rent the GPU VM",
+   "where": "local",
+   "start": 1793944521.4964383,
+   "state": "failed",
+   "end": 1793944540.475751,
+   "detail": "jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}"
+  },
+  {
+   "name": "link_vms",
+   "label": "Connect the GPU VM to the dataset VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "upload_code",
+   "label": "Upload the training code",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "launch",
+   "label": "Launch on the GPU VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "setup_env",
+   "label": "Install PyTorch and libraries",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "fetch_dataset",
+   "label": "Copy the dataset to the GPU VM",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "fetch_model",
+   "label": "Download Florence-2-large",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "smoke",
+   "label": "Smoke test on every GPU (6 steps)",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "train",
+   "label": "Train",
+   "where": "gpu",
+   "state": "pending"
+  }
+ ],
+ "remote": {},
+ "test": {
+  "state": "not_run"
+ },
+ "training_started_at": null,
+ "explore": {
+  "state": "paused",
+  "requests": {},
+  "spent": 0
+ },
+ "saves": [],
+ "checkpoints_local": {},
+ "mark_model_fetch": null,
+ "continue_from": {
+  "checkpoint": "best",
+  "step": 5133,
+  "val_mean_f1": 0.9050384374081061,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "run_id": 1793937892.8800106,
+  "archive": "train-20261105-214708"
+ },
+ "log_offset": 0
+}

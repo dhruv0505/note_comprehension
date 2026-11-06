@@ -1,0 +1,23 @@
+{
+  "iam_lines": {
+    "train": 9774,
+    "val": 1202,
+    "test": 1219
+  },
+  "iam_forms": {
+    "train": 1387,
+    "val": 168,
+    "test": 175
+  },
+  "fc_charts": {
+    "train": 432,
+    "val": 120,
+    "test": 120
+  },
+  "fc_templates": {
+    "train": 18,
+    "val": 5,
+    "test": 5
+  }
+}
+wrote C:\Users\propr\Desktop\whiteboard\note_comprehension\note_synth\splits.json

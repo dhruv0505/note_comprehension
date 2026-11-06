@@ -1,0 +1,25 @@
+{
+ "checkpoint": "best (val mean F1)",
+ "step": 8000,
+ "source": "/home/ubuntu/train/run/best (GPU VM 564825)",
+ "saved_at": "2026-11-05 19:12",
+ "run_id": 1793846102.3007178,
+ "base_model": "microsoft/Florence-2-large (LoRA adapter)",
+ "lora_rank": 32,
+ "lora_alpha": 64,
+ "trained_from": null,
+ "val_mean_f1": 0.9598213174881598,
+ "best_step": 8000,
+ "total_steps": 10267,
+ "epochs": 2.0,
+ "best_val_mean_f1": 0.9001788049041206,
+ "train_config": {
+  "gpus": "8 x H100",
+  "batch_size": 8,
+  "grad_accum": 2,
+  "global_batch": 128,
+  "lr": 0.0001,
+  "warmup_steps": 200,
+  "train_rows": 657085
+ }
+}

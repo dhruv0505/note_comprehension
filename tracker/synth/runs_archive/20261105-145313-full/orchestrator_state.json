@@ -1,0 +1,60 @@
+{
+ "run_id": "20261105-145313-full",
+ "mode": "full",
+ "phase": "failed",
+ "requested_at": 1793919193.1853518,
+ "hourly": 0.8073,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 4.0,
+ "pages": {
+  "train": 30000,
+  "val": 2000,
+  "test": 2000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_train",
+  "synth_val",
+  "synth_test",
+  "swap_dataset",
+  "count_classes",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "failed",
+   "start": 1793919193.197698,
+   "end": 1793919202.0853672,
+   "log": [
+    "JLError: jl list: exit 1: {\"error\": \"Request Connection failed: GET users/fetch\"}"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "pending"
+  }
+ ],
+ "poll": 0,
+ "pulled": [],
+ "machine_id": null,
+ "billing_started": null,
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "finished_at": 1793919202.0980961
+}

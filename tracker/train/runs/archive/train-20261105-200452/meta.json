@@ -1,0 +1,480 @@
+{
+ "phase": "trained",
+ "stages": {
+  "requested": {
+   "end": 1793925327.9953978,
+   "state": "done",
+   "detail": "4 x H100, budget $36.74, LoRA rank 32, saves best/ as inference/comprehension/comprehension-v4 at the end, takes marks out with inference/mark_separation/marks"
+  },
+  "resume_data_vm": {
+   "start": 1793925374.2803116,
+   "state": "done",
+   "end": 1793925395.3178804,
+   "detail": "VM 564776 running"
+  },
+  "create_gpu_vm": {
+   "start": 1793925395.3737867,
+   "state": "done",
+   "end": 1793925650.6664565,
+   "detail": "VM 564777 rented: 8 x H100 at $27.95/h"
+  },
+  "link_vms": {
+   "start": 1793925650.7213888,
+   "state": "done",
+   "end": 1793925677.1214895,
+   "detail": "dataset VM reachable at 10.0.0.2"
+  },
+  "upload_code": {
+   "start": 1793925677.178522,
+   "state": "done",
+   "end": 1793925776.7612848,
+   "detail": "9,730 KB"
+  },
+  "launch": {
+   "start": 1793925776.7784104,
+   "state": "done",
+   "end": 1793925836.2939384
+  }
+ },
+ "billing": [
+  {
+   "kind": "data",
+   "machine_id": 564776,
+   "hourly": 0.4105,
+   "start": 1793925338.5231302,
+   "end": 1793926915.2590704
+  },
+  {
+   "kind": "data",
+   "machine_id": 564776,
+   "hourly": 0.4105,
+   "start": 1793925385.939444,
+   "end": 1793926915.2590704
+  },
+  {
+   "kind": "gpu",
+   "machine_id": 564777,
+   "hourly": 27.947400000000002,
+   "start": 1793925400.635787,
+   "end": 1793933325.3510091
+  },
+  {
+   "kind": "gpu",
+   "machine_id": 564825,
+   "hourly": 3.5174000000000003,
+   "start": 1793933328.416075,
+   "end": 1793934774.2768748,
+   "purpose": "explore"
+  }
+ ],
+ "machines": {
+  "data": {
+   "id": 564776,
+   "status": "Paused",
+   "private_ip": "10.0.0.2",
+   "public_ip": "217.18.55.27",
+   "user": "ubuntu",
+   "gpu_type": "CPU",
+   "num_gpus": 0,
+   "storage_gb": 100,
+   "name": "note-synth-dataset",
+   "hourly": 0.4105
+  },
+  "gpu": {
+   "id": 564825,
+   "status": "Paused",
+   "private_ip": "10.0.0.3",
+   "public_ip": "217.18.55.131",
+   "user": "ubuntu",
+   "gpu_type": "H100",
+   "num_gpus": 1,
+   "storage_gb": 200,
+   "name": "seg-train",
+   "hourly": 27.947400000000002
+  }
+ },
+ "log_offset": 240032,
+ "pulled": {
+  "/home/ubuntu/train/run/samples_step_001000_pages.jsonl": 180340,
+  "/home/ubuntu/train/data/val/pages/page0000000.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000000.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000008.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000008.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000016.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000016.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000024.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000024.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000032.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000032.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000040.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000040.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000048.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000048.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000056.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000056.json": true,
+  "/home/ubuntu/train/run/samples_step_002000_pages.jsonl": 180791,
+  "/home/ubuntu/train/run/samples_step_003000_pages.jsonl": 181095,
+  "/home/ubuntu/train/run/samples_step_004000_pages.jsonl": 182738,
+  "/home/ubuntu/train/run/samples_step_005000_pages.jsonl": 182482,
+  "/home/ubuntu/train/run/samples_step_005133_pages.jsonl": 184001,
+  "/home/ubuntu/train/run/samples_step_006000_pages.jsonl": 183007,
+  "/home/ubuntu/train/run/samples_step_007000_pages.jsonl": 183509,
+  "/home/ubuntu/train/run/samples_step_008000_pages.jsonl": 182911,
+  "/home/ubuntu/train/run/samples_step_009000_pages.jsonl": 182380,
+  "/home/ubuntu/train/run/samples_step_010000_pages.jsonl": 182969,
+  "/home/ubuntu/train/run/samples_step_010267_pages.jsonl": 182505
+ },
+ "test": {
+  "state": "not_run"
+ },
+ "data_vm": 564776,
+ "region": "IN2",
+ "run_id": 1793846102.3007178,
+ "config": {
+  "gpu_type": "H100",
+  "num_gpus": 8,
+  "epochs": 2.0,
+  "budget": 64.15,
+  "lr": 0.0001,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 200,
+  "val_every": 1000,
+  "save_every": 1000,
+  "page_val_max": 200,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "grad_checkpointing": false,
+  "vision_lora": false,
+  "lora_rank": 32,
+  "requested_at": 1793925327.2493637,
+  "lora_alpha": 64,
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v4"
+  },
+  "mark_model": {
+   "source": "inference",
+   "name": "marks",
+   "checkpoint": "last (end of training)",
+   "step": 10900,
+   "mean_f1": 0.9812870260316365,
+   "run_id": null
+  }
+ },
+ "remote_snapshot": {
+  "now": 1793932408.1709108,
+  "home": "/home/ubuntu",
+  "stages": [
+   {
+    "start": 1793925833.543418,
+    "state": "done",
+    "end": 1793925992.8688607,
+    "name": "setup_env"
+   },
+   {
+    "start": 1793925992.885179,
+    "state": "done",
+    "end": 1793926792.732974,
+    "name": "fetch_dataset"
+   },
+   {
+    "start": 1793926792.7483482,
+    "state": "done",
+    "end": 1793926821.1492965,
+    "name": "fetch_model"
+   },
+   {
+    "start": 1793926821.164204,
+    "state": "done",
+    "end": 1793926852.5896027,
+    "name": "smoke"
+   },
+   {
+    "start": 1793926852.6047962,
+    "state": "done",
+    "end": 1793932393.4020941,
+    "name": "train"
+   }
+  ],
+  "progress": {
+   "started_at": 1793926864.3984904,
+   "pid": 8725,
+   "phase": "finished",
+   "world": 8,
+   "updated_at": 1793932390.0528293,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "global_batch": 128,
+   "train_rows": 657085,
+   "val_rows": 300,
+   "val_pages": 200,
+   "val_every": 1000,
+   "save_every": 1000,
+   "step": 10267,
+   "total_steps": 10267,
+   "epoch": 1.9999923906343928,
+   "epochs": 2.0,
+   "steps_per_epoch": 5133,
+   "lr": 0.0,
+   "peak_lr": 0.0001,
+   "control_seq": 0,
+   "best_mean_f1": 0.9001788049041206,
+   "best_step": 8000,
+   "best_pages_mean_f1": 0.9598213174881598,
+   "last_val_step": 10267,
+   "eta_s": 123.26776347900068,
+   "step_seconds": 0.3546049955926006,
+   "samples_per_s": 375.5109213012705,
+   "loss": 0.44302866474858354,
+   "val": null,
+   "last_checkpoint": {
+    "name": "last",
+    "step": 10267,
+    "at": 1793932389.9547722
+   },
+   "finished_at": 1793932390.0528204
+  },
+  "config": {
+   "manifest": [
+    "/home/ubuntu/train/data/train/samples/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/textline/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/formula/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition_pool/textline/manifest.jsonl"
+   ],
+   "val_manifest": [
+    "/home/ubuntu/train/data/val/samples/manifest.jsonl"
+   ],
+   "val_fraction": 0.01,
+   "page_val": [
+    "/home/ubuntu/train/data/val/pages"
+   ],
+   "page_val_max": 200,
+   "out": "/home/ubuntu/train/run",
+   "resume": null,
+   "init_adapter": null,
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "epochs": 2.0,
+   "max_steps": null,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "lr": 0.0001,
+   "weight_decay": 0.0,
+   "warmup_steps": 200,
+   "max_grad_norm": 1.0,
+   "grad_checkpointing": false,
+   "num_workers": 6,
+   "seed": 0,
+   "log_every": 20,
+   "val_every": 1000,
+   "eval_batches": 25,
+   "samples": 8,
+   "eval_batch_size": 12,
+   "max_new_tokens": 1024,
+   "iou": 0.5,
+   "vertex_px": 10.0,
+   "arrow_px": 15.0,
+   "page_vertex_px": 20.0,
+   "page_arrow_px": 30.0,
+   "page_min_box_px": 4.0,
+   "page_batch": 4,
+   "mark_model": "/home/ubuntu/train/marks/model.pt",
+   "vision_lora": false,
+   "save_every": 1000,
+   "keep": 2,
+   "allow_cpu": false,
+   "world_size": 8
+  },
+  "control": null,
+  "control_ack": null,
+  "stop_pending": false,
+  "console": [
+   "  vertex      0.952  0.937  0.945   1001     50     67         0",
+   "  enclosure   0.998  0.909  0.952   1134      2    113         0",
+   "  line mark   0.984  0.965  0.974    299      5     11         1",
+   "  arrow       0.959  0.941  0.950   1120     48     70         0",
+   "  recognition formula  loss 0.5108 over 120321 target tokens: 7407 detected lines (7326 matched) in 829 images; generated text accuracy 71.2% (142999 of 200759 characters), CER 34.2% (62550 edits over 182648 characters, 39 lines missed)",
+   "  recognition textline loss 0.7205 over 15217 target tokens: 3956 detected lines (3911 matched) in 489 images; generated text accuracy 90.9% (35422 of 38989 characters), CER 9.7% (3690 edits over 38024 characters, 61 lines missed)",
+   "  validation took 123s",
+   "  saved /home/ubuntu/train/run/step_010267",
+   "  saved /home/ubuntu/train/run/last",
+   "done: step 10267, best val mean F1 0.9002"
+  ],
+  "checkpoints": [
+   {
+    "name": "best",
+    "mtime": 1793931144.2925684
+   },
+   {
+    "name": "step_010000",
+    "mtime": 1793932163.2588534
+   },
+   {
+    "name": "step_010267",
+    "mtime": 1793932388.9693358
+   },
+   {
+    "name": "last",
+    "mtime": 1793932389.781316
+   }
+  ],
+  "gpus": [
+   {
+    "index": 0,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 70.62
+   },
+   {
+    "index": 1,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 69.82
+   },
+   {
+    "index": 2,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 28.0,
+    "power_w": 68.7
+   },
+   {
+    "index": 3,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 25.0,
+    "power_w": 68.53
+   },
+   {
+    "index": 4,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.96
+   },
+   {
+    "index": 5,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 30.0,
+    "power_w": 69.5
+   },
+   {
+    "index": 6,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 71.0
+   },
+   {
+    "index": 7,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.17
+   }
+  ],
+  "processes": 0,
+  "disk_used_gb": 78.6,
+  "disk_total_gb": 207.9,
+  "test": null,
+  "polled_at": 1793932408.8297112
+ },
+ "data_host": "10.0.0.2",
+ "gpu_home_shell": "/home/ubuntu",
+ "guard": {
+  "deadline": 1793933131.952911,
+  "machine_id": 564777,
+  "api_base": "https://backendn.jarvislabs.net/",
+  "stop_wait": 360,
+  "unwatched": 1200,
+  "written_at": 1793927600.3474624
+ },
+ "training_started_at": 1793925836.2939384,
+ "remote_home": "/home/ubuntu",
+ "copy_verified": {
+  "files": 661038,
+  "bytes": 45095741656,
+  "at": 1793926849.0181158
+ },
+ "budget_changes": [
+  {
+   "at": 1793927002.899331,
+   "from": 36.74,
+   "to": 47.32
+  },
+  {
+   "at": 1793927057.8477154,
+   "from": 47.32,
+   "to": 47.39
+  },
+  {
+   "at": 1793927600.3246257,
+   "from": 47.39,
+   "to": 64.15
+  }
+ ],
+ "pause_reason": "training finished",
+ "explore": {
+  "state": "paused",
+  "requests": {},
+  "since": 1793934774.2974815,
+  "error": null,
+  "hourly": 3.5174,
+  "uploaded_models": {},
+  "uploaded_marks": {},
+  "failures": 0,
+  "worker": null
+ },
+ "saves": {
+  "start": {
+   "id": "start",
+   "checkpoint": "best",
+   "name": "comprehension-v4",
+   "origin": "start",
+   "state": "done",
+   "requested_at": 1793933325.3904128,
+   "message": null,
+   "folder": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\inference\\comprehension\\comprehension-v4",
+   "step": 8000,
+   "val_mean_f1": 0.9598213174881598,
+   "finished_at": 1793934744.1838796
+  }
+ },
+ "save_to_queued": true,
+ "save_resumed_vm": null,
+ "checkpoints_local": {
+  "best": {
+   "mtime": 1793931144.2925684,
+   "step": 8000,
+   "at": 1793934744.006325,
+   "mean_f1": 0.9001788049041206
+  },
+  "last": {
+   "mtime": 1793932389.781316,
+   "step": 10267,
+   "at": 1793934744.006325
+  }
+ }
+}

@@ -480,3 +480,119 @@ C:\Users\propr\Desktop\whit
 [2026-09-15 19:09:22] waiting for a run request
 [2026-09-15 19:09:48] waiting for a run request
 [2026-09-15 19:27:51] waiting for a run request
+[2026-09-22 01:23:56] waiting for a run request
+[2026-09-30 19:00:11] waiting for a run request
+[2026-10-03 19:33:05] waiting for a run request
+[2026-10-08 11:14:44] waiting for a run request
+[2026-10-18 10:15:32] waiting for a run request
+[2026-10-19 21:34:35] waiting for a run request
+[2026-10-30 10:59:25] waiting for a run request
+[2026-11-02 11:11:55] waiting for a run request
+[2026-11-03 23:19:05] waiting for a run request
+[2026-11-04 18:25:37] waiting for a run request
+[2026-11-04 18:35:02] waiting for a run request
+[2026-11-04 19:04:19] starting 20261104-190419-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-04 19:04:26] resuming the dataset VM 563911 at 32 vCPUs / 128 GB
+[2026-11-04 19:04:34] could not resume at 32 vCPUs / 128 GB: jl resume 563911 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available in IN2."}
+[2026-11-04 19:04:34] resuming the dataset VM 563911 at its last size
+[2026-11-04 19:05:58] watching 20261104-190419-full
+[2026-11-04 19:07:38] 20261104-190419-full failed: stage failed: synth_train; the VM is paused
+[2026-11-04 19:07:38] waiting for a run request
+[2026-11-04 19:13:12] starting 20261104-191312-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-04 19:13:19] resuming the dataset VM 563936 at 32 vCPUs / 128 GB
+[2026-11-04 19:13:26] could not resume at 32 vCPUs / 128 GB: jl resume 563936 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available in IN2."}
+[2026-11-04 19:13:26] resuming the dataset VM 563936 at its last size
+[2026-11-04 19:14:55] watching 20261104-191312-full
+[2026-11-04 19:16:35] 20261104-191312-full failed: stage failed: synth_train; the VM is paused
+[2026-11-04 19:16:35] waiting for a run request
+[2026-11-04 19:19:18] carrying on 20261104-191312-full from where it stopped
+[2026-11-04 19:20:34] watching 20261104-191312-full
+[2026-11-04 19:45:15] watching 20261104-191312-full
+[2026-11-04 22:19:24] status unavailable (1/5): exec on 563943 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/563943"
+}
+[2026-11-04 22:49:56] status unavailable (1/5): jl exec timed out after 180s
+[2026-11-04 22:56:48] status unavailable (1/5): Connection timed out during banner exchange
+[2026-11-04 22:58:58] status unavailable (2/5): Connection timed out during banner exchange
+[2026-11-04 23:01:08] status unavailable (3/5): Connection timed out during banner exchange
+[2026-11-04 23:03:19] status unavailable (4/5): Connection timed out during banner exchange
+[2026-11-04 23:05:27] status unavailable (5/5): Connection timed out during banner exchange
+[2026-11-04 23:06:49] 20261104-191312-full failed: VM unreachable for 5 polls; the VM is paused
+[2026-11-04 23:06:49] waiting for a run request
+[2026-11-04 23:26:37] starting 20261104-232637-sample: 20 train, 20 val pages; recognition on, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-04 23:28:17] watching 20261104-232637-sample
+[2026-11-04 23:30:44] 20261104-232637-sample finished: finished; the VM is paused
+[2026-11-04 23:30:44] waiting for a run request
+[2026-11-04 23:34:00] FAILED: PermissionError: [WinError 5] Access is denied: 'C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\synth\\run' -> 'C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\synth\\runs_archive\\20261104-232637-sample'
+[2026-11-04 23:34:00] waiting for a run request
+[2026-11-04 23:39:25] starting 20261104-233925-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-04 23:39:32] resuming the dataset VM 564096 at 32 vCPUs / 128 GB
+[2026-11-04 23:39:39] could not resume at 32 vCPUs / 128 GB: jl resume 564096 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available in IN2."}
+[2026-11-04 23:39:39] resuming the dataset VM 564096 at 16 vCPUs / 64 GB
+[2026-11-04 23:39:49] could not resume at 16 vCPUs / 64 GB: jl resume 564096 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available in IN2."}
+[2026-11-04 23:39:49] resuming the dataset VM 564096 at 8 vCPUs / 32 GB
+[2026-11-04 23:39:57] could not resume at 8 vCPUs / 32 GB: jl resume 564096 --vcpus 8 --ram 32 --yes: exit 1: {"error": "CPU VM size 8 vCPU / 32GB RAM is not available in IN2."}
+[2026-11-04 23:39:57] resuming the dataset VM 564096 at its last size
+[2026-11-04 23:41:28] watching 20261104-233925-full
+[2026-11-04 23:54:34] status unavailable (1/5): exec on 564117 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564117"
+}
+[2026-11-05 07:03:45] 20261104-233925-full finished: finished; the VM is paused
+[2026-11-05 07:03:45] waiting for a run request
+[2026-11-05 09:02:35] starting 20261105-090235-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-05 09:02:42] resuming the dataset VM 564419 at 32 vCPUs / 128 GB
+[2026-11-05 09:02:50] could not resume at 32 vCPUs / 128 GB: jl resume 564419 --vcpus 32 --ram 128 --yes: exit 1: {"error": "CPU VM size 32 vCPU / 128GB RAM is not available in IN2."}
+[2026-11-05 09:02:50] resuming the dataset VM 564419 at 16 vCPUs / 64 GB
+[2026-11-05 09:02:57] could not resume at 16 vCPUs / 64 GB: jl resume 564419 --vcpus 16 --ram 64 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available in IN2."}
+[2026-11-05 09:02:57] resuming the dataset VM 564419 at 8 vCPUs / 32 GB
+[2026-11-05 09:03:04] could not resume at 8 vCPUs / 32 GB: jl resume 564419 --vcpus 8 --ram 32 --yes: exit 1: {"error": "CPU VM size 8 vCPU / 32GB RAM is not available in IN2."}
+[2026-11-05 09:03:04] resuming the dataset VM 564419 at its last size
+[2026-11-05 09:04:31] watching 20261105-090235-full
+[2026-11-05 09:32:45] status unavailable (1/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:48:06] status unavailable (1/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:50:08] status unavailable (2/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:52:10] status unavailable (3/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:54:13] status unavailable (4/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:56:11] status unavailable (5/5): exec on 564497 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564497"
+}
+[2026-11-05 13:57:47] 20261105-090235-full failed: VM unreachable for 5 polls; THE VM DID NOT PAUSE
+[2026-11-05 13:57:47] waiting for a run request
+[2026-11-05 13:59:25] 20261105-090235-full failed: VM unreachable for 5 polls; THE VM DID NOT PAUSE
+[2026-11-05 14:01:02] 20261105-090235-full failed: VM unreachable for 5 polls; THE VM DID NOT PAUSE
+[2026-11-05 14:02:40] 20261105-090235-full failed: VM unreachable for 5 polls; THE VM DID NOT PAUSE
+[2026-11-05 14:04:18] 20261105-090235-full failed: VM unreachable for 5 polls; THE VM DID NOT PAUSE
+[2026-11-05 14:04:18] carrying on 20261105-090235-full from where it stopped
+[2026-11-05 14:04:26] RESUME FAILED: JLError: jl list: exit 1: {"error": "Request Connection failed: GET users/fetch"}
+[2026-11-05 14:06:02] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:06:02] waiting for a run request
+[2026-11-05 14:07:39] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:09:17] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:10:55] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:12:32] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:14:09] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:15:47] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:17:25] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:19:02] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:20:40] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:22:18] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:23:56] 20261105-090235-full failed: the orchestrator failed; THE VM DID NOT PAUSE
+[2026-11-05 14:23:56] starting 20261105-142356-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-05 14:24:06] 20261105-142356-full failed: stage failed: resume_vm; the VM is paused
+[2026-11-05 14:24:06] waiting for a run request
+[2026-11-05 14:53:13] starting 20261105-145313-full: 30,000 train, 2,000 val, 2,000 test pages; recognition on with 10 whole-pool textline passes, mark crops box, 2 geometry figures without a page per train page, 0 tuned settings
+[2026-11-05 14:53:22] 20261105-145313-full failed: stage failed: resume_vm; the VM is paused
+[2026-11-05 14:53:22] waiting for a run request
+[2026-11-05 16:00:34] watching 20261105-090235-full
+[2026-11-05 16:26:25] 20261105-090235-full finished: finished; the VM is paused
+[2026-11-05 16:26:25] waiting for a run request

@@ -72,12 +72,12 @@ SHAPE_FIT_SPREAD = 1.0      # how fast geometry and drawings fall off away from 
 # (make_diagram). That density is intended: a page stands in for a downsampled
 # capture of a much larger screen, so small content is not meant to be legible.
 MIN_FLOWCHART_AREA = 0.06
-# Page area a flowchart symbol needs to stay legible. OHFD charts carry 9-30
+# Page area a flowchart symbol needs to stay legible. FC charts carry 7-25
 # symbols and the whole chart is scaled into its cell, so without this a
 # 30-symbol chart in a small cell rendered as a knot of overlapping boxes.
 AREA_PER_SYMBOL = 12000.0
 
-# How often each OHFD chart has been used, so the generator can spread itself
+# How often each FC chart has been used, so the generator can spread itself
 # over the set instead of returning to the same few. Module-level because it has
 # to persist across generate_page calls; clear it to start a fresh run.
 DIAGRAM_USAGE: Dict[int, int] = {}
@@ -316,13 +316,13 @@ def _inset(cell: Tuple[float, float, float, float], fill: float,
 
 def _fill_cell(kind: str, cell: Tuple[float, float, float, float], scale: float,
                 dealer, pools: Dict[str, list], page_charts: Optional[set] = None) -> Optional[Ink]:
-    """Build the content for one cell, already in page coordinates. `page_charts`: the OHFD charts
+    """Build the content for one cell, already in page coordinates. `page_charts`: the FC charts
     already on the page, which a flowchart may not repeat (bg.make_diagram); it is added to."""
     x0, y0, x1, y1 = cell
     local_w, local_h = ly.cell_capacity(cell, scale)
 
     if kind == "flowchart":
-        diagram = bg.make_diagram(pools["ohfd"], dealer,
+        diagram = bg.make_diagram(pools["flowchart"], dealer,
                                    cell=(x1 - x0, y1 - y0),
                                    min_area_per_symbol=AREA_PER_SYMBOL,
                                    usage=DIAGRAM_USAGE,
@@ -788,7 +788,7 @@ def _clamp_to_cell(block: Ink, cell: Tuple[float, float, float, float]) -> Ink:
 
 def generate_page(text_pool: List[Ink],
                    quickdraw_pool: List[Ink],
-                   ohfd_pool: Optional[List[Ink]] = None,
+                   flowchart_pool: Optional[List[Ink]] = None,
                    math_pool: Optional[List[Ink]] = None,
                    shape_bank: Optional["gd.Bank"] = None,
                    glyph_pool: Optional[Dict[str, List[Ink]]] = None,
@@ -797,7 +797,7 @@ def generate_page(text_pool: List[Ink],
     """
     text_pool:      line-level Ink from IAM-OnDB / DeepWriting loaders
     quickdraw_pool: sketch-level Ink from QuickDraw loader
-    ohfd_pool:      diagram-level Ink from OHFD loader (optional; falls back
+    flowchart_pool:      diagram-level Ink from the FC loader (optional; falls back
                      to procedural diagrams if not provided)
     math_pool:      expression-level Ink from MathWriting loader (optional;
                      fills whole maths sections and drops the odd expression
@@ -825,7 +825,7 @@ def generate_page(text_pool: List[Ink],
     if shape_bank is None:
         shape_bank = shape_bank_default()
 
-    pools = {"ohfd": ohfd_pool, "quickdraw": quickdraw_pool, "math": math_pool,
+    pools = {"flowchart": flowchart_pool, "quickdraw": quickdraw_pool, "math": math_pool,
              "shapes": shape_bank, "glyphs": glyph_pool}
     bank_ok = shape_bank is not None and shape_bank.ok()
     have = {
@@ -846,7 +846,7 @@ def generate_page(text_pool: List[Ink],
         kinds.append(_choose_kind((x1 - x0) / usable_w, (y1 - y0) / usable_h, cell_have))
 
     blocks: List[Ink] = []
-    page_charts: set = set()        # the OHFD charts on this page: none is placed twice
+    page_charts: set = set()        # the FC charts on this page: none is placed twice
     for cell_index, (cell, kind) in enumerate(zip(cells, kinds)):
         block = _fill_cell(kind, cell, scale, dealer, pools, page_charts)
         if block is None:
@@ -877,7 +877,7 @@ def generate_page(text_pool: List[Ink],
         if _attempt + 1 >= LINE_OVERLAP_ATTEMPTS:
             raise RuntimeError(f"{LINE_OVERLAP_ATTEMPTS} pages in a row had lines overlapping by more "
                                f"than {bg.LINE_MAX_OVERLAP:.0%} of the smaller one")
-        return generate_page(text_pool, quickdraw_pool, ohfd_pool, math_pool, shape_bank, glyph_pool,
+        return generate_page(text_pool, quickdraw_pool, flowchart_pool, math_pool, shape_bank, glyph_pool,
                              enclosure_prob, _attempt=_attempt + 1)
 
     # Arrows go on last, once every block they might connect is in place.

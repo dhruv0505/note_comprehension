@@ -19,6 +19,12 @@ CHUNK = 8 * 1024 * 1024         # a bigger upload goes in pieces: a long scp fro
 CONNECTION_CODES = {-1, 255, 4294967295}
 ENV = dict(os.environ, PYTHONPATH=os.path.join(os.path.dirname(HERE), "jl"), PYTHONIOENCODING="utf-8", PYTHONUTF8="1",
            MSYS_NO_PATHCONV="1")
+# A HOME set here (Git Bash sets one, a Windows path) reaches the VM's shell and overrides its own, so "$HOME" in a
+# remote command came back as C:\Users\...: never passed on. The CLI finds its config without it (USERPROFILE).
+ENV.pop("HOME", None)
+# jl.exe and the ssh it runs are console programs: started from a process with no console (the autopilot, a
+# background bootstrap) each would open a window of its own
+NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
 class JLError(RuntimeError):
@@ -46,7 +52,8 @@ class JL:
             # had its ssh children inherit that console as input, and after a while every
             # call hung until its timeout while the same command from a fresh process ran
             return subprocess.run([*self.base, *map(str, args)], capture_output=True, text=True, encoding="utf-8",
-                                  errors="replace", env=ENV, timeout=timeout, stdin=subprocess.DEVNULL)
+                                  errors="replace", env=ENV, timeout=timeout, stdin=subprocess.DEVNULL,
+                                  creationflags=NO_WINDOW)
         except subprocess.TimeoutExpired as error:
             raise JLError(f"jl {args[0]} timed out after {timeout}s") from error
 

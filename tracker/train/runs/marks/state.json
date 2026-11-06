@@ -1,0 +1,98 @@
+{
+ "heartbeat_at": 1793953497.6134255,
+ "pid": 33168,
+ "run_id": 1793926248.502215,
+ "scrapped": null,
+ "phase": "waiting_for_start",
+ "message": "waiting for Start in the tracker",
+ "error": null,
+ "pause_reason": null,
+ "config": {},
+ "fake": false,
+ "cost": {
+  "total": 0.0,
+  "gpu": 0.0,
+  "data": 0.0,
+  "hourly_now": 0,
+  "budget": null
+ },
+ "machines": {},
+ "stages": [
+  {
+   "name": "requested",
+   "label": "Start confirmed",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "resume_data_vm",
+   "label": "Resume the dataset VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "create_gpu_vm",
+   "label": "Rent the GPU VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "link_vms",
+   "label": "Connect the GPU VM to the dataset VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "upload_code",
+   "label": "Upload the training code",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "launch",
+   "label": "Launch on the GPU VM",
+   "where": "local",
+   "state": "pending"
+  },
+  {
+   "name": "setup_env",
+   "label": "Install PyTorch",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "fetch_dataset",
+   "label": "Copy the mark crops to the GPU VM",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "prepare",
+   "label": "Scale and pad the crops to 600 x 100",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "smoke",
+   "label": "Smoke test (6 steps)",
+   "where": "gpu",
+   "state": "pending"
+  },
+  {
+   "name": "train",
+   "label": "Train",
+   "where": "gpu",
+   "state": "pending"
+  }
+ ],
+ "remote": {},
+ "test": {
+  "state": "not_run"
+ },
+ "training_started_at": null,
+ "explore": null,
+ "saves": [],
+ "checkpoints_local": {},
+ "mark_model_fetch": null,
+ "continue_from": null,
+ "log_offset": 0

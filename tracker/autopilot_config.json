@@ -1,0 +1,53 @@
+{
+ "bootstrap_budget": 3.0,
+ "florence": {
+  "num_gpus": 8,
+  "epochs": 2,
+  "budget": "balance",
+  "lr": 5e-05,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 100,
+  "lora_rank": 32,
+  "val_every": 1000,
+  "page_val_max": 200,
+  "save_every": 1000,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v6"
+  },
+  "min_balance": 30,
+  "init_model": "comprehension-v5"
+ },
+ "notes": "v3's shape (rank 32, 8 x H100 (user: more H100s if it saves time), global batch 128 = 8 per GPU x 8 GPUs x 2 accumulation), from pretrained Florence-2-large, 2 full epochs. A third epoch is a later run continuing from this one's checkpoint, if the user adds money. Budget = the account balance at Start less $1.50; if the measured speed says 2 epochs need more, the user is notified and the budget raised via /api/budget once they top up.",
+ "reserve": 5.0,
+ "epoch3_plan": {
+  "when": "only after the user's go-ahead (and a top-up if needed)",
+  "continue_from": "this run's checkpoint (RESET continue_from + Start continue_run)",
+  "epochs": 1,
+  "lr": 5e-05,
+  "schedule": "fresh optimizer, short warmup, own cosine decay",
+  "num_gpus": 8,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "save_to": "comprehension-v4 epoch-3 result under a new name, e.g. comprehension-v4-e3",
+  "agreed": "2026-11-05",
+  "started": "2026-11-05 ~20:05: RESET continue_from best (step 8000 = comprehension-v4); waits for balance >= $30"
+ },
+ "epochs45_plan": {
+  "agreed": "2026-11-05 ~21:40",
+  "continue_from": "comprehension-v5 (best = last, step 5133)",
+  "epochs": 2,
+  "lr": 5e-05,
+  "schedule": "fresh cosine over 2 epochs",
+  "save_to": "comprehension-v6",
+  "est_cost": "~$64 (balance $23.37 -> add ~$45)",
+  "spend": "user 2026-11-05: run until $5 is left in Jarvis (reserve 5.0); starts now on the current balance, budget follows top-ups",
+  "revised": "2026-11-05 22:05: 8 x H100 refused (Jarvis wants 1 h of the VM's rate in the balance, $23.95 > $23.34); 4 x H100 from inference/comprehension-v5, 0.5 epoch so the cosine schedule finishes inside balance - $5",
+  "option_A": "2026-11-05 22:20: user chose A: half-epoch 4-GPU run stopped before training ($3.37); 2 epochs on 8 x H100 from inference/comprehension-v5, budget = balance - $5 (balance $65.29)"
+ }
+}

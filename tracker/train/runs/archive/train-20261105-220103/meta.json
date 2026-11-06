@@ -1,0 +1,135 @@
+{
+ "phase": "failed",
+ "stages": {
+  "requested": {
+   "end": 1793944469.6956835,
+   "state": "done",
+   "detail": "8 x H100, budget $18.34, LoRA rank 32, continues the previous run's best/ checkpoint (step 5133), saves best/ as inference/comprehension/comprehension-v6 at the end, takes marks out with inference/mark_separation/marks"
+  },
+  "resume_data_vm": {
+   "start": 1793944469.7291212,
+   "state": "done",
+   "end": 1793944521.431814,
+   "detail": "VM 564923 running"
+  },
+  "create_gpu_vm": {
+   "start": 1793944521.4964383,
+   "state": "failed",
+   "end": 1793944540.475751,
+   "detail": "jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}"
+  }
+ },
+ "billing": [
+  {
+   "kind": "data",
+   "machine_id": 564923,
+   "hourly": 0.4105,
+   "start": 1793944479.7831666,
+   "end": 1793944563.033092
+  },
+  {
+   "kind": "gpu",
+   "machine_id": 564857,
+   "hourly": 27.947400000000002,
+   "start": 1793944535.578059,
+   "end": 1793944619.9093628
+  }
+ ],
+ "machines": {
+  "data": {
+   "id": 564923,
+   "status": "Paused",
+   "private_ip": "10.0.0.2",
+   "public_ip": "217.18.55.218",
+   "user": "ubuntu",
+   "gpu_type": "CPU",
+   "num_gpus": 0,
+   "storage_gb": 100,
+   "name": "note-synth-dataset",
+   "hourly": 0.4105
+  },
+  "gpu": {
+   "id": 564857,
+   "status": "Paused",
+   "private_ip": "10.0.0.3",
+   "public_ip": "217.18.55.218",
+   "user": "ubuntu",
+   "gpu_type": "H100",
+   "num_gpus": 8,
+   "storage_gb": 200,
+   "name": "seg-train",
+   "hourly": 27.947400000000002
+  }
+ },
+ "log_offset": 0,
+ "pulled": {},
+ "test": {
+  "state": "not_run"
+ },
+ "data_vm": 564923,
+ "region": "IN2",
+ "run_id": 1793944028.4045744,
+ "wipe_remote": true,
+ "scrapped": {
+  "at": 1793944028.4045744,
+  "archive": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\runs\\archive\\train-20261105-214708"
+ },
+ "continue_from": {
+  "checkpoint": "best",
+  "step": 5133,
+  "val_mean_f1": 0.9050384374081061,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "run_id": 1793937892.8800106,
+  "archive": "train-20261105-214708"
+ },
+ "remote_snapshot": {},
+ "config": {
+  "gpu_type": "H100",
+  "num_gpus": 8,
+  "epochs": 2.0,
+  "budget": 18.34,
+  "lr": 5e-05,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 100,
+  "val_every": 1000,
+  "save_every": 1000,
+  "page_val_max": 200,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "grad_checkpointing": false,
+  "vision_lora": false,
+  "lora_rank": 32,
+  "requested_at": 1793944466.9100556,
+  "lora_alpha": 64,
+  "continue_from": {
+   "checkpoint": "best",
+   "step": 5133,
+   "val_mean_f1": 0.9050384374081061,
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "run_id": 1793937892.8800106,
+   "archive": "train-20261105-214708"
+  },
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v6"
+  },
+  "mark_model": {
+   "source": "inference",
+   "name": "marks",
+   "checkpoint": "last (end of training)",
+   "step": 10900,
+   "mean_f1": 0.9812870260316365,
+   "run_id": null
+  }
+ },
+ "error": "JLError: jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}\nTraceback (most recent call last):\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\orchestrator.py\", line 1680, in run\n    self.provision()\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\orchestrator.py\", line 526, in provision\n    inst = self.jl.resume(inst[\"machine_id\"], num_gpus=cfg[\"num_gpus\"], gpu=swap)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\jlcmd.py\", line 96, in resume\n    return self.json(\"resume\", machine_id, *extra, \"--yes\", timeout=2400)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\jlcmd.py\", line 68, in json\n    raise JLError(f\"jl {' '.join(map(str, args))}: exit {result.returncode}: {json.dumps(doc)[-600:]}\")\njlcmd.JLError: jl resume 564857 --num-gpus 8 --yes: exit 1: {\"error\": \"Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again.\"}\n",
+ "explore": {
+  "state": "paused",
+  "requests": {}
+ }
+}

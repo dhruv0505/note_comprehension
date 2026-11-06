@@ -402,6 +402,40 @@ class Orchestrator:
         self.save()
         self.publish()
 
+    # What train_remote.sh's fetch_dataset copies (its `parts` and the optional `extra` folders), less shards/
+    COPIED = ("train/samples val/samples val/pages test/pages train/report.json val/report.json test/report.json "
+              "train/recognition/textline train/recognition/formula train/recognition_pool/textline train/geometry")
+
+    def copy_matches(self):
+        """Whether the GPU VM holds every file of the dataset fetch_dataset copies, byte for byte in count and size,
+        checked before the dataset VM is paused: the copy's own checks count manifest rows and page files but not every
+        image. Counted with find on both VMs (~/run/dataset there, ~/train/data here), shards/ left out as the copy
+        leaves them out. A mismatch keeps the dataset VM running and is reported; it is counted once per run."""
+        if self.meta.get("copy_verified"):
+            return True
+        count = ("cd {root} && find " + self.COPIED + " -path '*/shards' -prune -o -type f -printf '%s\n' "
+                 "2>/dev/null | awk '{{n++; s+=$1}} END {{print \"FILES\", n+0, s+0}}'")
+        try:
+            sides = {}
+            for kind, root in (("data", "~/run/dataset"), ("gpu", "~/train/data")):
+                _, out, _ = self.exec(kind, count.format(root=root), timeout=900, check=False)
+                line = next((l for l in out.splitlines() if l.startswith("FILES")), "")
+                sides[kind] = tuple(int(x) for x in line.split()[1:3]) if line else None
+        except (JLError, Failure, ValueError) as error:
+            self.say(f"could not compare the copy with the dataset yet: {str(error)[:200]}; the dataset VM stays up")
+            return False
+        if sides["data"] and sides["data"] == sides["gpu"] and sides["data"][0] > 0:
+            self.meta["copy_verified"] = {"files": sides["data"][0], "bytes": sides["data"][1], "at": time.time()}
+            self.save()
+            self.say(f"copy checked: {sides['data'][0]:,} files, {sides['data'][1] / 1e9:.1f} GB on both VMs")
+            return True
+        if not self.meta.get("copy_mismatch"):
+            self.meta["copy_mismatch"] = {"data": sides["data"], "gpu": sides["gpu"], "at": time.time()}
+            self.save()
+            self.say(f"COPY MISMATCH, the dataset VM is kept running: dataset VM {sides['data']}, GPU VM {sides['gpu']}"
+                     " (files, bytes)")
+        return False
+
     def exec(self, kind, command, timeout=300, check=True):
         code, out, err = self.jl.exec(self.meta["machines"][kind]["id"], command, timeout=timeout)
         if check and code != 0:
@@ -906,7 +940,7 @@ class Orchestrator:
 
             states = {s["name"]: s.get("state") for s in st["stages"]}
             progress = st.get("progress") or {}
-            if states.get("fetch_dataset") == "done" and self.running("data"):
+            if states.get("fetch_dataset") == "done" and self.running("data") and self.copy_matches():
                 self.pause("data", "dataset copied to the GPU VM")
             failed = [n for n, s in states.items() if s == "failed"]
             cost = self.cost()

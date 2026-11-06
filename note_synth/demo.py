@@ -6,7 +6,7 @@ are present under data/ and on lightweight MOCK stand-ins otherwise.
     python demo.py --mock     # mocks only (fast, no data files needed)
 
 Each pool degrades independently: a missing archive just falls back to its mock
-(or to the procedural diagram builder for OHFD), so you can start generating
+(or to the procedural diagram builder for FC), so you can start generating
 pages with whichever datasets you've downloaded so far. See README.md for what
 goes in data/.
 
@@ -26,7 +26,7 @@ random.seed(0)
 # Enough lines that a single writer has a full page's worth (see
 # page_generator.MIN_LINES_PER_WRITER) without a slow startup.
 DEMO_LIMITS = {"iam": 1500, "deepwriting": 1500, "quickdraw": 40, "math": 60,
-               "ohfd": 30, "emnist": 8}
+               "fc": 30, "emnist": 8}
 
 
 def _fake_cursive_stroke(n_words=1, seed_x=0.0):
@@ -147,8 +147,8 @@ def load_real_pools() -> dict:
         # exhausting the item budget on whatever sorts first alphabetically
         "quickdraw_pool": _try_load("quickdraw", loaders.load_quickdraw,
                                     max_per_category=DEMO_LIMITS["quickdraw"]),
-        "ohfd_pool": _try_load("ohfd", loaders.load_ohfd,
-                               max_items=DEMO_LIMITS["ohfd"]),
+        "flowchart_pool": _try_load("fc", loaders.load_fc,
+                               max_items=DEMO_LIMITS["fc"]),
         "math_pool": _try_load("mathwriting", loaders.load_mathwriting,
                                max_items=DEMO_LIMITS["math"]),
         # keyed by character rather than a flat list: it is what a geometry
@@ -162,7 +162,7 @@ if __name__ == "__main__":
     from page_generator import generate_page
 
     if "--mock" in sys.argv:
-        pools = {"text_pool": [], "quickdraw_pool": [], "ohfd_pool": [],
+        pools = {"text_pool": [], "quickdraw_pool": [], "flowchart_pool": [],
                  "math_pool": [], "glyph_pool": None}
     else:
         pools = load_real_pools()

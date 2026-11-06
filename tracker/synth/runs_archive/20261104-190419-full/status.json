@@ -1,0 +1,175 @@
+{
+ "polled_at": 1793848058.29141,
+ "poll": 2,
+ "cost": 0.0052,
+ "budget": 4.0,
+ "hourly": 0.1129,
+ "machine_id": 563936,
+ "started": 1793847891.141915,
+ "status": {
+  "now": 1793848033.3976908,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000,
+   "val": 2000,
+   "test": 2000
+  },
+  "mode": "full",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1793847859.2678664,
+    "end": 1793847912.1501377,
+    "log": [
+     "VM 563936 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1793847912.1592054,
+    "end": 1793847958.5504553,
+    "log": [
+     "251 KB"
+    ]
+   },
+   {
+    "start": 1793847955.3575315,
+    "state": "done",
+    "end": 1793847955.3940232,
+    "name": "check_cache"
+   },
+   {
+    "start": 1793847955.4137857,
+    "state": "done",
+    "end": 1793847955.4593387,
+    "name": "cache_rebuild"
+   },
+   {
+    "start": 1793847955.4791358,
+    "state": "done",
+    "end": 1793847955.5010488,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1793847955.5204558,
+    "state": "failed",
+    "end": 1793847967.2538335,
+    "name": "synth_train",
+    "log": [
+     "  File \"/usr/lib/python3.12/multiprocessing/pool.py\", line 873, in next",
+     "    raise value",
+     "ModuleNotFoundError: No module named 'matplotlib'"
+    ]
+   },
+   {
+    "state": "pending",
+    "name": "synth_val"
+   },
+   {
+    "state": "pending",
+    "name": "synth_test"
+   },
+   {
+    "state": "pending",
+    "name": "swap_dataset"
+   },
+   {
+    "state": "pending",
+    "name": "count_classes"
+   },
+   {
+    "state": "pending",
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 0,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 0,
+    "target": 30000,
+    "geometry_samples": 0,
+    "recognition": {
+     "textline": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "lines_without_times": 0,
+      "shards_done": 0
+     },
+     "formula": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "lines_without_times": 0,
+      "shards_done": 0
+     }
+    }
+   },
+   "val": {
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 0,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 0,
+    "target": 2000,
+    "geometry_samples": 0,
+    "recognition": {
+     "textline": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "lines_without_times": 0,
+      "shards_done": 0
+     },
+     "formula": {
+      "samples": 0,
+      "rows": 0,
+      "short_samples": 0,
+      "rows_with_other_lines": 0,
+      "lines_without_times": 0,
+      "shards_done": 0
+     }
+    }
+   },
+   "test": {
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0,
+    "rejected": 0,
+    "worker_seconds": 0,
+    "max_item_uses_on_a_page": 0,
+    "shards_done": 0,
+    "target": 2000,
+    "geometry_samples": 0
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   0.5,
+   0.4,
+   0.2
+  ],
+  "cpus": 4,
+  "disk_used_gb": 13.4,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "stage failed: synth_train",
+ "paused": true,
+ "mode": "full"
+}

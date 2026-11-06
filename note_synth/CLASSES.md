@@ -23,7 +23,7 @@ and the size-weighted choice of what each cell holds; regenerate and recount.)
 | `geometry`  | **0.52** | 1 | 0–1  | 52% | A textbook geometry figure built from mined ink, its labels as textlines inside its box |
 | `drawing`   | **0.33** | 0 | 0–3  | 25% | A QuickDraw sketch |
 | `table`     | **0.29** | 0 | 0–3  | 23% | A grid ruled in mined ink — every column divider, and either every row divider or just the header's — each cell a textline or formula, held by the table directly |
-| `flowchart` | not yet counted | | | | An OHFD flowchart boxed as a whole: its shapes `enclosure`, its arrows `arrow`, its captions (in a shape or on an arrow) textlines or formulas held by the chart directly |
+| `flowchart` | **0.76** train, **1.26** val | | | | An FC_1.0 flowchart boxed as a whole: its shapes `enclosure`, its arrows `arrow`, its captions (in a shape or on an arrow) textlines or formulas held by the chart directly |
 
 **≈ 9.9 level-2 blocks per page**
 
@@ -84,7 +84,7 @@ maths section's rows never overlap at all, which is stricter, and stay that way.
 
 | Class | Avg / page | Median | Min–Max | On pages | What it is |
 |---|---:|---:|---:|---:|---|
-| `arrow`     | **5.27** | 5   | 0–22 | 84% | A flowchart edge (~4.21 / page, real OHFD ink) or a connector arrow between blocks (~1.06 / page, mined ink) |
+| `arrow`     | **5.27** | 5   | 0–22 | 84% | A flowchart edge (real FC_1.0 ink) or a connector arrow between blocks (~1.06 / page, mined ink) |
 | `unknown`   | **0.00** | 0   | 0–0  | 0%  | Unnameable ink. The class exists but nothing generates it yet |
 
 (Counts predate enclosures and line marks moving to level 1.) Arrows are the only

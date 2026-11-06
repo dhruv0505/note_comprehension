@@ -1,0 +1,99 @@
+{
+ "run_id": "20261104-191312-full",
+ "mode": "full",
+ "phase": "failed",
+ "requested_at": 1793848392.6469088,
+ "hourly": 0.1129,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 4.0,
+ "pages": {
+  "train": 30000,
+  "val": 2000,
+  "test": 2000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_train",
+  "synth_val",
+  "synth_test",
+  "swap_dataset",
+  "count_classes",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1793848392.6606817,
+   "end": 1793848450.6595957,
+   "log": [
+    "VM 563940 running with 4 vCPUs, $0.11/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1793848450.669358,
+   "end": 1793848495.9652221,
+   "log": [
+    "251 KB"
+   ]
+  }
+ ],
+ "poll": 183,
+ "pulled": [
+  "train/mark/0",
+  "train/mark/10500",
+  "train/mark/12001",
+  "train/mark/13500",
+  "train/mark/1500",
+  "train/mark/15000",
+  "train/mark/3000",
+  "train/mark/4501",
+  "train/mark/6000",
+  "train/mark/7500",
+  "train/mark/9000",
+  "train/recog_formula/10051",
+  "train/recog_formula/15050",
+  "train/recog_formula/50",
+  "train/recog_formula/5051",
+  "train/recog_textline/10045",
+  "train/recog_textline/15049",
+  "train/recog_textline/49",
+  "train/recog_textline/5046",
+  "train/sample/0",
+  "train/sample/10500",
+  "train/sample/12000",
+  "train/sample/13500",
+  "train/sample/1500",
+  "train/sample/15000",
+  "train/sample/3000",
+  "train/sample/4500",
+  "train/sample/6000",
+  "train/sample/7500",
+  "train/sample/9000"
+ ],
+ "machine_id": 563943,
+ "billing_started": 1793848592.4479907,
+ "cores": 4,
+ "home": "/home/ubuntu",
+ "billing_ended": 1793862409.8958492,
+ "pause_reason": "VM unreachable for 5 polls",
+ "paused": true,
+ "finished_at": 1793862409.8958492
+}

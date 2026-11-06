@@ -1,0 +1,7 @@
+# Source datasets: each has its own license and download terms (IAM-OnDB needs registration), so they are
+# downloaded rather than committed. See note_synth/README.md#data for where each comes from.
+note_synth/data/
+/FC_database_1.0.zip
+/IAM-OnDb.gz
+/ascii-all.tar.gz
+/deepwriting_dataset.zip

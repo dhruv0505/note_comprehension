@@ -1,0 +1,96 @@
+{
+ "polled_at": 1793919202.1021135,
+ "poll": 0,
+ "cost": 0.0,
+ "budget": 4.0,
+ "hourly": 0.8073,
+ "machine_id": null,
+ "started": 1793919193.1853518,
+ "status": {
+  "now": 1793919202.1021135,
+  "targets": {
+   "train": 30000,
+   "val": 2000,
+   "test": 2000
+  },
+  "mode": "full",
+  "picks": [],
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "failed",
+    "start": 1793919193.197698,
+    "end": 1793919202.0853672,
+    "log": [
+     "JLError: jl list: exit 1: {\"error\": \"Request Connection failed: GET users/fetch\"}"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "pending"
+   },
+   {
+    "name": "check_cache",
+    "state": "pending"
+   },
+   {
+    "name": "cache_rebuild",
+    "state": "pending"
+   },
+   {
+    "name": "prepare_output",
+    "state": "pending"
+   },
+   {
+    "name": "synth_train",
+    "state": "pending"
+   },
+   {
+    "name": "synth_val",
+    "state": "pending"
+   },
+   {
+    "name": "synth_test",
+    "state": "pending"
+   },
+   {
+    "name": "swap_dataset",
+    "state": "pending"
+   },
+   {
+    "name": "count_classes",
+    "state": "pending"
+   },
+   {
+    "name": "all_done",
+    "state": "pending"
+   }
+  ],
+  "splits": {
+   "train": {
+    "target": 30000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "val": {
+    "target": 2000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   },
+   "test": {
+    "target": 2000,
+    "pages": 0,
+    "samples": 0,
+    "rows": 0,
+    "marks": 0
+   }
+  }
+ },
+ "pause_reason": "stage failed: resume_vm",
+ "paused": true,
+ "mode": "full"
+}

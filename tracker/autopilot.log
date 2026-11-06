@@ -1,0 +1,49 @@
+[2026-11-04 18:18:08] copied C:\Users\propr\Desktop\whiteboard\note_comprehension\ascii-all.tar.gz to C:\Users\propr\Desktop\whiteboard\note_comprehension\note_synth\data\iamondb_ascii.tar
+[2026-11-04 18:18:08] ascii: done (0.3 MB of transcriptions); next splits
+[2026-11-04 18:18:40] splits: done (summary {"iam_lines": {"train": 9774, "val": 1202, "test": 1219}, "iam_forms": {"train": 1387, "val": 168, "test": 175}, "fc_charts": {"train": 432, "val": 120, "test": 120}, "fc_templates": {"train": 18, "val": 5, "test": 5}}; 0 IAM forms changed split from the last splits.json); next bootstrap
+[2026-11-04 18:18:48] started the dataset VM bootstrap (pid 19672)
+[2026-11-04 18:19:38] bootstrap failed (attempt 1 of 3): JLError: jl create --vm --cpu --vcpus 16 --ram 64 --storage 100 --name note-synth-dataset --region IN2 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available in IN2."}
+[2026-11-04 18:19:38] started the dataset VM bootstrap (pid 24048)
+[2026-11-04 18:23:10] bootstrap failed (attempt 2 of 3): RuntimeError: command failed (2): cd C:\Users\propr/run && tar xzf code.tgz && rm -f code.tgz && ls note_synth | wc -l: tar (child): code.tgz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+[2026-11-04 18:23:10] started the dataset VM bootstrap (pid 25532)
+[2026-11-04 18:36:21] started the dataset VM bootstrap (pid 3532)
+[2026-11-04 19:03:11] bootstrap: done (dataset VM 563911 set up for $0.06); next synth
+[2026-11-04 19:04:27] asked for Regenerate all: run 20261104-190419-full
+[2026-11-04 19:13:16] asked for Regenerate all: run 20261104-191312-full
+[2026-11-04 19:19:17] dataset run 20261104-191312-full ended (stage failed: synth_train); carrying it on: 200 {'ok': True}
+[2026-11-04 23:38:53] asked for Regenerate all: run None
+[2026-11-05 07:13:11] synth: done (dataset run 20261104-233925-full finished, $0.83); next marks
+[2026-11-05 09:02:45] asked for Regenerate all: run 20261105-090235-full
+[2026-11-05 14:03:11] dataset run 20261105-090235-full ended (VM unreachable for 5 polls); carrying it on: 200 {'ok': True}
+[2026-11-05 14:13:11] synth failed (attempt 1 of 3): dataset run 20261105-090235-full ended: the orchestrator failed; PAUSE FAILED, check the Jarvis dashboard: pause 564497 failed: ✗ Request Connection failed: GET users/fetch/564497
+[2026-11-05 14:24:02] asked for Regenerate all: run 20261105-142356-full
+[2026-11-05 14:33:11] dataset run 20261105-142356-full ended (stage failed: resume_vm); carrying it on: 409 {'error': 'the run failed before its VM was ready: start it again instead'}
+[2026-11-05 14:43:11] synth failed (attempt 2 of 3): dataset run 20261105-142356-full ended: stage failed: resume_vm; JLError: jl list: exit 1: {"error": "Request Connection failed: GET users/fetch"}
+[2026-11-05 14:53:16] asked for Regenerate all: run 20261105-145313-full
+[2026-11-05 15:03:11] dataset run 20261105-145313-full ended (stage failed: resume_vm); carrying it on: 409 {'error': 'the run failed before its VM was ready: start it again instead'}
+[2026-11-05 15:13:11] synth failed (attempt 3 of 3): dataset run 20261105-145313-full ended: stage failed: resume_vm; JLError: jl list: exit 1: {"error": "Request Connection failed: GET users/fetch"}
+[2026-11-05 16:33:13] synth: done (dataset run 20261105-090235-full finished, $0.83); next marks
+[2026-11-05 16:35:14] marks: done (inference/mark_separation/marks); next train
+[2026-11-05 16:35:37] train: done (Florence Tuning started: {"num_gpus": 4, "epochs": 2, "budget": 36.74, "lr": 0.0001, "batch_size": 8, "grad_accum": 4, "warmup_steps": 200, "lora_rank": 32, "val_every": 1000, "page_val_max": 200, "save_every": 1000, "eval_batches": 25, "samples": 8, "log_every": 20, "num_workers": 6, "save_to": {"checkpoint": "best", "name": "comprehension-v4"}}); next training
+[2026-11-05 17:03:21] training needs about $47.32 to finish (spent $12.70, 1.01 h left at $27.95/h); budget $36.74 -> $47.32: 200 {'ok': True}
+[2026-11-05 17:03:38] training needs about $47.39 to finish (spent $12.77, 1.01 h left at $27.95/h); budget $36.74 -> $47.39: 200 {'ok': True}
+[2026-11-05 17:13:19] training needs about $64.15 to finish (spent $17.34, 1.42 h left at $27.95/h); budget $47.39 -> $64.15: 200 {'ok': True}
+[2026-11-05 19:13:11] training: done (training ended (trained), $63.2877; saves: comprehension-v4 done); next done
+[2026-11-05 20:09:53] train: done (Florence Tuning started: {"num_gpus": 8, "epochs": 1, "budget": 34.2, "lr": 5e-05, "batch_size": 8, "grad_accum": 2, "warmup_steps": 100, "lora_rank": 32, "val_every": 1000, "page_val_max": 200, "save_every": 1000, "eval_batches": 25, "samples": 8, "log_every": 20, "num_workers": 6, "save_to": {"checkpoint": "best", "name": "comprehension-v5"}, "min_balance": 30, "continue_run": true}); next training
+[2026-11-05 20:53:47] the balance $15.60 leaves training $7.13 short of finishing
+[2026-11-05 20:54:24] training needs about $41.93 to finish (spent $20.15, 0.56 h left at $27.95/h); budget $34.20 -> $34.75: 200 {'ok': True}
+[2026-11-05 20:54:24] the balance $15.60 leaves training $7.18 short of finishing
+[2026-11-05 20:54:34] NOTIFIED user (push + email): epoch 3 short $7.18, asked to add ~$10
+[2026-11-05 21:03:22] training needs about $37.81 to finish (spent $24.52, 0.26 h left at $27.95/h); budget $34.75 -> $37.81: 200 {'ok': True}
+[2026-11-05 21:16:54] budget raised by hand to $41 (headroom for the final validation and save; balance $30.35)
+[2026-11-05 21:32:16] training: done (training ended (trained), $37.6564; saves: comprehension-v5 done); next done
+[2026-11-05 21:54:36] train: done (Florence Tuning started: {"num_gpus": 8, "epochs": 2, "budget": 18.34, "lr": 5e-05, "batch_size": 8, "grad_accum": 2, "warmup_steps": 100, "lora_rank": 32, "val_every": 1000, "page_val_max": 200, "save_every": 1000, "eval_batches": 25, "samples": 8, "log_every": 20, "num_workers": 6, "save_to": {"checkpoint": "best", "name": "comprehension-v6"}, "min_balance": 10, "continue_run": true}); next training
+[2026-11-05 22:01:20] train: done (Florence Tuning started: {"num_gpus": 4, "epochs": 0.5, "budget": 18.34, "lr": 5e-05, "batch_size": 8, "grad_accum": 4, "warmup_steps": 100, "lora_rank": 32, "val_every": 1000, "page_val_max": 200, "save_every": 1000, "eval_batches": 25, "samples": 8, "log_every": 20, "num_workers": 6, "save_to": {"checkpoint": "best", "name": "comprehension-v6"}, "min_balance": 15, "init_model": "comprehension-v5"}); next training
+[2026-11-05 22:17:08] train: done (Florence Tuning started: {"num_gpus": 8, "epochs": 2, "budget": 60.29, "lr": 5e-05, "batch_size": 8, "grad_accum": 2, "warmup_steps": 100, "lora_rank": 32, "val_every": 1000, "page_val_max": 200, "save_every": 1000, "eval_batches": 25, "samples": 8, "log_every": 20, "num_workers": 6, "save_to": {"checkpoint": "best", "name": "comprehension-v6"}, "min_balance": 30, "init_model": "comprehension-v5"}); next training
+[2026-11-05 23:03:46] training needs about $61.89 to finish (spent $21.16, 1.20 h left at $27.95/h); budget $60.29 -> $61.89: 200 {'ok': True}
+[2026-11-05 23:53:18] the balance $21.43 leaves training $1.22 short of finishing
+[2026-11-06 00:13:19] training needs about $62.58 to finish (spent $53.73, 0.06 h left at $27.95/h); budget $61.89 -> $62.58: 200 {'ok': True}
+[2026-11-06 00:21:27] training: done (training ended (trained), $57.2492; saves: comprehension-v6 done); next done

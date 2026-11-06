@@ -1,9 +1,9 @@
 {
- "heartbeat_at": 1790054072.3389196,
- "pid": 12936,
+ "heartbeat_at": 1793953419.5339599,
+ "pid": 35060,
  "phase": "finished",
- "mode": "additions",
- "run_id": "20260915-180608-additions",
+ "mode": "full",
+ "run_id": "20261105-090235-full",
  "message": "waiting for a run request",
  "error": null,
  "accepts_settings": true

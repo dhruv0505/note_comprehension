@@ -1,0 +1,23 @@
+{
+ "mode": "sample",
+ "run_id": "20261104-232637-sample",
+ "region": "IN2",
+ "vm": "4 vCPU / 16 GB / 100 GB SSD",
+ "machine_id": 564096,
+ "hourly": 0.1129,
+ "budget": 1.0,
+ "started": 1793863625.1593657,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 0
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ }
+}

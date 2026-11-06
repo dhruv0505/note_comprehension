@@ -89,7 +89,7 @@ Level-1 objects are labeled relative to a cropped, rescaled version of their par
  
 **Arrows preserve direction — they are never canonicalized.** Every other box-shaped class is stored as top-left/bottom-right, but an arrow's two coordinate pairs are always start-then-end and are never reordered to a canonical corner form, since doing so would erase the one thing that makes it an arrow rather than a box.
  
-**Geometry and flowchart synthesization.** Geometry figures are generated with their vertex labels nested *inside* the figure as level-1 objects (rather than as independent, ambiguous, often single-glyph level-2 textblocks), fixing a real degenerate case where blown-up single-letter labels were diluting the textblock training distribution. Flowchart shapes are sourced from an external offline handwritten flowchart dataset (OHFD) with their original, ambiguous shape content (which mixed text and math indistinguishably) replaced with definitively-labeled synthetic formula/textline substitutions, while keeping OHFD's real, exact bounding boxes.
+**Geometry and flowchart synthesization.** Geometry figures are generated with their vertex labels nested *inside* the figure as level-1 objects (rather than as independent, ambiguous, often single-glyph level-2 textblocks), fixing a real degenerate case where blown-up single-letter labels were diluting the textblock training distribution. Flowcharts come from the FC_1.0 online flowchart database (672 charts: 28 layouts each drawn by 24 writers), with each shape's original caption (which mixed text and math indistinguishably, in LaTeX-in-dollars) replaced with a definitively-labeled synthetic formula/textline substitution, while keeping the real ink, the exact shapes and arrows, and which shapes each arrow joins. Arrow captions ("Yes", "Then", "0") are kept as written. A chart is used only in the split both its layout and its writer belong to (layouts drawn as the same flowchart twice share a split), so 250 of the 672 are used: 180 train, 35 val, 35 test.
  
 **Inverted polarity for both tasks; grayscale-as-3-channel for segmentation, colored ink for recognition.** Images are rendered as dark ink on a white background, then inverted when loaded so that ink is encoded as 1 and background as 0 — inverted from the natural convention — specifically so that zero-value padding (introduced when cropping/rescaling level-1 objects) reads as background rather than as a solid stroke of ink. Segmentation images are natively single-channel, duplicated across all three channels (rather than zero-padding the unused channels) to stay in-distribution for a vision encoder pretrained on real RGB imagery. Recognition images are true RGB, following InkFM: each stroke is colored by time and pen movement. They go through the same per-channel inversion (each channel becomes 1 − value/255), so the model sees the complement of the rendered colors on a black background, identically in training and evaluation.
  
@@ -117,39 +117,50 @@ Segmentation and recognition are both implemented end-to-end, from synthetic dat
 
 ## Note Comprehension Performance
 
-These are the validation scores of the saved model, [inference/comprehension/comprehension-v3](inference/comprehension/comprehension-v3/). It's the best checkpoint of a 3-epoch LoRA fine-tune (rank 32, alpha 64) continued from `comprehension-v2`: step 15,000 of 15,564, on 4 × H100, global batch 128, lr 5e-5, over 664,048 training rows. It was scored on 200 held-out validation pages and, teacher-forced, on 300 manifest rows. The numbers are in its `stats.json`, computed by [seg_eval.py](training/seg_eval.py) and [recog_eval.py](training/recog_eval.py), and are what the tracker's Models tab shows.
+These are the validation scores of the saved model, [inference/comprehension/comprehension-v6](inference/comprehension/comprehension-v6/), the last of three LoRA fine-tunes (rank 32, alpha 64) of Florence-2-large, each on 8 × H100 with a global batch of 128 (8 per GPU × 2 accumulation steps) over the same 657,085 training rows:
 
-| Score | comprehension-v3 |
-| --- | --- |
-| Pages mean F1 (cascade) | 0.977 |
-| — Level 2 (blocks) | 0.983 |
-| — Level 1 (inside blocks) | 0.975 |
-| — Arrows | 0.953 |
-| Pages parse-valid | 100.0% |
-| Rows mean F1 (teacher-forced) | 0.966 |
-| Rows parse-valid | 100.0% |
-| Recognition accuracy (textlines) | 89.7% |
-| Recognition accuracy (formulas) | 77.2% |
-| Recognition CER (textlines) | 11.1% |
-| Recognition CER (formulas) | 26.5% |
+| Model | Trained from | Epochs | Peak lr (cosine decay) | Saved checkpoint | Cost |
+| --- | --- | --- | --- | --- | --- |
+| [comprehension-v4](inference/comprehension/comprehension-v4/) | pretrained Florence-2-large | 2 | 1e-4, 200-step warmup | step 8,000 of 10,267 | $63.29 |
+| [comprehension-v5](inference/comprehension/comprehension-v5/) | comprehension-v4 | 1 | 5e-5, 100-step warmup | step 5,133 of 5,133 | $37.66 |
+| **comprehension-v6** | comprehension-v5 | 2 | 5e-5, 100-step warmup | step 10,267 of 10,267 | $57.25 |
 
-Per class, over all 200 pages through the cascade:
+Five epochs in all, each continuation with a fresh optimizer and schedule; a half-epoch attempt between v5 and v6 was stopped before training ($4.03 of setup). The models were scored on 200 held-out validation pages and, teacher-forced, on 300 manifest rows. The numbers are in each model's `stats.json`, computed by [seg_eval.py](training/seg_eval.py) and [recog_eval.py](training/recog_eval.py), and are what the tracker's Models tab shows.
 
-| Class | Group | Precision | Recall | F1 | TP | FP | FN |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| textblock | level 2 | 0.997 | 0.998 | 0.997 | 1,836 | 6 | 4 |
-| table | level 2 | 1.000 | 1.000 | 1.000 | 147 | 0 | 0 |
-| flowchart | level 2 | 1.000 | 1.000 | 1.000 | 148 | 0 | 0 |
-| geometry | level 2 | 0.986 | 0.986 | 0.986 | 216 | 3 | 3 |
-| drawing | level 2 | 0.942 | 0.925 | 0.933 | 49 | 3 | 4 |
-| textline | level 1 | 0.994 | 0.988 | 0.991 | 3,772 | 22 | 46 |
-| formula | level 1 | 0.995 | 0.998 | 0.996 | 7,214 | 34 | 18 |
-| enclosure | level 1 | 0.980 | 0.983 | 0.982 | 941 | 19 | 16 |
-| line mark | level 1 | 0.993 | 0.983 | 0.988 | 291 | 2 | 5 |
-| vertex | level 1 | 0.987 | 0.973 | 0.980 | 975 | 13 | 27 |
-| segment | level 1 | 0.966 | 0.959 | 0.962 | 974 | 34 | 42 |
-| arc | level 1 | 0.939 | 0.918 | 0.928 | 168 | 11 | 15 |
-| arrow | page-level | 0.949 | 0.957 | 0.953 | 851 | 46 | 38 |
+The `comprehension-v3` column is the previous generation, for reference only: it was scored on a different validation set (OHFD flowcharts, a dealt split) and trained differently (3 epochs at lr 5e-5 continued from `comprehension-v2`, whose own training is not recorded). This validation set is stricter: no writer, IAM-OnDB passage or flowchart layout in it appears in training, and its flowchart layouts were chosen so its pages carry about 1.3 flowcharts each against train's 0.76, so it holds roughly a third more flowchart shapes (`enclosure`) than v3's did.
+
+| Score | comprehension-v6 | comprehension-v5 | comprehension-v3 |
+| --- | --- | --- | --- |
+| Pages mean F1 (cascade) | 0.975 | 0.965 | 0.977 |
+| — Level 2 (blocks) | 0.983 | 0.973 | 0.983 |
+| — Level 1 (inside blocks) | 0.971 | 0.960 | 0.975 |
+| — Arrows | 0.967 | 0.953 | 0.953 |
+| Pages parse-valid | 100.0% | 99.9% | 100.0% |
+| Rows mean F1 (teacher-forced) | 0.965 | 0.954 | 0.966 |
+| Rows parse-valid | 100.0% | 100.0% | 100.0% |
+| Recognition accuracy (textlines) | 91.4% | 91.1% | 89.7% |
+| Recognition accuracy (formulas) | 74.6% | 72.0% | 77.2% |
+| Recognition CER (textlines) | 9.2% | 9.5% | 11.1% |
+| Recognition CER (formulas) | 29.8% | 33.2% | 26.5% |
+| Combined score (model selection) | 0.917 | 0.905 | 0.920 |
+
+Per class for v6, over all 200 pages through the cascade (the last two columns are v5's F1 on the same pages and v3's on its own validation set):
+
+| Class | Group | Precision | Recall | F1 | TP | FP | FN | v5 F1 | v3 F1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| textblock | level 2 | 0.997 | 0.996 | 0.997 | 1,858 | 5 | 7 | 0.995 | 0.997 |
+| table | level 2 | 0.986 | 1.000 | 0.993 | 141 | 2 | 0 | 0.993 | 1.000 |
+| flowchart | level 2 | 1.000 | 0.990 | 0.995 | 194 | 0 | 2 | 0.995 | 1.000 |
+| geometry | level 2 | 0.986 | 0.986 | 0.986 | 214 | 3 | 3 | 0.977 | 0.986 |
+| drawing | level 2 | 0.945 | 0.945 | 0.945 | 52 | 3 | 3 | 0.906 | 0.933 |
+| textline | level 1 | 0.992 | 0.988 | 0.990 | 3,923 | 33 | 49 | 0.987 | 0.991 |
+| formula | level 1 | 0.992 | 0.996 | 0.994 | 7,336 | 60 | 29 | 0.993 | 0.996 |
+| enclosure | level 1 | 0.998 | 0.932 | 0.964 | 1,162 | 2 | 85 | 0.966 | 0.982 |
+| line mark | level 1 | 0.993 | 0.984 | 0.989 | 305 | 2 | 5 | 0.980 | 0.988 |
+| vertex | level 1 | 0.976 | 0.951 | 0.963 | 1,016 | 25 | 52 | 0.951 | 0.980 |
+| segment | level 1 | 0.955 | 0.936 | 0.945 | 1,032 | 49 | 71 | 0.926 | 0.962 |
+| arc | level 1 | 0.953 | 0.953 | 0.953 | 164 | 8 | 8 | 0.918 | 0.928 |
+| arrow | page-level | 0.975 | 0.958 | 0.967 | 1,140 | 29 | 50 | 0.953 | 0.953 |
 
 **How the numbers are computed** (in [seg_eval.py](training/seg_eval.py), with recognition in [recog_eval.py](training/recog_eval.py)):
 
@@ -161,7 +172,7 @@ Per class, over all 200 pages through the cascade:
 - **Rows** is the teacher-forced check: each manifest row's prompt on its own image, a level-1 crop taken from its *ground-truth* parent box, scored in the row image's pixels (vertex 10 px, arrow 15 px). It isolates each prompt from cascade error, and it runs on a much smaller set (300 rows), so a handful of objects moves it — it's a training-time sanity check, not the headline number.
 - **Recognition accuracy** is correct characters over total characters, for the textlines and then the formulas the cascade itself detected, read ten at a time from the page's own strokes with the mark separator applied first. A row's correct characters are the longest common subsequence of what was read and its target; its total is the longer of the two, so extra characters cost as much as missing ones. Every ground-truth line no detected box matched counts as read as nothing, all its characters wrong. **CER** is the edit distance of the read text against the target over the target's characters, on the same rows. Formulas are compared with whitespace removed, textlines with each run of whitespace made one space.
 
-Token cross-entropy is not used for model selection here. `best/` is kept by a combined score, 0.6 × pages mean F1 + 0.4 × the mean of the two recognition accuracies — a box in the right place around text the model misreads is only half a result. For this checkpoint that score is 0.920.
+Token cross-entropy is not used for model selection here. `best/` is kept by a combined score, 0.6 × pages mean F1 + 0.4 × the mean of the two recognition accuracies — a box in the right place around text the model misreads is only half a result. For v6 that score is 0.917 (v5's 0.905, v3's 0.920). Each continuation improved on the last: pages mean F1 0.960 → 0.965 → 0.975 and formula reading 71.7% → 72.0% → 74.6% across v4, v5 and v6, with v6's validations still edging up at its last steps. Formula reading remains the gap to v3; two experiments after v3 (LoRA rank 64, LoRA on the vision tower) had not moved it past about 77% either.
 
 ## Mark Separation Performance
 
@@ -212,7 +223,7 @@ Every page is synthesized from the ink in these datasets. Thanks to their author
  
 - **[IAM-OnDB](https://fki.tic.heia-fr.ch/databases/iam-on-line-handwriting-database)**: handwritten text lines, the source of all prose, table cells, and captions. M. Liwicki and H. Bunke, "IAM-OnDB – an On-Line English Sentence Database Acquired from Handwritten Text on a Whiteboard," *ICDAR* 2005.
 - **[MathWriting](https://github.com/google-research/google-research/tree/master/mathwriting)**: handwritten mathematical expressions, the source of every `formula`. P. Gervais, A. Fadeeva, and A. Maksai, "MathWriting: A Dataset for Handwritten Mathematical Expression Recognition," 2024.
-- **OHFD (Online Handwritten Flowchart Dataset)**: flowchart layouts, shapes, arrows, and bounding boxes. A.-M. Awal, G. Feng, H. Mouchère, and C. Viard-Gaudin, "First Experiments on a New Online Handwritten Flowchart Database," *Document Recognition and Retrieval XVIII*, 2011 (IRCCyN / Université de Nantes).
+- **FC_1.0 (online handwritten flowchart database)**: flowchart shapes, arrows, their connections and arrow captions. M. Bresler, D. Průša, and V. Hlaváč, "On-line recognition of sketched arrow-connected diagrams," *International Journal on Document Analysis and Recognition (IJDAR)*, 2016, DOI 10.1007/s10032-016-0269-z.
 - **[Quick, Draw!](https://github.com/googlecreativelab/quickdraw-dataset)**: sketches for the `drawing` class. Google Creative Lab, CC BY 4.0.
 - **NIST Special Database 19**: handprinted characters used to letter geometry figures. P. J. Grother, *NIST Special Database 19: Handprinted Forms and Characters Database*, NIST, 1995.
 - **[DeepWriting](https://ait.ethz.ch/deepwriting)**: used to recover IAM-OnDB's writer IDs, so that no writer appears in more than one split. E. Aksan, F. Pece, and O. Hilliges, "DeepWriting: Making Digital Ink Editable via Deep Generative Modeling," *CHI* 2018.

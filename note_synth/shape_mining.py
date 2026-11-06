@@ -6,7 +6,7 @@ shape_mining.py — find primitive shapes in the loaded ink.
 
 Three categories, each defined by a scale-free measurement on the ink itself
 rather than by any dataset's annotation, so a hit can come from anywhere: an
-equals sign in MathWriting, a QuickDraw envelope, an OHFD process box, the
+equals sign in MathWriting, a QuickDraw envelope, an FC process box, the
 cross-bar of a hand-written 't'.
 
     line        every point lies close to the chord joining the first and last

@@ -2336,7 +2336,7 @@ def make_table(text_pool, shape_bank, math_pool: Optional[List[Ink]] = None,
 
 
 def make_diagram_procedural(text_pool: Optional[List[Ink]] = None) -> Ink:
-    """Fallback diagram builder for when no OHFD sample is used: a couple of
+    """Fallback diagram builder for when no FC chart is used: a couple of
     boxes/ovals connected by arrows, optionally with a text label inside."""
     n_nodes = random.randint(2, 4)
     node_w, node_h = 30.0, 16.0
@@ -2348,8 +2348,8 @@ def make_diagram_procedural(text_pool: Optional[List[Ink]] = None) -> Ink:
         y0 = 0.0
         x1, y1 = x0 + node_w, y0 + node_h
         # Boxes only. Procedurally drawn ovals looked obviously synthetic next to
-        # real ink, so the `oval` class is now sourced solely from OHFD's real
-        # hand-drawn terminators (see OHFD_CLASS_MAP in loaders.py).
+        # real ink, so the `oval` class is now sourced solely from FC's real
+        # hand-drawn terminators (see FC_CLASS_MAP in loaders.py).
         node = Ink(strokes=[draw_rect_stroke(x0, y0, x1, y1)], class_name="enclosure",
                    label="rectangle")
         if text_pool and random.random() < 0.7:
@@ -2375,7 +2375,7 @@ def make_diagram_procedural(text_pool: Optional[List[Ink]] = None) -> Ink:
 # ----------------------------------------------------------------------------
 # What goes inside a flowchart shape
 # ----------------------------------------------------------------------------
-# OHFD's own node captions are thrown away and rewritten. The reason is a
+# The source chart's own node captions are thrown away and rewritten. The reason is a
 # labelling one. A caption like "i = i+1" or "x > y" is a formula written by
 # hand, and "check next value" is a line of prose, and nothing in the strokes
 # separates the two reliably — so the same marks would end up labelled
@@ -2384,8 +2384,8 @@ def make_diagram_procedural(text_pool: Optional[List[Ink]] = None) -> Ink:
 # known rather than guessed.
 #
 # It is also closer to the truth about flowcharts. Real ones hold far more than
-# OHFD's short phrases, and drawing from the full text and maths pools gives a
-# range of contents the 419 charts do not contain between them.
+# FC's short phrases, and drawing from the full text and maths pools gives a
+# range of contents the 672 charts do not contain between them.
 #
 # Only shapes that already had a caption get one: a chart whose nodes are blank
 # stays blank, which keeps each chart's own balance of labelled and unlabelled
@@ -2644,7 +2644,7 @@ def restock_diagram_text(diagram: Ink, text_pool, math_pool,
     """Swap every caption written inside a shape for ink of a known kind.
 
     In place, and only inside the shapes: a caption sitting on an *arrow* is
-    left exactly as OHFD wrote it.
+    left exactly as the source chart wrote it.
     """
     graph = (diagram.meta or {}).get("graph") or {}
     nodes = graph.get("nodes") or {}
@@ -2722,7 +2722,7 @@ def _fit_scale(ink: Ink, cell: Tuple[float, float]) -> float:
     return min(cell[0] / max(x1 - x0, 1e-6), cell[1] / max(y1 - y0, 1e-6))
 
 
-def make_diagram(ohfd_pool: Optional[List[Ink]], text_pool: Optional[List[Ink]] = None,
+def make_diagram(flowchart_pool: Optional[List[Ink]], text_pool: Optional[List[Ink]] = None,
                   cell: Optional[Tuple[float, float]] = None,
                   min_area_per_symbol: Optional[float] = None,
                   usage: Optional[dict] = None,
@@ -2732,7 +2732,7 @@ def make_diagram(ohfd_pool: Optional[List[Ink]], text_pool: Optional[List[Ink]] 
                   page_charts: Optional[set] = None) -> Optional[Ink]:
     """A flowchart, chosen to stay legible in the space it is given.
 
-    OHFD charts run from 9 to 30 symbols and the whole chart is scaled into its
+    FC charts run from 7 to 25 symbols and the whole chart is scaled into its
     cell, so a complex one in a small cell came out as an illegible knot. The
     choice is scored on the area each symbol will *actually* occupy once fitted,
     which is not the cell's area: fitting preserves aspect, so a tall chart in a
@@ -2747,22 +2747,22 @@ def make_diagram(ohfd_pool: Optional[List[Ink]], text_pool: Optional[List[Ink]] 
     for CAPTION_RUN_BOX bands of that size once the chart is fitted to the cell
     (allowing for `fit_jitter`) are chosen. A shape no caption keeps its size in is
     left blank, and a caption beside an arrow that would be too small is taken off.
-    With `page_charts` (the names of the OHFD charts already on the page), none of them is chosen again, and the
+    With `page_charts` (the names of the FC charts already on the page), none of them is chosen again, and the
     chosen chart's name is added: a page may hold two drawings of one layout, by different writers, but not one
     drawing twice.
     Returns None when no chart qualifies, and the cell is written as something else.
     """
-    if ohfd_pool:
+    if flowchart_pool:
         if page_charts:
             # the pool itself, not the candidates: every filter below starts again from the pool
-            ohfd_pool = [d for d in ohfd_pool if d.label not in page_charts]
-            if not ohfd_pool:
+            flowchart_pool = [d for d in flowchart_pool if d.label not in page_charts]
+            if not flowchart_pool:
                 return None
-        candidates = ohfd_pool
+        candidates = flowchart_pool
         need = None             # smallest x-height band on the page, in page units
         if cell is not None and text_scale:
             need = FLOWCHART_MIN_TEXT_RATIO * LINE_HEIGHT * text_scale / (1.0 - fit_jitter)
-            candidates = [d for d in ohfd_pool
+            candidates = [d for d in flowchart_pool
                           if _chart_room(d) is None
                           or _chart_room(d) * _fit_scale(d, cell) >= need * CAPTION_RUN_BOX]
             if not candidates:
@@ -2809,7 +2809,7 @@ def make_diagram(ohfd_pool: Optional[List[Ink]], text_pool: Optional[List[Ink]] 
         min_band = need / _fit_scale(chosen, cell) if need is not None else None
         restock_diagram_text(d, text_pool, math_pool, min_band=min_band)
         if min_band is not None:
-            # OHFD's own captions beside arrows ("yes", "no") are kept as written
+            # the chart's own captions beside arrows ("yes", "no") are kept as written
             d.children = [c for c in d.children
                           if c.class_name != "textline" or _band_height(c) >= min_band]
         _drop_overlapping_captions(d)
@@ -2824,7 +2824,7 @@ def _drop_overlapping_captions(diagram: Ink, limit: float = LINE_MAX_OVERLAP) ->
     pairing) share more than `limit` of the smaller one's box. In place, before
     _unnest_flowchart.
 
-    A caption beside an arrow goes first, since OHFD wrote it where it liked while a
+    A caption beside an arrow goes first, since the source chart wrote it where it liked while a
     shape's caption was fitted inside its own shape; between two of a kind, the smaller.
     A shape whose caption goes is left blank, as one is when no caption keeps its size.
     """

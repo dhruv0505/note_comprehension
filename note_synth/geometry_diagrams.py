@@ -219,6 +219,10 @@ def build_bank(per_pool: Optional[int] = None, cache: Optional[str] = None,
             except KeyError:
                 pass                                # not a bank; mine over it
 
+    if pools is None and split is not None:
+        # a split's bank is mined from that split's pools (split_pools.py) and nothing else: one that is unreadable
+        # must not be replaced with a bank of every dataset, held-out ink and all
+        raise ValueError(f"no usable bank for split {split!r} at {cache}; rebuild it with split_pools.py")
     if pools is None:
         import make_pdf
         pools = make_pdf.build_pools()

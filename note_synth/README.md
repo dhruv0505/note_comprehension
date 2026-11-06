@@ -1,7 +1,7 @@
 # Synthetic note-page generator
 
 Composes full-page handwritten "notes" for training a segmentation model, out of:
-- **OHFD**       -> flowcharts, boxed as a level-2 `flowchart` (its shapes level-1 `enclosure`s and its captions lines of the chart, + arrows)
+- **FC_1.0**     -> flowcharts, boxed as a level-2 `flowchart` (its shapes level-1 `enclosure`s and its captions lines of the chart, + arrows)
 - **IAM-OnDB** -> textlines/words (feeds textblocks — bulleted lists included — and table cells, which hold textlines or formulas); the only prose source by default
 - **DeepWriting** -> loaded but OFF for prose by default (see `PROSE_SOURCES`)
 - **MathWriting** -> whole maths sections, plus the odd expression inline in prose
@@ -85,7 +85,7 @@ unpacking. Every loader also accepts an explicit path or an extracted directory.
 | `data/iamondb_writers.json` | IAM-OnDB writer IDs | built here: `python iam_writers.py` (reads the two IAM-OnDB files and `data/deepwriting.zip`); optional — without it each form stands in for its writer |
 | `data/deepwriting.zip` | DeepWriting | [DeepWriting dataset](https://ait.ethz.ch/deepwriting) (`deepwriting_training.npz` + `deepwriting_validation.npz`) |
 | `data/mathwriting.tgz` | MathWriting 2024 | `curl -L -o data/mathwriting.tgz https://storage.googleapis.com/mathwriting_data/mathwriting-2024.tgz` (~4GB) |
-| `data/ohfd.zip` | OHFD flowcharts (FCinkML) | IRCCyN / Université de Nantes online flowchart database |
+| `data/fc.zip` | FC_1.0 flowcharts (InkML) | the FC database of Bresler, Průša and Hlaváč (CMP, CTU Prague; IJDAR 2016, DOI 10.1007/s10032-016-0269-z), `FC_database_1.0.zip` as downloaded |
 | `data/quickdraw.zip` | QuickDraw full raw | see below |
 | `data/emnist.zip` | NIST SD19 (EMNIST's source) | the NIST Special Database 19 1st Edition (1995) release, zipped as downloaded |
 
@@ -172,7 +172,11 @@ python synthesize.py --cache cache --split test  --pages 2000  --workers 32 --ou
 
 **Splits** (`dataset_splits.py`), 80/10/10 on the unit that carries identity:
 IAM-OnDB forms grouped so no writer and no text is in two splits (forms whose
-writer is unknown stay in train); OHFD by layout (18/5/5 of its 28); MathWriting
+writer is unknown stay in train, and forms sharing a passage stay together); FC by
+layout AND writer: val and test each get 5 of the 28 layouts, chosen for room to
+write in (`FC_EVAL_LAYOUTS`; layouts that are one chart drawn twice stay together),
+and the release's own writer lists (000-009 / 010-016 / 017-023), so 180/35/35 of
+its 672 charts are used; MathWriting
 by the release's own train+synthetic / valid / test; EMNIST by SD19 writer set
 (hsf_0-3,6 / hsf_4 / hsf_7); QuickDraw by a hash of each drawing's `key_id`.
 
@@ -233,8 +237,11 @@ python seg_eval.py --checkpoint runs/seg/best --pages dataset/test/pages
 
 **Reuse cap.** Content is reused across pages within a split, but no item may
 take more than `--cap-share` (default 1%) of its class's uses — IAM-OnDB lines,
-MathWriting expressions, OHFD charts, QuickDraw drawings; a pool too small for
-that gets 2 / its size. Capped items are held off the next page. Uses inside a
+MathWriting expressions, FC charts, QuickDraw drawings; a pool too small for
+that gets 2 / its size. FC charts are capped at 2% in train and 10% in val and test
+(`CLASS_CAP_SHARE`, `EVAL_CLASS_CAP_SHARE`): only some of a split's charts fit a given
+cell legibly, and a cap below one over that count left a split with almost no
+flowcharts (0.03 a val page at the default). Capped items are held off the next page. Uses inside a
 single-line textblock that `labels.is_single_line` fails to recognise are not
 counted: those are the cases the classifier passes on in deployment, and they
 stay at the rate the generator makes them. Counts are kept per worker, so with
@@ -358,7 +365,7 @@ the split and the page number.
    table cells repeated text already on their page (before: 25%, 1.8%, 5.4%), 0
    of 25 same-character label pairs shared a glyph, and formula rows repeated
    3.8% (26 of 684) — the MathWriting excerpt's size. Captions on arrows are
-   OHFD's own ("yes", "no") and left as they are, so 1 of 33 repeated.
+   the chart's own ("yes", "no") and left as they are, so 1 of 33 repeated.
 
 6. **Connector arrows** are drawn last, linking a text line in one block to one
    in another (`_add_connector_arrows`). Only the two endpoints are fixed: the
@@ -613,18 +620,19 @@ flowchart shape, an angle written in radians. One class, one meaning everywhere.
 
 ### What goes inside a flowchart shape
 
-OHFD's own node captions are **thrown away and rewritten** — text 70% of the
+The source chart's own node captions are **thrown away and rewritten** — text 70% of the
 time, a formula 30%. Two reasons:
 
-- **Labelling.** OHFD captions are often maths written in text (`i = i+1`,
+- **Labelling.** FC captions are often maths written in text (`$M=M+1$`,
   `x > y`), and nothing in the ink says which they are. Left alone, the same
   marks would be `textline` in one chart and `formula` in another.
-- **Range.** Real flowcharts hold far more than OHFD's short phrases. The full
-  text and maths pools cover ground the 419 charts do not.
+- **Range.** Real flowcharts hold far more than FC's short phrases. The full
+  text and maths pools cover ground the 672 charts do not.
 
 Only shapes that *already had* a caption get one, so each chart keeps its own
 balance of labelled and blank nodes rather than having captions invented for it.
-A caption sitting on an **arrow** is left exactly as OHFD wrote it.
+A caption sitting on an **arrow** is left exactly as the source chart wrote it
+(`Yes`, `Then`, `0`; the few written in LaTeX-in-dollars or with no transcription are left out).
 
 Content is sized to the room inside the shape, and the room is measured against
 the shape's **own outline** rather than worked out from its class
@@ -728,7 +736,7 @@ single-point strokes (so they move with the figure when the page places it),
 taken from the exact construction.
 
 ### Arrows that share a pair of nodes
-28 of OHFD's node pairs are joined in **both directions** — a loop back up to the
+72 of FC's node pairs (28 in OHFD, the earlier source) are joined in **both directions** — a loop back up to the
 decision it came from. Drawn straight, both land on exactly the same line between
 the same two outlines, and what should read as "A goes to B, and B comes back to
 A" instead reads as a single arrow with a head at each end. `_arrow_lanes` bows
@@ -816,14 +824,14 @@ came out on top of each other.
   synthetic tables/lists look too clean vs. real IAMonDo.
 - Procedural **ovals are gone**: an ellipse drawn by formula read as an obvious
   artifact next to real ink, so procedural flowchart nodes are boxes. Every
-  ellipse on a page is real hand-drawn ink: OHFD's terminators and connection
+  ellipse on a page is real hand-drawn ink: FC's terminators and connection
   circles, and the mined ovals drawn round words. A geometry figure draws only
   circles and arcs of them, out of mined oval ink.
 - There are **no per-shape classes**. A flowchart's rectangle, stadium, diamond,
   parallelogram and circle, and a box or oval drawn round a block, line or words,
-  are all `enclosure` (a table's outer border is not labelled) (`OHFD_CLASS_MAP` in `loaders.py`); where an enclosure sits says
+  are all `enclosure` (a table's outer border is not labelled) (`FC_CLASS_MAP` in `loaders.py`); where an enclosure sits says
   what kind it is. An underline (single or double) and a strikethrough are both
-  `line_mark`. What was drawn survives as `meta["ohfd_type"]` or the label
+  `line_mark`. What was drawn survives as `meta["node_type"]` or the label
   (`rectangle`, `oval`, `underline`, `strikethrough`), for rendering only. A
   geometry figure's circles and straight lines are its `arc` and `segment`
   objects.
@@ -883,16 +891,16 @@ came out on top of each other.
   `data/iamondb_writers.json` now supplies the real writer for 1,591 of the
   1,730 forms, so a "hand" is normally a whole writer. Lines are dealt without replacement
   (`block_generators.LineDealer`) for the same reason. Flowchart captions are sized via `DIAGRAM_CAPTION_RATIO`; the residual
-  spread in them is real variation in the OHFD ink, not a scaling artifact.
+  spread in them is real variation in the FC ink, not a scaling artifact.
 - Page composition deviates from the paper's prior on purpose, via
   `page_generator.COUNT_SCALE` (less prose), `block_generators.MATH_LINE_PROB`
   (35% of textblock lines are expressions) and `DIAGRAM_CROWDING` (when a
   flowchart is present it gets `layout.DIAGRAM_WIDTH_FRAC` of the page and
   everything else is thinned). `LEVEL2_STATS` still holds the paper's numbers
   unmodified.
-- 60 of OHFD's 419 flowcharts have no `text` traceGroups at all — the writer
-  drew unlabelled shapes — so some diagram blocks are empty boxes and arrows.
-  That is the source data, not a parsing failure.
+- Every one of FC's 672 flowcharts has captions, but a shape whose rewritten
+  caption would not stay legible at the chart's size is left blank, so some
+  flowcharts show empty shapes. That is by design, not a parsing failure.
 - **No timestamps.** A `Stroke` is x/y only. The per-point times IAM,
   MathWriting and QuickDraw record are dropped on load, and nothing synthesized
   is given any; the output describes ink as drawn, not the order or pace it was
@@ -900,6 +908,6 @@ came out on top of each other.
 - IAM-OnDB word boundaries are **geometric guesses**
   (`naive_split_line_into_words`), because the `lineStrokes` distribution has no
   word segmentation — delayed strokes (i-dots, t-crossings) can land in the
-  neighboring word. DeepWriting and OHFD word/symbol groups are real annotations.
+  neighboring word. DeepWriting and FC symbol groups are real annotations.
   If level-0 word boxes turn out to be the weak point, the fix is to also
   download IAM-OnDB's `original` part and read its per-word time ranges.

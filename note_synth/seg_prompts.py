@@ -408,7 +408,7 @@ def build_samples(blocks) -> List[Dict]:
         samples.append({"image": "object",
                         "parent": {"index": index, "class": obj["class"],
                                    "board_bbox": obj["board"],
-                                   # the source item it was built from ("ohfd:writer3_5"), where it has one
+                                   # the source item it was built from ("fc:writer003_fc_005"), where it has one
                                    "item": (obj["node"].meta or {}).get("item")},
                         "transform": transform, "prompts": prompts})
     return samples

@@ -162,7 +162,7 @@ PY
     return 0
   fi
   local src="$HOME/run/note_synth" name
-  for name in iamondb_linestrokes.tar.gz iamondb_ascii.tar ohfd.zip emnist.zip mathwriting.tgz quickdraw.zip; do
+  for name in iamondb_linestrokes.tar.gz iamondb_ascii.tar fc.zip emnist.zip mathwriting.tgz quickdraw.zip; do
     [ -f "$src/data/$name" ] || { echo "no $src/data/$name to rebuild the split caches from"; return 1; }
   done
   # this run's code and splits.json, reading the first run's archives: linked into its data/, where the loaders look

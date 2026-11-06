@@ -20,14 +20,14 @@ so in practice you just call `load_iam_ondb()` with no arguments.
     data/iamondb_ascii.tar            IAM-OnDB transcriptions
     data/deepwriting.zip              DeepWriting .npz bundle
     data/mathwriting.tgz              MathWriting 2024 InkML release
-    data/ohfd.zip                     OHFD / IRCCyN flowcharts (FCinkML)
+    data/fc.zip                       FC_1.0 flowcharts (Bresler, Průša, Hlaváč; InkML)
     data/quickdraw.zip                QuickDraw "full raw" .ndjson files
     data/emnist.zip                   NIST SD19 (EMNIST's source) character rasters
 
 See README.md for where each one comes from.
 
 Coordinate convention: every loader emits y increasing DOWNWARD, matching
-IAM-OnDB, OHFD and the layout engine's page space.
+IAM-OnDB, FC and the layout engine's page space.
 
 No timing is kept: a Stroke is x/y only, and the per-point times the online
 sources carry are dropped on load.
@@ -55,7 +55,7 @@ DATA_FILES = {
     "iamondb_writers": "iamondb_writers.json",
     "deepwriting": "deepwriting.zip",
     "mathwriting": "mathwriting.tgz",
-    "ohfd": "ohfd.zip",
+    "fc": "fc.zip",
     "quickdraw": "quickdraw.zip",
     "emnist": "emnist.zip",
 }
@@ -73,7 +73,7 @@ DATA_FILES = {
 MIN_STROKES = 3
 
 # DeepWriting ships normalized deltas, so a reconstructed line is only ~0.2 units
-# tall where IAM's is ~600 and OHFD's ~200. Nothing downstream should depend on
+# tall where IAM's is ~600 and FC's ~2000. Nothing downstream should depend on
 # absolute units — everything is refit into page boxes — but keeping the pools
 # within an order of magnitude of each other makes mixed-pool output far easier
 # to eyeball, and stops any absolute epsilon elsewhere from quietly biting.
@@ -125,7 +125,7 @@ class _Archive:
     """Uniform member access over a zip, a tar(.gz), or an already-extracted dir.
 
     The datasets are shipped as archives of many small files (12k XMLs for IAM,
-    ~400 InkMLs for OHFD, 600k for MathWriting). Reading them in place avoids
+    ~670 InkMLs for FC, 600k for MathWriting). Reading them in place avoids
     unpacking tens of gigabytes just to stream through them once.
     """
 
@@ -464,7 +464,7 @@ def load_iam_ondb(xml_dir: str = None, transcription_dir: str = None,
 #
 # Reconstruction, verified by rendering: denormalize the first two channels
 # (v*std + mean) and cumsum them. The result is already y-down like IAM and
-# OHFD, so it needs NO flip. Worth stating explicitly because the mistake is
+# FC, so it needs NO flip. Worth stating explicitly because the mistake is
 # invisible in a y-up plot (matplotlib's default), where the wrongly negated
 # version is what looks upright — you only catch it once the ink lands on a
 # y-down page next to IAM text and reads as a mirror image.
@@ -722,37 +722,37 @@ def load_mathwriting(path: str = None, max_items: int = None,
 
 
 # ----------------------------------------------------------------------------
-# OHFD — Online Handwritten Flowchart Dataset (IRCCyN, shipped as FCinkML)
+# FC — the Bresler / Průša / Hlaváč online flowchart database (FC_1.0, CMP, CTU Prague)
 # ----------------------------------------------------------------------------
-# 419 InkML flowcharts. Traces carry X and Y only. y increases downward, same as IAM (verified: the "Begin" node of
-# writer10_1b sits at y~103, the final node at y~1908).
+# Bresler M., Průša D., Hlaváč V.: On-line recognition of sketched arrow-connected diagrams. IJDAR,
+# DOI 10.1007/s10032-016-0269-z. 672 InkML flowcharts: 28 layouts (001-021, some with a second drawing "b"),
+# each drawn by all 24 writers (writer000-writer023), as FC_1.0/writer<WWW>_fc_<LLL>[b].inkml.
 #
-# Structure — a flat list of traceGroups, each naming its symbol class and the
-# traces belonging to it, linked back to the flowchart graph by id:
-#   <annotationXML type="truth" encoding="Content-FlowchartML">
-#     <flowchart><node xml:id="terminator_1" type="terminator">
-#                  <text xml:id="Begin_1">Begin</text></node>
-#                <arrow xml:id="_1" source="terminator_1" target="data_1"/>
-#   <traceGroup>
-#     <annotation type="truth">terminator</annotation>
-#     <traceView traceDataRef="6"/><traceView traceDataRef="7"/>
-#     <annotationXML href="terminator_1"/>
+# Traces carry X Y T P; T is milliseconds from the trace's own timeStamp, so a point's time is the two added.
+# y increases downward, as in IAM (the "Start" terminator of writer000_fc_001 sits at the top of the page).
+# No InkML namespace.
 #
-# Symbol classes present across the 419 files: text (3202), arrow (3088),
-# process (1006), data (710), decision (522), terminator (502), connection (301).
+#   <symbols>
+#     <traceGroup id="0"><annotation type="truth">text</annotation>
+#                        <annotation type="textMeaning">Read $N$</annotation><traceView traceDataRef="15"/>...
+#     <traceGroup id="10"><annotation type="truth">arrow</annotation><head>traceViews</head><shaft>traceViews</shaft>
+#     <traceGroup id="18"><annotation type="truth">data</annotation>...
+#   <relations>
+#     <symbolGroup><annotation type="truth">arrow_connection</annotation>   arrow, from-node, to-node
+#     <symbolGroup><annotation type="truth">text_inside</annotation>        text, node
+#     <symbolGroup><annotation type="truth">arrow_label</annotation>        text, arrow
+#
+# Symbol classes across the 672 files: text (5732), arrow (4569), process (1300), data (1221), terminator (908),
+# decision (768), connection (382). Every text is either inside a node (4246) or an arrow's label (1486), and every
+# arrow names the two nodes it joins.
 
-# OHFD symbol class -> our taxonomy.
+# FC symbol class -> our taxonomy.
 #
-# Every node shape is one class, `enclosure`, the same class as a box or oval
-# drawn round writing. Which shape it is — process rectangle, terminator
-# stadium, data parallelogram, decision diamond, connection circle — is not a
-# class: once the enclosure is found, where it sits and what it holds say what
-# kind it is. The original annotation is kept per symbol in meta["ohfd_type"],
-# which is also what the label page reads to draw and anchor to its outline.
-#
-# `connection` (a small empty circle) is a NODE in the FlowchartML, not an edge
-# — mapping it to "arrow" once labelled 301 circles in the set as edges.
-OHFD_CLASS_MAP = {
+# Every node shape is one class, `enclosure`, the same class as a box or oval drawn round writing. Which shape it
+# is — process rectangle, terminator stadium, data parallelogram, decision diamond, connection circle — is not a
+# class: once the enclosure is found, where it sits and what it holds say what kind it is. The original annotation
+# is kept per symbol in meta["node_type"], which is also what the label page reads to draw and anchor to its outline.
+FC_CLASS_MAP = {
     "process": "enclosure",
     "terminator": "enclosure",
     "data": "enclosure",
@@ -762,265 +762,176 @@ OHFD_CLASS_MAP = {
     "text": "textline",
 }
 
-# The shapes an arrow may join, i.e. everything OHFD_CLASS_MAP treats as a node.
-OHFD_NODE_CLASSES = ("enclosure",)
-
-# Every `text` group in OHFD with no transcription that captions no shape, keyed by chart and the group's trace
-# ids, and what its ink really is, judged by eye. Taken as text they were labelled textlines with nothing to read:
-#   ("arrow", None)       an arrow filed as text
-#   ("text", "No")        a caption whose transcription is missing
-#   ("part_of", "then_3") one stroke of that caption (its text id), annotated apart from it: put back in it
-#   ("drop", None)        stray dots, no writing
-# A group like these not listed here (another release of OHFD) is left out, ink and all, rather than guessed at.
-# A shape's own caption with no transcription is not listed: shape captions are rewritten
-# (block_generators.restock_diagram_text).
-OHFD_UNTRANSCRIBED = {
-    ("writer1_5", ("162", "163")): ("text", "No"),
-    ("writer4_7", ("123",)): ("text", "No"),
-    ("writer26_7b", ("107",)): ("text", "0"),          # the chart's other branch is captioned 1
-    ("writer31_14", ("38",)): ("part_of", "then_3"),   # the crossbar of its t
-    ("writer31_5", ("183",)): ("part_of", "Yes_4"),
-    ("writer33_5", ("236",)): ("part_of", "Stop_2"),
-    ("writer31_9", ("35",)): ("arrow", None),
-    ("writer32_6b", ("101", "102")): ("arrow", None),
-    ("writer7_4", ("18", "19")): ("arrow", None),
-    ("writer31_5", ("33", "80", "154", "156", "157", "182")): ("drop", None),
-    ("writer34_5", ("9",)): ("drop", None),
-}
+# The shapes an arrow may join, i.e. everything FC_CLASS_MAP treats as a node.
+FC_NODE_CLASSES = ("enclosure",)
 
 
-def _ohfd_is_arrow(element: ET.Element) -> bool:
-    """Whether a FlowchartML element is an edge.
+def _fc_arrow_label(text: Optional[str]) -> Optional[str]:
+    """An arrow's caption as a textline's label, or None when it is not one to keep.
 
-    Fourteen arrows across the set are filed as `<node type="arrow">` rather than
-    `<arrow>`, so the tag alone does not decide it.
+    A shape's caption is rewritten (block_generators.restock_diagram_text), but an arrow's is kept as written, so
+    its transcription is the label. Nearly all are a word or two ("Yes", "Then", "0", "True"). Seven have no
+    transcription, and three are written in the dataset's LaTeX-in-dollars ("Output $A$"), mixing text and maths a
+    textline label cannot hold; their ink is left out rather than labelled with a guess.
     """
-    tag = element.tag.split("}")[-1]
-    if tag == "arrow":
-        return True
-    return tag == "node" and element.attrib.get("type") == "arrow"
+    if not text:
+        return None
+    text = text.strip()
+    if not text or "$" in text or "\\" in text:
+        return None
+    return text
 
 
-def _ohfd_captions_by_owner(root: ET.Element) -> Tuple[Dict[str, str], Dict[str, str]]:
-    """Caption id -> owning element id, split into node captions and arrow ones.
-
-    A node's caption is nested inside the node's Ink, so the box's bbox properly
-    encloses the text it labels. An arrow's caption is NOT nested — the text sits
-    beside the shaft, and swallowing it would inflate the arrow's box well beyond
-    the drawn arrow — so it stays a sibling at diagram level.
-    """
-    node_captions: Dict[str, str] = {}
-    arrow_captions: Dict[str, str] = {}
-    for element in root.iter():
-        tag = element.tag.split("}")[-1]
-        if tag not in ("node", "arrow"):
+def _fc_traces(root: ET.Element) -> Tuple[List[Stroke], Dict[str, int]]:
+    """Traces of one FC file and a trace-id -> stroke-index map; Stroke.t is timeStamp + T (ms)."""
+    strokes: List[Stroke] = []
+    index_of: Dict[str, int] = {}
+    for trace in root.iter("trace"):
+        start = float(trace.attrib.get("timeStamp") or 0.0)
+        xs, ys, ts = [], [], []
+        for point in (trace.text or "").split(","):
+            parts = point.split()
+            if len(parts) < 2:
+                continue
+            xs.append(float(parts[0]))
+            ys.append(float(parts[1]))
+            if len(parts) >= 3:
+                ts.append(start + float(parts[2]))
+        if not xs:
             continue
-        owner_id = element.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-        into = arrow_captions if _ohfd_is_arrow(element) else node_captions
-        for child in element:
-            if child.tag.endswith("text"):
-                text_id = child.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-                if owner_id and text_id:
-                    into[text_id] = owner_id
-    return node_captions, arrow_captions
+        index_of[trace.attrib.get("id", str(len(strokes)))] = len(strokes)
+        strokes.append(Stroke(x=xs, y=ys, t=ts if len(ts) == len(xs) else None))
+    return strokes, index_of
 
 
-def _ohfd_edges(root: ET.Element) -> Dict[str, Tuple[str, str]]:
-    """Arrow element id -> (source node id, target node id).
-
-    The FlowchartML states which nodes every arrow joins, so the ground truth
-    can draw an edge between the two shapes instead of guessing its direction
-    from where the pen happened to start and stop.
-
-    Fourteen arrows across the set are filed as `<node type="arrow">` rather than
-    `<arrow>`, carrying the same source/target attributes. Scanning only the
-    `<arrow>` tag silently dropped those to the ink-derived fallback, so anything
-    with source and target counts as an edge whatever tag it is under.
-    """
-    edges: Dict[str, Tuple[str, str]] = {}
+def _strip_namespaces(root: ET.Element) -> ET.Element:
     for element in root.iter():
-        if not _ohfd_is_arrow(element):
-            continue
-        arrow_id = element.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-        source = element.attrib.get("source")
-        target = element.attrib.get("target")
-        if arrow_id and source and target:
-            edges[arrow_id] = (source, target)
-    return edges
+        if isinstance(element.tag, str) and "}" in element.tag:
+            element.tag = element.tag.split("}", 1)[1]
+    return root
 
 
-def _ohfd_node_types(root: ET.Element) -> Dict[str, str]:
-    """Node element id -> its declared FlowchartML type.
-
-    Kept alongside the mapped class so the original annotation survives even
-    where OHFD_CLASS_MAP collapses two types onto one class: a `box` that came
-    from a `process` is still recoverable as such.
+def load_fc(path: str = None, max_items: int = None) -> List[Ink]:
     """
-    types: Dict[str, str] = {}
-    for element in root.iter():
-        if not element.tag.endswith("node"):
-            continue
-        node_id = element.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-        node_type = element.attrib.get("type")
-        if node_id and node_type and node_type != "arrow":
-            types[node_id] = node_type
-    return types
+    Load the FC database as one Ink per flowchart, whose children are the annotated symbols mapped onto the target
+    taxonomy (enclosure / arrow / textline). The flowchart is marked meta["flowchart"], and is given its class,
+    `flowchart`, when block_generators.make_diagram places it. A node's caption is nested inside that node here;
+    make_diagram brings it out as a line of the chart. It drops straight into a flowchart slot without any
+    procedural drawing.
 
+    The flowchart's graph is attached to the diagram as meta["graph"], and each arrow carries
+    meta["source_id"]/["target_id"], so an edge is drawn between the nodes the dataset says it joins rather than
+    inferred from the ink.
 
-def _ohfd_caption_text(root: ET.Element) -> Dict[str, str]:
-    """Element id -> its transcription, for both node and arrow captions."""
-    out: Dict[str, str] = {}
-    for element in root.iter():
-        if element.tag.endswith("text"):
-            eid = element.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-            if eid and element.text:
-                out[eid] = element.text.strip()
-    return out
+    Captions belonging to an *arrow* rather than to a node are not nested (that would inflate the arrow's box over
+    the text beside it); they stay at diagram level, and the arrow carries meta["caption_id"]. One the label of
+    which cannot be kept (_fc_arrow_label) is left out, ink and all.
 
-
-def load_ohfd(path: str = None, max_items: int = None) -> List[Ink]:
+    Each chart's label is its file's stem ("writer000_fc_001b"), and its source "fc".
     """
-    Load OHFD as one Ink per flowchart, whose children are the annotated symbols
-    mapped onto the target taxonomy (rectangle / oval / data / diamond / arrow /
-    textline). The flowchart is marked meta["flowchart"], and is given its class,
-    `flowchart`, when block_generators.make_diagram places it. A node's caption
-    is nested inside that node here; make_diagram brings it out as a line of the
-    chart. It drops straight into a flowchart slot without any procedural drawing.
-
-    Symbols whose class isn't in OHFD_CLASS_MAP (i.e. the document-level truth
-    group) are skipped rather than guessed at.
-
-    The flowchart's graph is attached to the diagram as meta["graph"], and each
-    arrow carries meta["source_id"]/["target_id"], so an edge is drawn between
-    the nodes OHFD says it joins rather than inferred from the ink.
-
-    Captions belonging to an *arrow* rather than to a node are not nested (that
-    would inflate the arrow's box over the text beside it); they stay at diagram
-    level, and the arrow carries meta["caption_id"].
-    """
-    archive = _Archive(_resolve(path, "ohfd"))
+    archive = _Archive(_resolve(path, "fc"))
 
     inks: List[Ink] = []
     for name in archive.names(".inkml"):
         if max_items is not None and len(inks) >= max_items:
             break
-        root = ET.fromstring(archive.read(name))
+        root = _strip_namespaces(ET.fromstring(archive.read(name)))
         chart = os.path.basename(name)[:-len(".inkml")]
 
-        strokes, index_of = _parse_inkml_traces(root)
-        if not strokes:
+        strokes, index_of = _fc_traces(root)
+        symbols_el, relations_el = root.find("symbols"), root.find("relations")
+        if not strokes or symbols_el is None:
             continue
 
-        parents, arrow_captions = _ohfd_captions_by_owner(root)
-        # ...and the other way round. No arrow in the set carries two captions,
-        # so this loses nothing.
-        caption_of_arrow = {arrow_id: text_id
-                            for text_id, arrow_id in arrow_captions.items()}
-        captions = _ohfd_caption_text(root)
-        edges = _ohfd_edges(root)
-        node_types = _ohfd_node_types(root)
+        groups: Dict[str, Tuple[str, Optional[str], List[Stroke]]] = {}     # symbol id -> (fc class, meaning, ink)
+        for group in symbols_el.findall("traceGroup"):
+            sid = group.attrib.get("id")
+            kind = meaning = None
+            for note in group.findall("annotation"):
+                if note.attrib.get("type") == "truth":
+                    kind = (note.text or "").strip()
+                elif note.attrib.get("type") == "textMeaning":
+                    meaning = note.text
+            refs = [v.attrib.get("traceDataRef") for v in group.iter("traceView")]
+            grouped = [strokes[index_of[r]] for r in refs if r in index_of]
+            if sid is not None and kind and grouped:
+                groups[sid] = (kind, meaning, grouped)
 
-        symbols: Dict[str, Ink] = {}     # flowchart element id -> Ink
-        loose: List[Ink] = []            # symbols with no id to attach to
-        pending_text: List[Tuple[str, Ink]] = []
-        strays: List[Tuple[str, list]] = []   # (caption's text id, strokes of it annotated apart: OHFD_UNTRANSCRIBED)
+        edges: Dict[str, Tuple[str, str]] = {}          # arrow id -> (from node id, to node id)
+        inside: Dict[str, str] = {}                     # text id -> node id
+        arrow_caption: Dict[str, str] = {}              # arrow id -> text id
+        labelled: set = set()                           # text ids that label an arrow
+        for relation in (relations_el.findall("symbolGroup") if relations_el is not None else []):
+            note = relation.find("annotation")
+            kind = (note.text or "").strip() if note is not None else ""
+            refs = [v.attrib.get("symbolDataRef") for v in relation.findall("symbolView")]
+            if kind == "arrow_connection" and len(refs) == 3:
+                edges[refs[0]] = (refs[1], refs[2])
+            elif kind == "text_inside" and len(refs) == 2:
+                inside[refs[0]] = refs[1]
+            elif kind == "arrow_label" and len(refs) == 2:
+                labelled.add(refs[0])
+                arrow_caption.setdefault(refs[1], refs[0])
 
-        for group in root.iter(_INKML_NS + "traceGroup"):
-            truth = group.find(_INKML_NS + "annotation")
-            if truth is None or truth.text is None:
+        symbols: Dict[str, Ink] = {}
+        node_types: Dict[str, str] = {}
+        for sid, (kind, meaning, grouped) in groups.items():
+            class_name = FC_CLASS_MAP.get(kind)
+            if class_name is None or class_name == "textline":
                 continue
-            class_name = OHFD_CLASS_MAP.get(truth.text.strip())
-            if class_name is None:
-                continue    # the outer "From ITF" wrapper and document-truth groups
+            meta = {"id": sid}
+            if class_name == "enclosure":
+                meta["node_type"] = node_types[sid] = kind
+            symbols[sid] = Ink(strokes=grouped, class_name=class_name, source="fc", meta=meta)
 
-            refs = [v.attrib["traceDataRef"] for v in group.iter(_INKML_NS + "traceView")
-                    if v.attrib.get("traceDataRef") in index_of]
-            grouped = [strokes[index_of[r]] for r in refs]
-            if not grouped:
+        children: List[Ink] = []
+        captions: Dict[str, str] = {}                   # text id -> its transcription, for the graph
+        for sid, (kind, meaning, grouped) in groups.items():
+            if FC_CLASS_MAP.get(kind) != "textline":
                 continue
+            owner = inside.get(sid)
+            if owner in symbols and symbols[owner].class_name in FC_NODE_CLASSES:
+                # a shape's caption: rewritten downstream, so its own transcription only rides along
+                text = Ink(strokes=grouped, class_name="textline", source="fc",
+                           label=(meaning or "").strip() or None, meta={"id": sid})
+                symbols[owner].children.append(text)
+                if text.label:
+                    captions[sid] = text.label
+                continue
+            label = _fc_arrow_label(meaning) if sid in labelled else None
+            if label is None:
+                continue                    # see _fc_arrow_label; a text with no relation at all is not in the set
+            captions[sid] = label
+            children.append(Ink(strokes=grouped, class_name="textline", source="fc", label=label,
+                                meta={"id": sid}))
+        kept_text = {(c.meta or {}).get("id") for c in children}
 
-            ref = group.find(_INKML_NS + "annotationXML")
-            element_id = ref.attrib.get("href") if ref is not None else None
-            label = captions.get(element_id) if element_id else None
-            if class_name == "textline" and not label and element_id not in parents:
-                action, value = OHFD_UNTRANSCRIBED.get((chart, tuple(refs)), ("drop", None))
-                if action == "drop":
-                    continue
-                if action == "part_of":
-                    strays.append((value, grouped))
-                    continue
-                if action == "arrow":
-                    class_name = "arrow"
-                else:
-                    label = value
-            meta = {"id": element_id} if element_id else None
-            if element_id in edges:
-                meta = dict(meta or {})
-                meta["source_id"], meta["target_id"] = edges[element_id]
-            if element_id in caption_of_arrow:
-                meta = dict(meta or {})
-                meta["caption_id"] = caption_of_arrow[element_id]
-            if element_id in node_types:
-                meta = dict(meta or {})
-                meta["ohfd_type"] = node_types[element_id]
-            ink = Ink(strokes=grouped, class_name=class_name, source="ohfd", label=label, meta=meta)
+        for sid, ink in symbols.items():
+            if ink.class_name == "arrow":
+                if sid in edges:
+                    ink.meta["source_id"], ink.meta["target_id"] = edges[sid]
+                if arrow_caption.get(sid) in kept_text:
+                    ink.meta["caption_id"] = arrow_caption[sid]
+        children = list(symbols.values()) + children
+        if not children:
+            continue
 
-            if class_name == "textline" and element_id in parents:
-                pending_text.append((parents[element_id], ink))
-            elif element_id:
-                symbols[element_id] = ink
-            else:
-                loose.append(ink)
-
-        # a caption's stroke annotated on its own goes back into the caption
-        by_id = dict(symbols)
-        by_id.update({(text_ink.meta or {}).get("id"): text_ink for _, text_ink in pending_text})
-        for owner_id, extra in strays:
-            if owner_id in by_id:
-                by_id[owner_id].strokes.extend(extra)
-
-        # nest each node caption inside its node, keeping orphans at diagram level
-        children = list(symbols.values()) + loose
-        for parent_id, text_ink in pending_text:
-            parent = symbols.get(parent_id)
-            if parent is not None:
-                parent.children.append(text_ink)
-            else:
-                children.append(text_ink)
-
-        if children:
-            # The flowchart's graph, carried on the diagram itself. Every consumer
-            # otherwise has to rebuild it by walking the children and re-reading
-            # each symbol's meta, and only edges whose two nodes both survived the
-            # walk are usable. Restricting it here to nodes that actually made it
-            # into the tree means an edge present in `graph["edges"]` can always
-            # be drawn.
-            present = {eid for eid, ink in symbols.items()
-                        if ink.class_name in OHFD_NODE_CLASSES}
-
-            # A caption's transcription is keyed by the caption's own id, not by
-            # the id of the thing it labels, so a node's or an arrow's text has to
-            # be looked up through the ownership map rather than under its own id.
-            def owned_text(owner_id: str, owned: Dict[str, str]) -> Optional[str]:
-                return captions.get(owned.get(owner_id))
-
-            caption_of_node = {node_id: text_id
-                               for text_id, node_id in parents.items()}
-            graph = {
-                "nodes": {eid: {"class": symbols[eid].class_name,
-                                 "type": node_types.get(eid),
-                                 "text": owned_text(eid, caption_of_node)}
-                           for eid in present},
-                "edges": [{"id": aid, "source": s, "target": t,
-                            "caption_id": caption_of_arrow.get(aid),
-                            "text": owned_text(aid, caption_of_arrow)}
-                           for aid, (s, t) in edges.items()
-                           if s in present and t in present],
-            }
-            inks.append(Ink(strokes=[], children=children,
-                             label=os.path.basename(name)[:-len(".inkml")],
-                             source="ohfd",
-                             meta={"flowchart": True, "graph": graph}))
+        # The flowchart's graph, carried on the diagram itself, restricted to nodes that made it into the tree, so
+        # an edge present in graph["edges"] can always be drawn.
+        present = {sid for sid, ink in symbols.items() if ink.class_name in FC_NODE_CLASSES}
+        caption_of_node = {node: text for text, node in inside.items()}
+        graph = {
+            "nodes": {sid: {"class": symbols[sid].class_name, "type": node_types.get(sid),
+                            "text": captions.get(caption_of_node.get(sid))}
+                      for sid in present},
+            "edges": [{"id": aid, "source": s, "target": t,
+                       "caption_id": symbols[aid].meta.get("caption_id"),
+                       "text": captions.get(symbols[aid].meta.get("caption_id"))}
+                      for aid, (s, t) in edges.items()
+                      if aid in symbols and s in present and t in present],
+        }
+        inks.append(Ink(strokes=[], children=children, label=chart, source="fc",
+                        meta={"flowchart": True, "graph": graph}))
     return inks
 
 

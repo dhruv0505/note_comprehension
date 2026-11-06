@@ -1,0 +1,22 @@
+{
+  "forms_with_ink": 1730,
+  "lines_with_ink": 12195,
+  "deepwriting_chunks_on_iam_text": 35195,
+  "chunk_line_matches": 20832,
+  "forms_with_writer": 1591,
+  "lines_with_writer": 11230,
+  "forms_conflicting": 0,
+  "forms_unmatched": 139,
+  "writers": 200,
+  "lines_per_writer_median": 55.5,
+  "split_groups": 321,
+  "split_group_lines_largest": [
+    177,
+    132,
+    116,
+    113,
+    79
+  ],
+  "split_group_lines_median": 49.0
+}
+wrote C:\Users\propr\Desktop\whiteboard\note_comprehension\note_synth\data\iamondb_writers.json

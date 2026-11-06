@@ -1,0 +1,33 @@
+[2026-11-04 18:18:52] creating the dataset VM note-synth-dataset (16 vCPU / 64 GB / 100 GB) in IN2
+[2026-11-04 18:18:55] failed: JLError: jl create --vm --cpu --vcpus 16 --ram 64 --storage 100 --name note-synth-dataset --region IN2 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available in IN2."}
+[2026-11-04 18:19:42] creating the dataset VM note-synth-dataset (16 vCPU / 64 GB / 100 GB) in IN2
+[2026-11-04 18:19:47] not at that size: cpu --vcpus 16 --ram 64 --storage 100 --name note-synth-dataset --region IN2 --yes: exit 1: {"error": "CPU VM size 16 vCPU / 64GB RAM is not available in IN2."}
+[2026-11-04 18:19:47] creating the dataset VM note-synth-dataset (8 vCPU / 32 GB / 100 GB) in IN2
+[2026-11-04 18:19:50] not at that size: --cpu --vcpus 8 --ram 32 --storage 100 --name note-synth-dataset --region IN2 --yes: exit 1: {"error": "CPU VM size 8 vCPU / 32GB RAM is not available in IN2."}
+[2026-11-04 18:19:50] creating the dataset VM note-synth-dataset (4 vCPU / 16 GB / 100 GB) in IN2
+[2026-11-04 18:20:39] VM 563910 up: HOME=C:\Users\propr | 4
+[2026-11-04 18:21:18] failed: RuntimeError: command failed (2): cd C:\Users\propr/run && tar xzf code.tgz && rm -f code.tgz && ls note_synth | wc -l: tar (child): code.tgz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+[2026-11-04 18:21:42] paused the dataset VM 563910
+[2026-11-04 18:23:29] VM 563911 up: HOME=/home/ubuntu | 4 | /dev/vda1 | 96G | 2.3G | 94G | 3% | /
+[2026-11-04 18:24:16] uploading iamondb_linestrokes.tar.gz (70 MB)
+[2026-11-04 18:29:27] uploading iamondb_ascii.tar (0 MB)
+[2026-11-04 18:29:59] uploading iamondb_writers.json (0 MB)
+[2026-11-04 18:30:30] uploading deepwriting.zip (52 MB)
+[2026-11-04 18:33:56] uploading fc.zip (27 MB)
+[2026-11-04 18:36:39] VM 563911 up: HOME=/home/ubuntu | 4 | /dev/vda1 | 96G | 2.5G | 94G | 3% | /
+[2026-11-04 18:37:22] iamondb_linestrokes.tar.gz is already on the VM
+[2026-11-04 18:37:29] iamondb_ascii.tar is already on the VM
+[2026-11-04 18:37:37] iamondb_writers.json is already on the VM
+[2026-11-04 18:37:44] deepwriting.zip is already on the VM
+[2026-11-04 18:37:52] uploading fc.zip (27 MB)
+[2026-11-04 18:40:30] bootstrap_remote.sh started
+[2026-11-04 18:40:37] remote: 1793846427 setup_python start | ALIVE
+[2026-11-04 18:41:46] remote: 1793846457 check_uploads start | 1793846457 fc.zip done | 1793846457 fetch_mathwriting start | ALIVE
+[2026-11-04 18:45:08] remote: 1793846649 fetch_emnist start | 1793846677 fetch_emnist done | 1793846677 fetch_quickdraw start | ALIVE
+[2026-11-04 18:46:16] remote: 1793846677 fetch_quickdraw start | 1793846742 fetch_quickdraw done | 1793846742 build_caches start | ALIVE
+[2026-11-04 18:54:35] remote: 1793846742 fetch_quickdraw done | 1793846742 build_caches start | 1793847245 build_caches done | STATE=done | ALIVE
+[2026-11-04 18:54:35] the dataset VM is set up; cost $0.06
+[2026-11-04 18:55:05] paused the dataset VM 563911

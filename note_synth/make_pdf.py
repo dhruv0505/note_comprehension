@@ -39,13 +39,13 @@ from demo import CLASS_COLORS
 from labels import label_bbox
 
 # Enough variety that 100 pages rarely repeat a line, without a slow startup.
-# OHFD ships 419 charts and they are small to parse, so load them all: at a
+# FC ships 672 charts and they are small to parse, so load them all: at a
 # 120 cap the generator was drawing 92 flowcharts from 35 distinct charts.
 # EMNIST was 24 per character, and a geometry figure writing the same character
 # twice (two "5"s, say) used the identical glyph for both 1 time in 10; at 200
 # per character that went to 0 of 33 such pairs.
 POOL_LIMITS = {"iam": 4000, "deepwriting": 4000, "quickdraw": 120,
-               "math": 400, "ohfd": 419, "emnist": 200}
+               "math": 400, "fc": 672, "emnist": 200}
 
 
 def _try(name, fn, *args, **kwargs):
@@ -72,7 +72,7 @@ def build_pools(with_shape_bank: bool = False) -> dict:
         "text_pool": text,
         "quickdraw_pool": _try("quickdraw", loaders.load_quickdraw,
                                max_per_category=POOL_LIMITS["quickdraw"]),
-        "ohfd_pool": _try("ohfd", loaders.load_ohfd, max_items=POOL_LIMITS["ohfd"]),
+        "flowchart_pool": _try("fc", loaders.load_fc, max_items=POOL_LIMITS["fc"]),
         "math_pool": _try("mathwriting", loaders.load_mathwriting,
                           max_items=POOL_LIMITS["math"]),
         # keyed by character, not a flat list: a geometry figure looks up the
@@ -261,10 +261,10 @@ def _node_shape(node):
     """How an enclosure's outline is approximated, for edge anchoring and boxing.
 
     The class does not say — every shape is an `enclosure` — so this reads
-    what was drawn: OHFD's own symbol type for a flowchart node, or the shape
+    what was drawn: FC's own symbol type for a flowchart node, or the shape
     drawn round some writing, kept in its label.
     """
-    drawn = (node.meta or {}).get("ohfd_type") or node.label
+    drawn = (node.meta or {}).get("node_type") or node.label
     if drawn in ROUND_OUTLINES:
         return "ellipse"
     if drawn == "decision":
@@ -275,7 +275,7 @@ def _node_shape(node):
 def _graph_span(node, shapes):
     """An arrow's endpoints taken from the flowchart graph, not from its ink.
 
-    OHFD states which nodes each arrow joins, and that is what the arrow means.
+    FC states which nodes each arrow joins, and that is what the arrow means.
     Deriving the endpoints from the ink instead put them wherever the pen
     happened to start and stop — short of the shapes, past them, or with the
     head on the wrong end when the writer drew the arrow backwards.
@@ -365,7 +365,7 @@ def _arrow_span(node):
     pointing at. The shaft alone carries the run — loop and all, it still starts
     on the anchor and ends on the tip.
 
-    OHFD's own arrows are captured ink with no such convention, so there the two
+    FC's own arrows are captured ink with no such convention, so there the two
     stroke endpoints furthest apart are used, with the head placed at whichever
     of them the last stroke finished nearest.
     """

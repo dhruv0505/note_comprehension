@@ -1,0 +1,266 @@
+{
+ "polled_at": 1793891025.5696962,
+ "poll": 378,
+ "cost": 0.8346,
+ "budget": 4.0,
+ "hourly": 0.1129,
+ "machine_id": 564117,
+ "started": 1793864413.363196,
+ "status": {
+  "now": 1793890989.1112435,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 30000,
+   "val": 2000,
+   "test": 2000
+  },
+  "mode": "full",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1793864365.1298876,
+    "end": 1793864436.275999,
+    "log": [
+     "VM 564117 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1793864436.2919664,
+    "end": 1793864488.5892546,
+    "log": [
+     "252 KB"
+    ]
+   },
+   {
+    "start": 1793864485.4898736,
+    "state": "done",
+    "end": 1793864485.5264537,
+    "name": "check_cache"
+   },
+   {
+    "start": 1793864485.5525599,
+    "state": "done",
+    "end": 1793864485.6059666,
+    "name": "cache_rebuild"
+   },
+   {
+    "start": 1793864485.6275134,
+    "state": "done",
+    "end": 1793864501.7636025,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1793864501.7838752,
+    "state": "done",
+    "end": 1793888388.6255994,
+    "name": "synth_train"
+   },
+   {
+    "start": 1793888388.6477065,
+    "state": "done",
+    "end": 1793889586.5587628,
+    "name": "synth_val"
+   },
+   {
+    "start": 1793889586.5801477,
+    "state": "done",
+    "end": 1793890583.8244078,
+    "name": "synth_test"
+   },
+   {
+    "start": 1793890866.2870896,
+    "state": "done",
+    "end": 1793890866.329834,
+    "name": "swap_dataset"
+   },
+   {
+    "start": 1793890866.3520186,
+    "state": "done",
+    "end": 1793890923.899518,
+    "name": "count_classes"
+   },
+   {
+    "start": 1793890923.923567,
+    "state": "done",
+    "end": 1793890923.9451861,
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 30000,
+    "samples": 421403,
+    "rows": 451403,
+    "marks": 65864,
+    "rejected": 0,
+    "worker_seconds": 71441.4,
+    "max_item_uses_on_a_page": 7,
+    "shards_done": 300,
+    "target": 30000,
+    "geometry_samples": 60000,
+    "classes": {
+     "iam": {
+      "items_used": 6147,
+      "uses": 446445,
+      "most_used_share": 0.00147,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 531846,
+      "uses": 1227810,
+      "most_used_share": 1e-05,
+      "cap_share": 0.01
+     },
+     "fc": {
+      "items_used": 113,
+      "uses": 22662,
+      "most_used_share": 0.02008,
+      "cap_share": 0.02
+     },
+     "qd": {
+      "items_used": 8548,
+      "uses": 9537,
+      "most_used_share": 0.00042,
+      "cap_share": 0.01
+     }
+    },
+    "recognition_pool": {
+     "textline": {
+      "samples": 10229,
+      "rows": 97663,
+      "pool_items": 9766,
+      "finished": true
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 58574,
+      "rows": 449085,
+      "short_samples": 26366,
+      "rows_with_other_lines": 40558,
+      "lines_without_times": 124426,
+      "shards_done": 300
+     },
+     "formula": {
+      "samples": 136561,
+      "rows": 1230596,
+      "short_samples": 26986,
+      "rows_with_other_lines": 1255,
+      "lines_without_times": 0,
+      "shards_done": 300
+     }
+    }
+   },
+   "val": {
+    "pages": 2000,
+    "samples": 25926,
+    "rows": 27926,
+    "marks": 5243,
+    "rejected": 0,
+    "worker_seconds": 3413.9,
+    "max_item_uses_on_a_page": 1,
+    "shards_done": 20,
+    "target": 2000,
+    "geometry_samples": 0,
+    "classes": {
+     "iam": {
+      "items_used": 824,
+      "uses": 33006,
+      "most_used_share": 0.0077,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 15036,
+      "uses": 76399,
+      "most_used_share": 0.00021,
+      "cap_share": 0.01
+     },
+     "fc": {
+      "items_used": 19,
+      "uses": 66,
+      "most_used_share": 0.06061,
+      "cap_share": 0.05714285714285714
+     },
+     "qd": {
+      "items_used": 600,
+      "uses": 620,
+      "most_used_share": 0.00323,
+      "cap_share": 0.01
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 4221,
+      "rows": 33017,
+      "short_samples": 1753,
+      "rows_with_other_lines": 4589,
+      "lines_without_times": 8967,
+      "shards_done": 20
+     },
+     "formula": {
+      "samples": 8533,
+      "rows": 76443,
+      "short_samples": 1810,
+      "rows_with_other_lines": 169,
+      "lines_without_times": 0,
+      "shards_done": 20
+     }
+    }
+   },
+   "test": {
+    "pages": 2000,
+    "samples": 0,
+    "rows": 0,
+    "marks": 4705,
+    "rejected": 0,
+    "worker_seconds": 2846.3,
+    "max_item_uses_on_a_page": 2,
+    "shards_done": 20,
+    "target": 2000,
+    "geometry_samples": 0,
+    "classes": {
+     "iam": {
+      "items_used": 751,
+      "uses": 33169,
+      "most_used_share": 0.00564,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 7609,
+      "uses": 67593,
+      "most_used_share": 0.00034,
+      "cap_share": 0.01
+     },
+     "fc": {
+      "items_used": 21,
+      "uses": 2390,
+      "most_used_share": 0.05732,
+      "cap_share": 0.05714285714285714
+     },
+     "qd": {
+      "items_used": 648,
+      "uses": 662,
+      "most_used_share": 0.00302,
+      "cap_share": 0.01
+     }
+    }
+   }
+  },
+  "picks": [],
+  "runner_alive": false,
+  "load": [
+   0.7,
+   1.9,
+   2.5
+  ],
+  "cpus": 4,
+  "disk_used_gb": 61.9,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "finished",
+ "paused": true,
+ "mode": "full"
+}

@@ -52,7 +52,7 @@ LEVEL2 = {"textblock", "geometry", "drawing", "table", "flowchart"}
 # `enclosure` is every shape drawn round something — a flowchart's box, stadium,
 # diamond, parallelogram or circle, and a box or oval drawn round a block, a line
 # or some words, alike (a table's outer border is not labelled). Which shape it is is kept for
-# rendering (meta["ohfd_type"], or the label: "rectangle", "oval"), not as a class.
+# rendering (meta["node_type"], or the label: "rectangle", "oval"), not as a class.
 # `line_mark` is a line drawn under or through writing — an underline (single or
 # double) or a strikethrough — one class for both, with which it is kept as the
 # label. Both are level 1, held by the object whose writing they mark (a

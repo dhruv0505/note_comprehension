@@ -98,7 +98,10 @@ GEOMETRY_PER_PAGE_MAX = 4
 # The paused dataset VM's disk lives on one Jarvis server, which can have no free cores for a while ("No contiguous
 # block of 16 cores available on server N9001"). When the mode's size can't be had, these are tried after it, in
 # turn (None: the size the VM last had), round after round for up to RESUME_WAIT seconds.
-RESUME_SIZES = (None, {"vcpus": 16, "ram": 64}, {"vcpus": 8, "ram": 32}, {"vcpus": 4, "ram": 16}, {"vcpus": 2, "ram": 8})
+RESUME_SIZES = ({"vcpus": 16, "ram": 64}, {"vcpus": 8, "ram": 32}, None, {"vcpus": 4, "ram": 16}, {"vcpus": 2, "ram": 8})
+# requests/UPSIZE.json: a running full run is paused to be carried on (RESUME.json) at a bigger size, when Jarvis has
+# one free again; the stages done and the shards written are kept, so only the shards under way are made again
+UPSIZE_REASON = "upsizing: paused to carry on with more vCPUs"
 RESUME_WAIT = 45 * 60
 RESUME_RETRY = 120
 
@@ -445,6 +448,13 @@ class Regen:
         elif inst.get("status") != "Running":
             raise RuntimeError(f"the dataset VM {inst['machine_id']} is {inst.get('status')}")
         st["machine_id"] = int(inst["machine_id"])
+        # the size it came back at sets the workers (launch) and the rate; time already run keeps its cost
+        cores = int(inst.get("cores") or 0)
+        if cores and cores != st.get("cores"):
+            spent = self.cost()
+            st["cores"], st["hourly"] = cores, vm_hourly(cores)
+            st["billing_started"] = time.time() - spent / st["hourly"] * 3600
+            self.say(f"carrying on with {cores} vCPUs, ${st['hourly']:.2f}/h")
         self.save()
         end = time.time() + 900
         while self.jl.exec(st["machine_id"], "true", timeout=90)[0] != 0:
@@ -646,6 +656,11 @@ class Regen:
                         self.launch()
             if self.killed():
                 reason = "kill requested"
+            upsize = os.path.join(REQUESTS, "UPSIZE.json")
+            if os.path.exists(upsize):
+                os.remove(upsize)
+                if st.get("mode") == "full" and not reason:
+                    reason = UPSIZE_REASON
             if self.cost() >= st["budget"] - BUDGET_MARGIN:
                 reason = f"budget reached (${self.cost():.2f} of ${st['budget']:.2f})"
             if failures >= 5:

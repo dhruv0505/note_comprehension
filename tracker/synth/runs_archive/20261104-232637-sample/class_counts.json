@@ -1,0 +1,103 @@
+{
+ "generated_at": 1793863744.5960126,
+ "classes": [
+  "textblock",
+  "drawing",
+  "geometry",
+  "table",
+  "flowchart",
+  "textline",
+  "formula",
+  "enclosure",
+  "line_mark",
+  "arc",
+  "segment",
+  "vertex",
+  "arrow"
+ ],
+ "splits": {
+  "train": {
+   "source": "samples",
+   "pages": 20,
+   "totals": {
+    "textblock": 157,
+    "drawing": 7,
+    "geometry": 25,
+    "table": 13,
+    "flowchart": 28,
+    "textline": 341,
+    "formula": 715,
+    "enclosure": 125,
+    "line_mark": 27,
+    "arc": 17,
+    "segment": 131,
+    "vertex": 121,
+    "arrow": 179
+   },
+   "per_page": {
+    "textblock": 7.85,
+    "drawing": 0.35,
+    "geometry": 1.25,
+    "table": 0.65,
+    "flowchart": 1.4,
+    "textline": 17.05,
+    "formula": 35.75,
+    "enclosure": 6.25,
+    "line_mark": 1.35,
+    "arc": 0.85,
+    "segment": 6.55,
+    "vertex": 6.05,
+    "arrow": 8.95
+   }
+  },
+  "val": {
+   "source": "pages",
+   "pages": 20,
+   "totals": {
+    "textblock": 196,
+    "drawing": 10,
+    "geometry": 18,
+    "table": 7,
+    "flowchart": 11,
+    "textline": 289,
+    "formula": 791,
+    "enclosure": 83,
+    "line_mark": 24,
+    "arc": 17,
+    "segment": 86,
+    "vertex": 83,
+    "arrow": 88
+   },
+   "per_page": {
+    "textblock": 9.8,
+    "drawing": 0.5,
+    "geometry": 0.9,
+    "table": 0.35,
+    "flowchart": 0.55,
+    "textline": 14.45,
+    "formula": 39.55,
+    "enclosure": 4.15,
+    "line_mark": 1.2,
+    "arc": 0.85,
+    "segment": 4.3,
+    "vertex": 4.15,
+    "arrow": 4.4
+   },
+   "from_samples": {
+    "textblock": 9.8,
+    "drawing": 0.5,
+    "geometry": 0.9,
+    "table": 0.35,
+    "flowchart": 0.55,
+    "textline": 14.45,
+    "formula": 39.55,
+    "enclosure": 4.15,
+    "line_mark": 1.2,
+    "arc": 0.85,
+    "segment": 4.3,
+    "vertex": 4.15,
+    "arrow": 4.4
+   }
+  }
+ }
+}

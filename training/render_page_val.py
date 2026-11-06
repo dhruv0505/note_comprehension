@@ -42,7 +42,7 @@ training side would misread:
     written, a level-1 one under the parent it is trained under and inside its box
   * every arrow runs tail to head, judged by how it was built rather than by
     seg_prompts._arrow: a flowchart edge starts on its source shape's outline and ends
-    on its target's (OHFD's source_id / target_id); a connector starts and ends at its
+    on its target's (FC's source_id / target_id); a connector starts and ends at its
     shaft's first and last points, with the head drawn at the end. Any other kind of
     arrow is counted as unverified
   * the folder read back through seg_eval.PageSet, with a perfect model answering

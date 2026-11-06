@@ -1,0 +1,68 @@
+{
+ "run_id": "20261104-190419-full",
+ "mode": "full",
+ "phase": "failed",
+ "requested_at": 1793847859.2457805,
+ "hourly": 0.1129,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ },
+ "budget": 4.0,
+ "pages": {
+  "train": 30000,
+  "val": 2000,
+  "test": 2000
+ },
+ "shard_pages": 100,
+ "remote_stages": [
+  "check_cache",
+  "cache_rebuild",
+  "prepare_output",
+  "synth_train",
+  "synth_val",
+  "synth_test",
+  "swap_dataset",
+  "count_classes",
+  "all_done"
+ ],
+ "local_stages": [
+  {
+   "name": "resume_vm",
+   "state": "done",
+   "start": 1793847859.2678664,
+   "end": 1793847912.1501377,
+   "log": [
+    "VM 563936 running with 4 vCPUs, $0.11/h"
+   ]
+  },
+  {
+   "name": "upload_code",
+   "state": "done",
+   "start": 1793847912.1592054,
+   "end": 1793847958.5504553,
+   "log": [
+    "251 KB"
+   ]
+  }
+ ],
+ "poll": 2,
+ "pulled": [],
+ "machine_id": 563936,
+ "billing_started": 1793847891.141915,
+ "cores": 4,
+ "home": "/home/ubuntu",
+ "billing_ended": 1793848058.273391,
+ "pause_reason": "stage failed: synth_train",
+ "paused": true,
+ "finished_at": 1793848058.273391
+}

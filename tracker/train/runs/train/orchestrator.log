@@ -1,0 +1,79 @@
+[01:23:56] waiting for Start in the tracker
+[19:00:12] waiting for Start in the tracker
+[19:33:05] waiting for Start in the tracker
+[11:14:44] waiting for Start in the tracker
+[10:15:32] waiting for Start in the tracker
+[21:34:35] waiting for Start in the tracker
+[10:59:25] waiting for Start in the tracker
+[11:11:55] waiting for Start in the tracker
+[23:19:05] waiting for Start in the tracker
+[18:25:37] waiting for Start in the tracker
+[18:35:02] waiting for Start in the tracker
+[17:00:49] copy checked: 661,038 files, 45.1 GB on both VMs
+[17:00:49] pausing the data VM 564776: dataset copied to the GPU VM
+[17:03:22] budget changed from $36.74 to $47.32
+[17:04:17] budget changed from $47.32 to $47.39
+[17:13:20] budget changed from $47.39 to $64.15
+[18:33:28] copying best/ and last/ back from the GPU VM
+[18:46:53] could not copy the checkpoints back: exec on 564777 gave no result after 3 tries: exit 1: {
+  "error": "Instance 564777 is not available for SSH (status: Pausing)."
+}
+[18:46:53] pausing the gpu VM 564777: training finished
+[18:48:45] training ended at step 10267: VM paused, waiting for a test request
+[18:48:45] saving: resuming the GPU VM with one GPU to copy the checkpoint back
+[18:48:48] explorer: resuming GPU VM 564777 with 1 GPU
+[18:53:06] explorer: GPU VM 564825 is running; starting the model
+[18:53:14] copying best/ and last/ back from the GPU VM
+[19:12:24] saved best/ (step 8000) as inference/comprehension/comprehension-v4
+[19:12:24] saving: done; pausing the GPU VM again
+[19:12:27] explorer: pausing GPU VM 564825
+[19:12:54] explorer: GPU VM paused
+[20:04:52] finished in phase trained
+[20:04:52] restarting training: pausing everything and archiving the run's files
+[20:04:52] training restarted, the old run's files are in C:\Users\propr\Desktop\whiteboard\note_comprehension\tracker\train\runs\archive\train-20261105-200452; the next Start can continue from its best/ checkpoint
+[20:04:52] waiting for Start in the tracker
+[20:17:13] cleared the previous run from the GPU VM, keeping its best/ checkpoint
+[20:34:36] copy checked: 661,038 files, 45.1 GB on both VMs
+[20:34:36] pausing the data VM 564856: dataset copied to the GPU VM
+[20:48:58] status unavailable (1/5): exec on 564857 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564857"
+}
+[20:50:59] status unavailable (2/5): exec on 564857 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564857"
+}
+[20:53:05] status unavailable (3/5): exec on 564857 gave no result after 3 tries: exit 1: {
+  "error": "Request Connection failed: GET users/fetch/564857"
+}
+[20:54:50] budget changed from $34.20 to $34.75
+[21:03:24] budget changed from $34.75 to $37.81
+[21:17:02] budget changed from $37.81 to $41.00
+[21:21:05] copying best/ and last/ back from the GPU VM
+[21:28:50] pausing the gpu VM 564857: training finished
+[21:31:21] training ended at step 5133: VM paused, waiting for a test request
+[21:31:21] saved best/ (step 5133) as inference/comprehension/comprehension-v5
+[21:47:08] finished in phase trained
+[21:47:08] restarting training: pausing everything and archiving the run's files
+[21:47:08] training restarted, the old run's files are in C:\Users\propr\Desktop\whiteboard\note_comprehension\tracker\train\runs\archive\train-20261105-214708; the next Start can continue from its best/ checkpoint
+[21:47:08] waiting for Start in the tracker
+[21:55:40] FAILED: jl resume 564857 --num-gpus 8 --yes: exit 1: {"error": "Insufficient balance to start this instance. A minimum balance of $23.95 is required to run it for at least 1 hour. You currently have $23.34 available. Add at least $0.61 and try again."}
+[21:55:40] pausing the gpu VM 564857: the orchestrator failed
+[21:55:40] pausing the data VM 564923: the orchestrator failed
+[22:01:03] restarting training: pausing everything and archiving the run's files
+[22:01:03] training restarted, the old run's files are in C:\Users\propr\Desktop\whiteboard\note_comprehension\tracker\train\runs\archive\train-20261105-220103; the next Start trains from the pretrained weights or a saved model
+[22:01:03] waiting for Start in the tracker
+[22:05:37] cleared the previous run from the GPU VM
+[22:14:05] pausing the gpu VM 564929: stopped from the tracker
+[22:14:05] pausing the data VM 564928: stopped from the tracker
+[22:16:14] finished in phase stopped
+[22:16:41] restarting training: pausing everything and archiving the run's files
+[22:16:42] training restarted, the old run's files are in C:\Users\propr\Desktop\whiteboard\note_comprehension\tracker\train\runs\archive\train-20261105-221642; the next Start trains from the pretrained weights or a saved model
+[22:16:42] waiting for Start in the tracker
+[22:24:11] cleared the previous run from the GPU VM
+[22:44:26] copy checked: 661,038 files, 45.1 GB on both VMs
+[22:44:26] pausing the data VM 564944: dataset copied to the GPU VM
+[23:03:47] budget changed from $60.29 to $61.89
+[00:13:22] budget changed from $61.89 to $62.58
+[00:15:58] copying best/ and last/ back from the GPU VM
+[00:19:02] pausing the gpu VM 564945: training finished
+[00:20:42] training ended at step 10267: VM paused, waiting for a test request
+[00:20:43] saved best/ (step 10267) as inference/comprehension/comprehension-v6

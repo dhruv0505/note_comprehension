@@ -1,0 +1,469 @@
+{
+ "heartbeat_at": 1793944028.243065,
+ "pid": 32320,
+ "run_id": 1793937892.8800106,
+ "scrapped": {
+  "at": 1793937892.8800106,
+  "archive": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\runs\\archive\\train-20261105-200452"
+ },
+ "phase": "trained",
+ "message": "restarting training: pausing everything and archiving the run's files",
+ "error": null,
+ "pause_reason": "training finished",
+ "config": {
+  "gpu_type": "H100",
+  "num_gpus": 8,
+  "epochs": 1.0,
+  "budget": 41.0,
+  "lr": 5e-05,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 100,
+  "val_every": 1000,
+  "save_every": 1000,
+  "page_val_max": 200,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "grad_checkpointing": false,
+  "vision_lora": false,
+  "lora_rank": 32,
+  "requested_at": 1793938183.5388641,
+  "lora_alpha": 64,
+  "continue_from": {
+   "checkpoint": "best",
+   "step": 8000,
+   "val_mean_f1": 0.9001788049041206,
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "run_id": 1793846102.3007178,
+   "archive": "train-20261105-200452"
+  },
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v5"
+  },
+  "mark_model": {
+   "source": "inference",
+   "name": "marks",
+   "checkpoint": "last (end of training)",
+   "step": 10900,
+   "mean_f1": 0.9812870260316365,
+   "run_id": null
+  }
+ },
+ "fake": false,
+ "cost": {
+  "total": 37.6564,
+  "gpu": 37.4838,
+  "data": 0.1725,
+  "hourly_now": 0,
+  "budget": 41.0
+ },
+ "machines": {
+  "data": {
+   "id": 564856,
+   "status": "Paused",
+   "private_ip": "10.0.0.2",
+   "public_ip": "217.18.55.207",
+   "user": "ubuntu",
+   "gpu_type": "CPU",
+   "num_gpus": 0,
+   "storage_gb": 100,
+   "name": "note-synth-dataset",
+   "hourly": 0.4105
+  },
+  "gpu": {
+   "id": 564857,
+   "status": "Paused",
+   "private_ip": "10.0.0.3",
+   "public_ip": "217.18.55.218",
+   "user": "ubuntu",
+   "gpu_type": "H100",
+   "num_gpus": 8,
+   "storage_gb": 200,
+   "name": "seg-train",
+   "hourly": 27.947400000000002
+  }
+ },
+ "stages": [
+  {
+   "name": "requested",
+   "label": "Start confirmed",
+   "where": "local",
+   "end": 1793938184.15945,
+   "state": "done",
+   "detail": "8 x H100, budget $34.20, LoRA rank 32, continues the previous run's best/ checkpoint (step 8000), saves best/ as inference/comprehension/comprehension-v5 at the end, takes marks out with inference/mark_separation/marks"
+  },
+  {
+   "name": "resume_data_vm",
+   "label": "Resume the dataset VM",
+   "where": "local",
+   "start": 1793938184.2151465,
+   "state": "done",
+   "end": 1793938238.1612983,
+   "detail": "VM 564856 running"
+  },
+  {
+   "name": "create_gpu_vm",
+   "label": "Rent the GPU VM",
+   "where": "local",
+   "start": 1793938238.1968787,
+   "state": "done",
+   "end": 1793938510.4751644,
+   "detail": "VM 564857 resumed: 8 x H100 at $27.95/h"
+  },
+  {
+   "name": "link_vms",
+   "label": "Connect the GPU VM to the dataset VM",
+   "where": "local",
+   "start": 1793938510.4977503,
+   "state": "done",
+   "end": 1793938601.03633,
+   "detail": "dataset VM reachable at 217.18.55.207"
+  },
+  {
+   "name": "upload_code",
+   "label": "Upload the training code",
+   "where": "local",
+   "start": 1793938601.1035516,
+   "state": "done",
+   "end": 1793938729.7006438,
+   "detail": "9,730 KB"
+  },
+  {
+   "name": "launch",
+   "label": "Launch on the GPU VM",
+   "where": "local",
+   "start": 1793938729.719397,
+   "state": "done",
+   "end": 1793938794.6969616
+  },
+  {
+   "name": "setup_env",
+   "label": "Install PyTorch and libraries",
+   "where": "gpu",
+   "start": 1793925833.543418,
+   "state": "done",
+   "end": 1793925992.8688607
+  },
+  {
+   "name": "fetch_dataset",
+   "label": "Copy the dataset to the GPU VM",
+   "where": "gpu",
+   "start": 1793938790.843514,
+   "state": "done",
+   "end": 1793939585.528544
+  },
+  {
+   "name": "fetch_model",
+   "label": "Download Florence-2-large",
+   "where": "gpu",
+   "start": 1793939585.543008,
+   "state": "done",
+   "end": 1793939603.8712313
+  },
+  {
+   "name": "smoke",
+   "label": "Smoke test on every GPU (6 steps)",
+   "where": "gpu",
+   "start": 1793939603.8861547,
+   "state": "done",
+   "end": 1793939657.791545
+  },
+  {
+   "name": "train",
+   "label": "Train",
+   "where": "gpu",
+   "start": 1793939657.806921,
+   "state": "done",
+   "end": 1793942432.4680731
+  }
+ ],
+ "remote": {
+  "now": 1793942465.5213823,
+  "home": "/home/ubuntu",
+  "stages": [
+   {
+    "start": 1793925833.543418,
+    "state": "done",
+    "end": 1793925992.8688607,
+    "name": "setup_env"
+   },
+   {
+    "start": 1793938790.843514,
+    "state": "done",
+    "end": 1793939585.528544,
+    "name": "fetch_dataset"
+   },
+   {
+    "start": 1793939585.543008,
+    "state": "done",
+    "end": 1793939603.8712313,
+    "name": "fetch_model"
+   },
+   {
+    "start": 1793939603.8861547,
+    "state": "done",
+    "end": 1793939657.791545,
+    "name": "smoke"
+   },
+   {
+    "start": 1793939657.806921,
+    "state": "done",
+    "end": 1793942432.4680731,
+    "name": "train"
+   }
+  ],
+  "progress": {
+   "started_at": 1793939667.388185,
+   "pid": 7874,
+   "phase": "finished",
+   "world": 8,
+   "updated_at": 1793942429.0305505,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "global_batch": 128,
+   "train_rows": 657085,
+   "val_rows": 300,
+   "val_pages": 200,
+   "val_every": 1000,
+   "save_every": 1000,
+   "step": 5133,
+   "total_steps": 5133,
+   "epoch": 0.9999071657395923,
+   "epochs": 1.0,
+   "steps_per_epoch": 5133,
+   "lr": 0.0,
+   "peak_lr": 5e-05,
+   "control_seq": 0,
+   "best_mean_f1": 0.9050384374081061,
+   "best_step": 5133,
+   "best_pages_mean_f1": 0.9646749994287249,
+   "last_val_step": 5133,
+   "eta_s": 123.96867174099998,
+   "step_seconds": 0.3580570768791615,
+   "samples_per_s": 356.351201212798,
+   "loss": 0.4353393083438277,
+   "val": null,
+   "last_checkpoint": {
+    "name": "last",
+    "step": 5133,
+    "at": 1793942428.9776235
+   },
+   "finished_at": 1793942429.0305417
+  },
+  "config": {
+   "manifest": [
+    "/home/ubuntu/train/data/train/samples/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/textline/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/formula/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition_pool/textline/manifest.jsonl"
+   ],
+   "val_manifest": [
+    "/home/ubuntu/train/data/val/samples/manifest.jsonl"
+   ],
+   "val_fraction": 0.01,
+   "page_val": [
+    "/home/ubuntu/train/data/val/pages"
+   ],
+   "page_val_max": 200,
+   "out": "/home/ubuntu/train/run",
+   "resume": null,
+   "init_adapter": "/home/ubuntu/train/init",
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "epochs": 1.0,
+   "max_steps": null,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "lr": 5e-05,
+   "weight_decay": 0.0,
+   "warmup_steps": 100,
+   "max_grad_norm": 1.0,
+   "grad_checkpointing": false,
+   "num_workers": 6,
+   "seed": 0,
+   "log_every": 20,
+   "val_every": 1000,
+   "eval_batches": 25,
+   "samples": 8,
+   "eval_batch_size": 12,
+   "max_new_tokens": 1024,
+   "iou": 0.5,
+   "vertex_px": 10.0,
+   "arrow_px": 15.0,
+   "page_vertex_px": 20.0,
+   "page_arrow_px": 30.0,
+   "page_min_box_px": 4.0,
+   "page_batch": 4,
+   "mark_model": "/home/ubuntu/train/marks/model.pt",
+   "vision_lora": false,
+   "save_every": 1000,
+   "keep": 2,
+   "allow_cpu": false,
+   "world_size": 8
+  },
+  "control": null,
+  "control_ack": null,
+  "stop_pending": false,
+  "console": [
+   "  enclosure   0.999  0.936  0.966   1167      1     80         0",
+   "  line mark   0.990  0.971  0.980    301      3      9         1",
+   "  arrow       0.962  0.945  0.953   1124     44     66         0",
+   "  recognition formula  loss 0.4881 over 120327 target tokens: 7389 detected lines (7329 matched) in 830 images; generated text accuracy 72.0% (144712 of 200872 characters), CER 33.2% (60598 edits over 182648 characters, 36 lines missed)",
+   "  recognition textline loss 0.7468 over 15236 target tokens: 3965 detected lines (3918 matched) in 491 images; generated text accuracy 91.1% (35470 of 38946 characters), CER 9.5% (3603 edits over 38024 characters, 54 lines missed)",
+   "  validation took 124s",
+   "  saved /home/ubuntu/train/run/best",
+   "  saved /home/ubuntu/train/run/step_005133",
+   "  saved /home/ubuntu/train/run/last",
+   "done: step 5133, best val mean F1 0.9050"
+  ],
+  "checkpoints": [
+   {
+    "name": "step_005000",
+    "mtime": 1793942252.2934074
+   },
+   {
+    "name": "best",
+    "mtime": 1793942427.4383152
+   },
+   {
+    "name": "step_005133",
+    "mtime": 1793942428.1383028
+   },
+   {
+    "name": "last",
+    "mtime": 1793942428.810291
+   }
+  ],
+  "gpus": [
+   {
+    "index": 0,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.49
+   },
+   {
+    "index": 1,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 69.64
+   },
+   {
+    "index": 2,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 68.3
+   },
+   {
+    "index": 3,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 25.0,
+    "power_w": 68.89
+   },
+   {
+    "index": 4,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 25.0,
+    "power_w": 70.86
+   },
+   {
+    "index": 5,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 29.0,
+    "power_w": 69.32
+   },
+   {
+    "index": 6,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 71.17
+   },
+   {
+    "index": 7,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.26
+   }
+  ],
+  "processes": 0,
+  "disk_used_gb": 78.9,
+  "disk_total_gb": 207.9,
+  "test": null,
+  "polled_at": 1793942465.5107632
+ },
+ "test": {
+  "state": "not_run"
+ },
+ "training_started_at": 1793938794.6969616,
+ "explore": {
+  "state": "paused",
+  "requests": {},
+  "spent": 0
+ },
+ "saves": [
+  {
+   "id": "start",
+   "checkpoint": "best",
+   "name": "comprehension-v5",
+   "origin": "start",
+   "state": "done",
+   "requested_at": 1793943081.5351844,
+   "message": null,
+   "folder": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\inference\\comprehension\\comprehension-v5",
+   "step": 5133,
+   "val_mean_f1": 0.9646749994287249,
+   "finished_at": 1793943081.6147692
+  }
+ ],
+ "checkpoints_local": {
+  "best": {
+   "mtime": 1793942427.4383152,
+   "step": 5133,
+   "at": 1793942930.2655053,
+   "mean_f1": 0.9050384374081061
+  },
+  "last": {
+   "mtime": 1793942428.810291,
+   "step": 5133,
+   "at": 1793942930.2655053
+  }
+ },
+ "mark_model_fetch": null,
+ "continue_from": {
+  "checkpoint": "best",
+  "step": 8000,
+  "val_mean_f1": 0.9001788049041206,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "run_id": 1793846102.3007178,
+  "archive": "train-20261105-200452"
+ },
+ "log_offset": 120035
+}

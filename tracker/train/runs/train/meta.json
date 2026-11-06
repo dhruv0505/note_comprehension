@@ -1,0 +1,473 @@
+{
+ "phase": "trained",
+ "stages": {
+  "requested": {
+   "end": 1793945820.2037175,
+   "state": "done",
+   "detail": "8 x H100, budget $60.29, LoRA rank 32, trained further from inference/comprehension/comprehension-v5, saves best/ as inference/comprehension/comprehension-v6 at the end, takes marks out with inference/mark_separation/marks"
+  },
+  "resume_data_vm": {
+   "start": 1793945820.2187946,
+   "state": "done",
+   "end": 1793945875.2670274,
+   "detail": "VM 564944 running"
+  },
+  "create_gpu_vm": {
+   "start": 1793945875.291371,
+   "state": "done",
+   "end": 1793946135.3764796,
+   "detail": "VM 564945 resumed: 8 x H100 at $27.95/h"
+  },
+  "link_vms": {
+   "start": 1793946135.437712,
+   "state": "done",
+   "end": 1793946217.4154167,
+   "detail": "dataset VM reachable at 151.185.52.28"
+  },
+  "upload_code": {
+   "start": 1793946217.5178633,
+   "state": "done",
+   "end": 1793946550.0788517,
+   "detail": "73,976 KB"
+  },
+  "launch": {
+   "start": 1793946550.1035676,
+   "state": "done",
+   "end": 1793946601.8132296
+  }
+ },
+ "billing": [
+  {
+   "kind": "data",
+   "machine_id": 564944,
+   "hourly": 0.4105,
+   "start": 1793945830.4521153,
+   "end": 1793947498.6739676
+  },
+  {
+   "kind": "gpu",
+   "machine_id": 564945,
+   "hourly": 27.947400000000002,
+   "start": 1793945892.958358,
+   "end": 1793953242.916521
+  }
+ ],
+ "machines": {
+  "data": {
+   "id": 564944,
+   "status": "Paused",
+   "private_ip": "10.0.0.2",
+   "public_ip": "151.185.52.28",
+   "user": "ubuntu",
+   "gpu_type": "CPU",
+   "num_gpus": 0,
+   "storage_gb": 100,
+   "name": "note-synth-dataset",
+   "hourly": 0.4105
+  },
+  "gpu": {
+   "id": 564945,
+   "status": "Paused",
+   "private_ip": "10.0.0.3",
+   "public_ip": "151.185.52.54",
+   "user": "ubuntu",
+   "gpu_type": "H100",
+   "num_gpus": 8,
+   "storage_gb": 200,
+   "name": "seg-train",
+   "hourly": 27.947400000000002
+  }
+ },
+ "log_offset": 238252,
+ "pulled": {
+  "/home/ubuntu/train/run/samples_step_001000_pages.jsonl": 183381,
+  "/home/ubuntu/train/data/val/pages/page0000000.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000000.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000008.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000008.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000016.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000016.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000024.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000024.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000032.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000032.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000040.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000040.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000048.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000048.json": true,
+  "/home/ubuntu/train/data/val/pages/page0000056.png": true,
+  "/home/ubuntu/train/data/val/pages/page0000056.json": true,
+  "/home/ubuntu/train/run/samples_step_002000_pages.jsonl": 183073,
+  "/home/ubuntu/train/run/samples_step_003000_pages.jsonl": 183374,
+  "/home/ubuntu/train/run/samples_step_004000_pages.jsonl": 182783,
+  "/home/ubuntu/train/run/samples_step_005000_pages.jsonl": 182363,
+  "/home/ubuntu/train/run/samples_step_005133_pages.jsonl": 183184,
+  "/home/ubuntu/train/run/samples_step_006000_pages.jsonl": 183450,
+  "/home/ubuntu/train/run/samples_step_007000_pages.jsonl": 186172,
+  "/home/ubuntu/train/run/samples_step_008000_pages.jsonl": 183059,
+  "/home/ubuntu/train/run/samples_step_009000_pages.jsonl": 183119,
+  "/home/ubuntu/train/run/samples_step_010000_pages.jsonl": 183119,
+  "/home/ubuntu/train/run/samples_step_010267_pages.jsonl": 183119
+ },
+ "test": {
+  "state": "not_run"
+ },
+ "data_vm": 564944,
+ "region": "IN2",
+ "run_id": 1793945802.1359396,
+ "wipe_remote": false,
+ "scrapped": {
+  "at": 1793945802.1359396,
+  "archive": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\tracker\\train\\runs\\archive\\train-20261105-221642"
+ },
+ "remote_snapshot": {
+  "now": 1793952959.0934176,
+  "home": "/home/ubuntu",
+  "stages": [
+   {
+    "start": 1793925833.543418,
+    "state": "done",
+    "end": 1793925992.8688607,
+    "name": "setup_env"
+   },
+   {
+    "start": 1793946599.232605,
+    "state": "done",
+    "end": 1793947385.2268872,
+    "name": "fetch_dataset"
+   },
+   {
+    "start": 1793947385.2413967,
+    "state": "done",
+    "end": 1793947403.7642765,
+    "name": "fetch_model"
+   },
+   {
+    "start": 1793947403.7789328,
+    "state": "done",
+    "end": 1793947495.5123465,
+    "name": "smoke"
+   },
+   {
+    "start": 1793947495.5268376,
+    "state": "done",
+    "end": 1793952929.7112682,
+    "name": "train"
+   }
+  ],
+  "progress": {
+   "started_at": 1793947507.201991,
+   "pid": 9007,
+   "phase": "finished",
+   "world": 8,
+   "updated_at": 1793952926.5097315,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "global_batch": 128,
+   "train_rows": 657085,
+   "val_rows": 300,
+   "val_pages": 200,
+   "val_every": 1000,
+   "save_every": 1000,
+   "step": 10267,
+   "total_steps": 10267,
+   "epoch": 1.9999923906343928,
+   "epochs": 2.0,
+   "steps_per_epoch": 5133,
+   "lr": 0.0,
+   "peak_lr": 5e-05,
+   "control_seq": 0,
+   "best_mean_f1": 0.9171193662823406,
+   "best_step": 10267,
+   "best_pages_mean_f1": 0.9754601810478527,
+   "last_val_step": 10267,
+   "eta_s": 122.53356972500023,
+   "step_seconds": 0.3517264839172851,
+   "samples_per_s": 376.2524385468833,
+   "loss": 0.38162338866719175,
+   "val": null,
+   "last_checkpoint": {
+    "name": "last",
+    "step": 10267,
+    "at": 1793952926.4703283
+   },
+   "finished_at": 1793952926.5097203
+  },
+  "config": {
+   "manifest": [
+    "/home/ubuntu/train/data/train/samples/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/textline/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition/formula/manifest.jsonl",
+    "/home/ubuntu/train/data/train/recognition_pool/textline/manifest.jsonl"
+   ],
+   "val_manifest": [
+    "/home/ubuntu/train/data/val/samples/manifest.jsonl"
+   ],
+   "val_fraction": 0.01,
+   "page_val": [
+    "/home/ubuntu/train/data/val/pages"
+   ],
+   "page_val_max": 200,
+   "out": "/home/ubuntu/train/run",
+   "resume": null,
+   "init_adapter": "/home/ubuntu/train/init",
+   "lora_rank": 32,
+   "lora_alpha": 64,
+   "epochs": 2.0,
+   "max_steps": null,
+   "batch_size": 8,
+   "grad_accum": 2,
+   "lr": 5e-05,
+   "weight_decay": 0.0,
+   "warmup_steps": 100,
+   "max_grad_norm": 1.0,
+   "grad_checkpointing": false,
+   "num_workers": 6,
+   "seed": 0,
+   "log_every": 20,
+   "val_every": 1000,
+   "eval_batches": 25,
+   "samples": 8,
+   "eval_batch_size": 12,
+   "max_new_tokens": 1024,
+   "iou": 0.5,
+   "vertex_px": 10.0,
+   "arrow_px": 15.0,
+   "page_vertex_px": 20.0,
+   "page_arrow_px": 30.0,
+   "page_min_box_px": 4.0,
+   "page_batch": 4,
+   "mark_model": "/home/ubuntu/train/marks/model.pt",
+   "vision_lora": false,
+   "save_every": 1000,
+   "keep": 2,
+   "allow_cpu": false,
+   "world_size": 8
+  },
+  "control": null,
+  "control_ack": null,
+  "stop_pending": false,
+  "console": [
+   "  enclosure   0.998  0.932  0.964   1162      2     85         0",
+   "  line mark   0.993  0.984  0.989    305      2      5         0",
+   "  arrow       0.975  0.958  0.967   1140     29     50         0",
+   "  recognition formula  loss 0.4552 over 120403 target tokens: 7396 detected lines (7336 matched) in 832 images; generated text accuracy 74.6% (147868 of 198294 characters), CER 29.8% (54495 edits over 182648 characters, 29 lines missed)",
+   "  recognition textline loss 0.7556 over 15224 target tokens: 3956 detected lines (3923 matched) in 490 images; generated text accuracy 91.4% (35512 of 38874 characters), CER 9.2% (3485 edits over 38024 characters, 49 lines missed)",
+   "  validation took 123s",
+   "  saved /home/ubuntu/train/run/best",
+   "  saved /home/ubuntu/train/run/step_010267",
+   "  saved /home/ubuntu/train/run/last",
+   "done: step 10267, best val mean F1 0.9171"
+  ],
+  "checkpoints": [
+   {
+    "name": "step_010000",
+    "mtime": 1793952701.329345
+   },
+   {
+    "name": "best",
+    "mtime": 1793952924.607204
+   },
+   {
+    "name": "step_010267",
+    "mtime": 1793952925.4751806
+   },
+   {
+    "name": "last",
+    "mtime": 1793952926.2991586
+   }
+  ],
+  "gpus": [
+   {
+    "index": 0,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.78
+   },
+   {
+    "index": 1,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 69.89
+   },
+   {
+    "index": 2,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 68.37
+   },
+   {
+    "index": 3,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 25.0,
+    "power_w": 68.84
+   },
+   {
+    "index": 4,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 25.0,
+    "power_w": 70.9
+   },
+   {
+    "index": 5,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 30.0,
+    "power_w": 69.41
+   },
+   {
+    "index": 6,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 27.0,
+    "power_w": 70.84
+   },
+   {
+    "index": 7,
+    "name": "NVIDIA H100 80GB HBM3",
+    "util": 0.0,
+    "mem_used_mb": 0.0,
+    "mem_total_mb": 81559.0,
+    "temp_c": 26.0,
+    "power_w": 70.12
+   }
+  ],
+  "processes": 0,
+  "disk_used_gb": 79.0,
+  "disk_total_gb": 207.9,
+  "test": null,
+  "polled_at": 1793952958.950717
+ },
+ "config": {
+  "gpu_type": "H100",
+  "num_gpus": 8,
+  "epochs": 2.0,
+  "budget": 62.58,
+  "lr": 5e-05,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "warmup_steps": 100,
+  "val_every": 1000,
+  "save_every": 1000,
+  "page_val_max": 200,
+  "eval_batches": 25,
+  "samples": 8,
+  "log_every": 20,
+  "num_workers": 6,
+  "grad_checkpointing": false,
+  "vision_lora": false,
+  "lora_rank": 32,
+  "requested_at": 1793945818.6112697,
+  "lora_alpha": 64,
+  "init_model": {
+   "name": "comprehension-v5",
+   "signature": "69265456-1793942427",
+   "info": {
+    "checkpoint": "best (val mean F1)",
+    "step": 5133,
+    "best_step": 5133,
+    "total_steps": 5133,
+    "epochs": 1.0,
+    "best_val_mean_f1": 0.9050384374081061,
+    "val_mean_f1": 0.9646749994287249,
+    "lora_rank": 32,
+    "trained_from": "train-20261105-200452 best/",
+    "saved_at": "2026-11-05 21:31"
+   }
+  },
+  "save_to": {
+   "checkpoint": "best",
+   "name": "comprehension-v6"
+  },
+  "mark_model": {
+   "source": "inference",
+   "name": "marks",
+   "checkpoint": "last (end of training)",
+   "step": 10900,
+   "mean_f1": 0.9812870260316365,
+   "run_id": null
+  }
+ },
+ "data_host": "151.185.52.28",
+ "gpu_home_shell": "/home/ubuntu",
+ "guard": {
+  "deadline": 1793953443.1577659,
+  "machine_id": 564945,
+  "api_base": "https://backendn.jarvislabs.net/",
+  "stop_wait": 360,
+  "unwatched": 1200,
+  "written_at": 1793952802.3043735
+ },
+ "training_started_at": 1793946601.8132296,
+ "remote_home": "/home/ubuntu",
+ "copy_verified": {
+  "files": 661038,
+  "bytes": 45095741656,
+  "at": 1793947466.6821866
+ },
+ "budget_changes": [
+  {
+   "at": 1793948627.2691011,
+   "from": 60.29,
+   "to": 61.89
+  },
+  {
+   "at": 1793952802.2933466,
+   "from": 61.89,
+   "to": 62.58
+  }
+ ],
+ "checkpoints_local": {
+  "best": {
+   "mtime": 1793952924.607204,
+   "step": 10267,
+   "at": 1793953142.1056442,
+   "mean_f1": 0.9171193662823406
+  },
+  "last": {
+   "mtime": 1793952926.2991586,
+   "step": 10267,
+   "at": 1793953142.1056442
+  }
+ },
+ "pause_reason": "training finished",
+ "explore": {
+  "state": "paused",
+  "requests": {}
+ },
+ "saves": {
+  "start": {
+   "id": "start",
+   "checkpoint": "best",
+   "name": "comprehension-v6",
+   "origin": "start",
+   "state": "done",
+   "requested_at": 1793953242.9827542,
+   "message": null,
+   "folder": "C:\\Users\\propr\\Desktop\\whiteboard\\note_comprehension\\inference\\comprehension\\comprehension-v6",
+   "step": 10267,
+   "val_mean_f1": 0.9754601810478527,
+   "finished_at": 1793953243.1012406
+  }
+ },
+ "save_to_queued": true
+}

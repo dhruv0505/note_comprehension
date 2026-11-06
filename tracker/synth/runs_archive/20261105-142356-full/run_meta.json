@@ -1,0 +1,23 @@
+{
+ "mode": "full",
+ "run_id": "20261105-142356-full",
+ "region": "IN2",
+ "vm": "32 vCPU / 128 GB / 100 GB SSD",
+ "machine_id": null,
+ "hourly": 0.8073,
+ "budget": 4.0,
+ "started": 1793917436.8395228,
+ "options": {
+  "recognition": {
+   "on": true,
+   "tasks": [
+    "textline",
+    "formula"
+   ],
+   "pool_epochs": 10
+  },
+  "tuning": {},
+  "mark_crop": "box",
+  "geometry_per_page": 2.0
+ }
+}

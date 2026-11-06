@@ -1,0 +1,1764 @@
+{
+ "polled_at": 1793863844.1152258,
+ "poll": 2,
+ "cost": 0.0069,
+ "budget": 1.0,
+ "hourly": 0.1129,
+ "machine_id": 564096,
+ "started": 1793863625.1593657,
+ "status": {
+  "now": 1793863773.4763803,
+  "home": "/home/ubuntu",
+  "targets": {
+   "train": 20,
+   "val": 20
+  },
+  "mode": "sample",
+  "stages": [
+   {
+    "name": "resume_vm",
+    "state": "done",
+    "start": 1793863597.4379976,
+    "end": 1793863646.6143909,
+    "log": [
+     "VM 564096 running with 4 vCPUs, $0.11/h"
+    ]
+   },
+   {
+    "name": "upload_code",
+    "state": "done",
+    "start": 1793863646.629701,
+    "end": 1793863697.105218,
+    "log": [
+     "252 KB"
+    ]
+   },
+   {
+    "start": 1793863693.8165748,
+    "state": "done",
+    "end": 1793863693.8471541,
+    "name": "check_cache"
+   },
+   {
+    "start": 1793863693.8686125,
+    "state": "done",
+    "end": 1793863693.9177573,
+    "name": "cache_rebuild"
+   },
+   {
+    "start": 1793863693.9382672,
+    "state": "done",
+    "end": 1793863693.9622688,
+    "name": "prepare_output"
+   },
+   {
+    "start": 1793863693.9844747,
+    "state": "done",
+    "end": 1793863724.2273579,
+    "name": "synth_train"
+   },
+   {
+    "start": 1793863724.2494936,
+    "state": "done",
+    "end": 1793863744.5520635,
+    "name": "synth_val"
+   },
+   {
+    "start": 1793863744.573659,
+    "state": "done",
+    "end": 1793863744.845147,
+    "name": "count_classes"
+   },
+   {
+    "start": 1793863744.8656325,
+    "state": "done",
+    "end": 1793863744.8869147,
+    "name": "all_done"
+   }
+  ],
+  "splits": {
+   "train": {
+    "pages": 20,
+    "samples": 274,
+    "rows": 294,
+    "marks": 40,
+    "rejected": 0,
+    "worker_seconds": 62.4,
+    "max_item_uses_on_a_page": 1,
+    "shards_done": 4,
+    "target": 20,
+    "geometry_samples": 40,
+    "classes": {
+     "iam": {
+      "items_used": 258,
+      "uses": 266,
+      "most_used_share": 0.00752,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 722,
+      "uses": 722,
+      "most_used_share": 0.00139,
+      "cap_share": 0.01
+     },
+     "fc": {
+      "items_used": 19,
+      "uses": 28,
+      "most_used_share": 0.07143,
+      "cap_share": 0.02
+     },
+     "qd": {
+      "items_used": 7,
+      "uses": 7,
+      "most_used_share": 0.14286,
+      "cap_share": 0.01
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 39,
+      "rows": 268,
+      "short_samples": 20,
+      "rows_with_other_lines": 11,
+      "lines_without_times": 99,
+      "shards_done": 4
+     },
+     "formula": {
+      "samples": 82,
+      "rows": 725,
+      "short_samples": 18,
+      "rows_with_other_lines": 2,
+      "lines_without_times": 0,
+      "shards_done": 4
+     }
+    }
+   },
+   "val": {
+    "pages": 20,
+    "samples": 252,
+    "rows": 272,
+    "marks": 40,
+    "rejected": 0,
+    "worker_seconds": 37.7,
+    "max_item_uses_on_a_page": 1,
+    "shards_done": 4,
+    "target": 20,
+    "geometry_samples": 0,
+    "classes": {
+     "iam": {
+      "items_used": 195,
+      "uses": 236,
+      "most_used_share": 0.01695,
+      "cap_share": 0.01
+     },
+     "mw": {
+      "items_used": 767,
+      "uses": 790,
+      "most_used_share": 0.00253,
+      "cap_share": 0.01
+     },
+     "fc": {
+      "items_used": 6,
+      "uses": 11,
+      "most_used_share": 0.27273,
+      "cap_share": 0.05714285714285714
+     },
+     "qd": {
+      "items_used": 10,
+      "uses": 10,
+      "most_used_share": 0.1,
+      "cap_share": 0.01
+     }
+    },
+    "recognition": {
+     "textline": {
+      "samples": 34,
+      "rows": 236,
+      "short_samples": 16,
+      "rows_with_other_lines": 24,
+      "lines_without_times": 53,
+      "shards_done": 4
+     },
+     "formula": {
+      "samples": 89,
+      "rows": 791,
+      "short_samples": 20,
+      "rows_with_other_lines": 1,
+      "lines_without_times": 0,
+      "shards_done": 4
+     }
+    }
+   }
+  },
+  "picks": [
+   {
+    "split": "train",
+    "kind": "recog_textline",
+    "page": 2,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/textline/images/00000/p0000002_00.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "else.\npeople.\nJust as the\nfrom the strict\nthat what\nhad fought the\npoint at\nhad\nthe\nfor"
+   },
+   {
+    "split": "train",
+    "kind": "recog_textline",
+    "page": 7,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/textline/images/00001/p0000007_01.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "money\ninsects.\nFlamme\nIllness,\nwere as\ntance to\nseen\non the shore"
+   },
+   {
+    "split": "train",
+    "kind": "recog_textline",
+    "page": 12,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/textline/images/00002/p0000012_00.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "came forward to\ngiving\nand a Mr Robert\nthe Gunpowder Plot"
+   },
+   {
+    "split": "train",
+    "kind": "recog_textline",
+    "page": 17,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/textline/images/00003/p0000017_01.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "not\nthe chines\nin a\nreported on Mr . Weaver .\nafraid\nmight well\nofficial welcome\n1951\nof the\nmonth to"
+   },
+   {
+    "split": "train",
+    "kind": "recog_formula",
+    "page": 2,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/formula/images/00000/p0000002_03.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "\\hat{F}_{j}=\\frac{1}{2}\\lambda_{j}\n\\sigma(t)=ED_{t}^{\\alpha}\\epsilon(t),0<\\alpha<1.\n(m,t)\nD=\\pm\\prod_{j<k}(a_{j}-a_{k})\nV_{2}^{N}=AV_{1}^{N-1}+re_{N-1}^{T}=V_{1}^{N-1}S+re_{N-1}^{T},"
+   },
+   {
+    "split": "train",
+    "kind": "recog_formula",
+    "page": 7,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/formula/images/00001/p0000007_02.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "\\underline{x}\\in\\mathbb{R}^{n}\n\\frac{M}{m}\n1-(0.95)^{3}=0.143\nF=\\tilde{M}\nr_{xg}=\\frac{\\overline{xg}}{\\sqrt{\\overline{x^{5}}\\overline{g^{5}}}}\n\\theta^{\\omega_{8}}\n(\\begin{matrix}n\\\\ 2\\end{matrix})\nW=i\\theta^{j}e_{j}+\\eta^{j}e_{j}"
+   },
+   {
+    "split": "train",
+    "kind": "recog_formula",
+    "page": 12,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/formula/images/00002/p0000012_00.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "\\frac{m}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\n\\tilde{x}(t)\ny=T(k)=cdf_{x}(k)\nn^{log_{b}a}\n\\int_{b}^{a}|f(x)|dx\nr_{1}\\cdot r_{2}\nY_{y}=\\varphi_{*}(X_{\\varphi^{-1}(y)})\n\\frac{o^{+\\frac{j^{2}}{2\\sigma^{2}}}}{\\sqrt{2\\pi}\\sigma}\n\\eta_{C}=\\frac{T_{H}-T_{a}}{T_{H}}\n\\sqrt{7}"
+   },
+   {
+    "split": "train",
+    "kind": "recog_formula",
+    "page": 17,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/recognition/formula/images/00003/p0000017_02.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "y_{1}=crcos\\theta,y_{2}=a\\sqrt{r}sin(\\theta/2),\n\\frac{\\frac{40}{\\frac{33.926074767}{10000}+100000000000}}{\\frac{63.2}{555555666000}}\nx,y,z\\in L\n\\eta_{th}=1-\\frac{r^{1-\\gamma}(r_{c}^{\\gamma}-1)}{\\gamma(r_{c}-1)}\nx=x_{0},y=y_{0},z=\\sqrt{z_{0}^{2}+t^{2}}\n\\frac{34.049009607}{222000011100}\n\\omega:E\\rightarrow\\mathbb{R}\n5mod3,2mod3,5mod3\n|li(x)-\\pi(x)|=O(\\sqrt{x}logx)\n\\frac{\\frac{c_{n-1}b_{n}}{c_{n}}+\\frac{c_{n+1}}{c_{n}b_{n}}}{2}"
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 0,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00000/p0000000_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "52 48 252 133 textblock 435 49 599 337 textblock 616 45 913 212 textblock 422 409 596 664 textblock 631 466 945 691 textblock 41 507 178 745 textblock 211 490 388 660 textblock 215 737 384 860 textblock 428 764 591 918 textblock 630 785 765 938 textblock 824 789 946 934 textblock 41 813 165 904 textblock 60 244 383 448 table 640 246 935 411 table"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 0,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000000_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000000_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "Burgundy,",
+    "box": [
+     112,
+     1077,
+     288,
+     1083
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 1,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00000/p0000001_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "223 72 226 82 arrow 229 119 231 143 arrow 271 167 324 193 arrow 195 171 122 185 arrow 108 228 110 239 arrow 320 231 237 287 arrow 109 273 183 286 arrow 463 348 515 120 arrow 337 410 234 416 arrow 259 435 302 435 arrow 116 438 167 443 arrow 338 460 336 498 arrow 793 480 836 478 arrow 677 484 708 482 arrow 885 496 661 552 arrow 336 543 331 578 arrow 722 571 740 569 arrow 867 575 888 571 arrow"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 1,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000001_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000001_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "headquarters.",
+    "box": [
+     671,
+     161,
+     926,
+     167
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 2,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00000/p0000002_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "192 0 486 117 textline 192 138 402 237 textline 192 239 745 347 textline 192 438 805 537 textline 192 543 704 665 textline 192 695 791 789 textline 192 885 590 999 textline 192 354 397 444 formula 192 788 648 893 formula 452 531 725 708 enclosure"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 2,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000002_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000002_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "that what",
+    "box": [
+     225,
+     326,
+     364,
+     417
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 3,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00000/p0000003_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "53 31 189 328 textblock 236 44 384 229 textblock 427 72 648 331 textblock 697 254 951 430 textblock 232 312 374 612 textblock 68 381 190 527 textblock 50 588 192 719 textblock 407 675 668 933 textblock 229 690 377 939 textblock 708 756 940 903 textblock"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 3,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000003_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000003_m00_text.png"
+    },
+    "shapes": [
+     "oval"
+    ],
+    "labels": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "text_label": "and",
+    "box": [
+     181,
+     49,
+     284,
+     169
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 4,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00000/p0000004_s13.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "498 788 624 892 textline 999 494 6 494 999 494 arc 278 51 953 704 segment 278 51 77 751 segment 523 289 77 751 segment 953 704 77 751 segment 278 51 vertex 523 289 vertex 953 704 vertex 77 751 vertex"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 4,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000004_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00000/p0000004_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "Budgette YOU are",
+    "box": [
+     558,
+     305,
+     839,
+     327
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 5,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00001/p0000005_s12.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "627 58 791 145 textline 213 297 325 387 textline 189 578 388 661 textline 671 691 904 786 formula 595 33 823 170 enclosure 603 237 905 409 enclosure 0 266 538 417 enclosure 61 510 515 730 enclosure 625 638 950 838 enclosure 127 771 526 887 enclosure"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 5,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000005_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000005_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "filmed play.",
+    "box": [
+     1149,
+     430,
+     1327,
+     451
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 6,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00001/p0000006_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "53 44 231 288 textblock 676 68 933 353 textblock 279 343 600 526 textblock 54 354 231 677 textblock 288 585 446 617 textblock 58 742 216 915 textblock 264 739 617 917 textblock 665 409 931 593 table 278 51 603 301 flowchart 636 655 959 916 flowchart"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 6,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000006_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000006_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "penalty of success. \"",
+    "box": [
+     651,
+     566,
+     920,
+     581
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 7,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00001/p0000007_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "469 151 539 115 arrow 665 343 779 424 arrow 389 542 218 190 arrow 442 594 443 622 arrow 421 640 364 643 arrow 465 643 469 574 arrow 322 660 323 681 arrow 444 661 440 740 arrow 356 704 409 751 arrow 636 721 636 739 arrow 321 728 322 744 arrow 317 770 440 768 arrow 631 778 629 798 arrow 560 829 248 816 arrow 628 839 621 860 arrow 626 898 623 921 arrow"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 7,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000007_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000007_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "nonsensical.",
+    "box": [
+     73,
+     121,
+     390,
+     142
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 8,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00001/p0000008_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "278 0 801 119 textline 278 136 688 268 textline 278 274 514 385 textline 278 387 425 487 textline 278 492 717 629 textline 278 638 706 757 textline 278 857 679 999 textline 278 762 530 874 formula 275 128 813 130 line mark"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 8,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000008_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000008_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "been fatal.",
+    "box": [
+     142,
+     123,
+     360,
+     128
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 9,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00001/p0000009_s11.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "999 497 3 497 999 497 arc"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 9,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000009_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00001/p0000009_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "horseman.",
+    "box": [
+     85,
+     167,
+     399,
+     172
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 10,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00002/p0000010_s09.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "424 676 472 759 textline 434 214 572 280 formula 346 439 545 527 formula 440 0 550 100 enclosure 280 172 726 323 enclosure 280 401 611 565 enclosure 272 640 624 795 enclosure 356 886 528 999 enclosure"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 10,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000010_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000010_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "expecting trouble,\" I said.",
+    "box": [
+     684,
+     197,
+     980,
+     218
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 11,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00002/p0000011_s14.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "45 309 156 386 textline 835 795 881 872 textline 381 305 522 378 formula 803 536 948 621 formula 759 259 935 424 enclosure 317 270 587 413 enclosure 0 275 201 419 enclosure 752 508 999 650 enclosure 771 762 945 904 enclosure"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 12,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000012_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000012_m00_text.png"
+    },
+    "shapes": [
+     "oval"
+    ],
+    "labels": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "text_label": "came forward to",
+    "box": [
+     56,
+     494,
+     217,
+     566
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 12,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00002/p0000012_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "79 47 207 137 textblock 388 63 627 252 textblock 36 228 301 352 textblock 383 313 610 600 textblock 50 408 329 549 textblock 686 614 926 716 textblock 80 784 317 936 textblock 727 74 934 319 geometry 727 391 936 556 geometry"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 13,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000013_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000013_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "in some of",
+    "box": [
+     159,
+     776,
+     414,
+     783
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 13,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00002/p0000013_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "435 121 477 123 arrow 559 127 591 125 arrow 633 145 403 208 arrow 450 232 477 234 arrow 583 234 607 233 arrow 681 254 695 307 arrow 888 284 887 302 arrow 860 324 802 324 arrow 909 328 913 273 arrow 754 342 752 360 arrow 790 390 852 445 arrow 757 409 754 427 arrow 881 423 887 340 arrow 752 466 889 463 arrow 634 504 762 619 arrow"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 14,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000014_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00002/p0000014_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "feeding their flocks.",
+    "box": [
+     1298,
+     86,
+     1504,
+     101
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 14,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00002/p0000014_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "132 0 867 276 textline 221 325 836 553 formula 254 602 436 771 formula 222 821 518 999 formula"
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 15,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00003/p0000015_s06.png"
+    },
+    "prompt": "Where are the level 1 objects in table? Detect multiple textline, formula.",
+    "target": "63 293 300 393 textline 426 295 657 391 textline 426 519 936 706 textline 63 563 173 662 formula"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 16,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000016_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000016_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "the top",
+    "box": [
+     796,
+     605,
+     895,
+     711
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 16,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00003/p0000016_s10.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "189 73 285 918 998 455 arc 598 70 498 466 segment 598 70 189 73 segment 189 73 498 466 segment 998 455 498 466 segment 598 70 vertex 189 73 vertex 998 455 vertex 498 466 vertex"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 17,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000017_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000017_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "Minister of Laos . His",
+    "box": [
+     1332,
+     202,
+     1487,
+     215
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 17,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00003/p0000017_s11.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "595 42 835 117 textline 103 330 303 429 textline 174 617 244 694 textline 131 846 248 937 textline 624 834 889 924 formula 565 0 865 159 enclosure 648 287 838 464 enclosure 16 302 390 456 enclosure 63 549 355 763 enclosure 591 816 922 942 enclosure 17 835 362 948 enclosure"
+   },
+   {
+    "split": "train",
+    "kind": "mark",
+    "page": 19,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000019_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/marks/images/00003/p0000019_m00_text.png"
+    },
+    "shapes": [
+     "oval"
+    ],
+    "labels": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "text_label": "THE",
+    "box": [
+     1069,
+     157,
+     1262,
+     256
+    ]
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 18,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00003/p0000018_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "781 50 907 90 textblock 563 303 749 484 textblock 41 407 326 558 textblock 571 548 739 732 textblock 55 600 327 732 textblock 348 722 529 947 textblock 45 779 323 938 textblock 594 802 700 948 drawing 368 150 509 290 geometry 797 386 950 594 geometry 70 47 297 381 flowchart"
+   },
+   {
+    "split": "train",
+    "kind": "sample",
+    "page": 19,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/train/samples/images/00003/p0000019_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": ""
+   },
+   {
+    "split": "val",
+    "kind": "recog_textline",
+    "page": 1,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/textline/images/00000/p0000001_01.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "country.\nDuring\nbeing\nshould\nAlso\nfog.\nand\n- as\nThe\nThis"
+   },
+   {
+    "split": "val",
+    "kind": "recog_textline",
+    "page": 7,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/textline/images/00001/p0000007_01.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "its nutritional\na bus\nout"
+   },
+   {
+    "split": "val",
+    "kind": "recog_textline",
+    "page": 11,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/textline/images/00002/p0000011_02.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "that\nfeeling"
+   },
+   {
+    "split": "val",
+    "kind": "recog_textline",
+    "page": 18,
+    "task": "textline",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/textline/images/00003/p0000018_00.png"
+    },
+    "prompt": "What is written in this image in English?",
+    "target": "runway.\ntowels.\ngrass.\nfor obeying the\nThe other\ntalk with\nexpect\nthe oil\ndozen\nthe car at the point"
+   },
+   {
+    "split": "val",
+    "kind": "recog_formula",
+    "page": 2,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/formula/images/00000/p0000002_02.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "T_{2}=T_{1}e^{\\mu_{s}\\beta}\nZ(C[S_{n}])\nf=\\frac{\\omega}{2\\pi}=\\frac{1}{2\\pi\\sqrt{LC}}\nH^{rot}=\\frac{1}{2}I\\omega^{2}=\\frac{L^{2}}{2I}\n\\frac{f^{(n)}(b)}{n!}=a_{n}\nH_{i+1}/H_{i}\n\\tilde{x}(t)\nnH(p)-o(n)\n(X_{b}^{*},Y_{b}^{*};Z)\na(x)=\\int f(x)dx"
+   },
+   {
+    "split": "val",
+    "kind": "recog_formula",
+    "page": 6,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/formula/images/00001/p0000006_04.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "AI=I_{w}-I_{o}\n2^{k-1}+k\nX\\frac{d}{dX}\n(X_{b}^{*},Y_{b}^{*};Z)\nc^{(1)}(t),c^{(2)}(t)\nS=\\int Ldt"
+   },
+   {
+    "split": "val",
+    "kind": "recog_formula",
+    "page": 12,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/formula/images/00002/p0000012_02.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "\\hat{U}(t)\nV\\approx\\sum\\pi y^{2}\\cdot\\delta x\n2\\cdot(\\begin{matrix}12\\\\ 4\\end{matrix})=990\n(\\frac{dt}{dr})^{2}\n\\omega_{\\rho}^{k}\n\\frac{\\partial L}{\\partial f}\n(\\hat{b})\nn^{\\underline{n}}=n(n-1)(n-2)\\cdot\\cdot\\cdot1"
+   },
+   {
+    "split": "val",
+    "kind": "recog_formula",
+    "page": 17,
+    "task": "formula",
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/recognition/formula/images/00003/p0000017_05.png"
+    },
+    "prompt": "What is written in this image in LaTeX?",
+    "target": "|2\\Theta_{C}|\n\\int\\frac{dx}{lnx}\n=\\int u+(-v)dx\nn=n_{0}-\\frac{4n_{0}}{m^{2}}\nlog_{2}(26^{n^{2}})\n(\\begin{matrix}n\\\\ 2\\end{matrix})p\np+B^{2}/2\\mu_{0}\np=\\frac{\\partial L}{\\partial\\dot{q}}\ns_{j}=[s_{j-1},x]\n(\\begin{matrix}n\\\\ 3\\end{matrix})"
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 0,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00000/p0000000_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "49 62 267 284 textblock 319 52 460 170 textblock 660 48 780 290 textblock 295 223 450 462 textblock 486 228 621 564 textblock 809 251 958 439 textblock 658 358 782 643 textblock 53 387 233 543 textblock 837 523 945 775 textblock 301 533 443 752 textblock 674 698 783 935 textblock 304 824 441 926 textblock 819 830 914 902 textblock 808 65 958 207 drawing 511 730 617 835 geometry 51 648 260 893 flowchart"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 0,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000000.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000000.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 1,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000001_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000001_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "Books in brief. It will",
+    "box": [
+     128,
+     120,
+     414,
+     132
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 1,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00000/p0000001_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "490 139 489 144 arrow 490 192 488 197 arrow 299 209 264 156 arrow 540 218 568 219 arrow 627 237 633 269 arrow 503 255 508 270 arrow 571 286 548 286 arrow 761 301 729 300 arrow 225 629 289 730 arrow 498 752 498 773 arrow 495 830 495 845 arrow 709 857 795 687 arrow 538 875 586 871 arrow 637 897 638 916 arrow 495 905 495 925 arrow 584 937 534 939 arrow"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 1,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000001.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000001.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 2,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000002_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000002_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "And then he",
+    "box": [
+     850,
+     835,
+     1020,
+     897
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 2,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00000/p0000002_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "273 0 647 144 formula 257 179 440 315 formula 295 349 457 467 formula 276 502 661 644 formula 282 679 675 825 formula 264 860 740 999 formula"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 2,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000002.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000002.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 3,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000003_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00000/p0000003_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "mews house.",
+    "box": [
+     481,
+     257,
+     876,
+     294
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 3,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00000/p0000003_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "70 40 173 183 textblock 247 2 608 229 textblock 613 44 754 327 textblock 796 50 948 177 textblock 781 232 949 458 textblock 322 265 492 495 textblock 625 360 717 625 textblock 50 438 193 757 textblock 774 534 927 715 textblock 299 559 422 691 textblock 445 546 592 943 textblock 622 685 744 909 textblock 303 774 418 934 textblock 798 768 947 936 textblock 45 787 186 920 textblock"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 3,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000003.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000003.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 4,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00000/p0000004_s06.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "989 500 0 500 989 500 arc 303 44 38 691 segment 303 44 951 309 segment 165 130 823 870 segment 864 171 494 500 segment 951 309 686 956 segment 38 691 686 956 segment 303 44 vertex 165 130 vertex 864 171 vertex 951 309 vertex 494 500 vertex 38 691 vertex 823 870 vertex 686 956 vertex"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 4,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000004.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000004.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 5,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00001/p0000005_s15.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "195 237 261 345 textline 631 561 885 651 textline 641 863 850 972 textline 194 845 279 941 formula 117 0 334 102 enclosure 74 218 382 364 enclosure 83 499 397 688 enclosure 591 509 925 703 enclosure 107 814 367 973 enclosure 586 836 905 999 enclosure"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 5,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000005.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000005.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 5,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000005_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000005_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "a privileged elite.",
+    "box": [
+     588,
+     991,
+     778,
+     1015
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 6,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00001/p0000006_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "53 55 349 183 textblock 419 75 622 358 textblock 760 59 948 300 textblock 68 226 291 404 textblock 770 383 946 565 textblock 564 451 727 760 textblock 47 490 188 577 textblock 225 488 349 695 textblock 759 655 957 890 textblock 380 670 517 890 textblock 51 665 184 935 textblock 219 755 355 944 textblock 536 794 733 923 textblock 392 507 505 564 drawing"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 6,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000006.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000006.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 6,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000006_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000006_m00_text.png"
+    },
+    "shapes": [
+     "oval"
+    ],
+    "labels": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "text_label": "reference to",
+    "box": [
+     913,
+     777,
+     1127,
+     855
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 7,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00001/p0000007_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "262 288 444 177 arrow 682 399 655 632 arrow"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 7,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000007.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000007.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 7,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000007_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000007_m00_text.png"
+    },
+    "shapes": [
+     "strikethrough"
+    ],
+    "labels": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "text_label": "straightened it, tried again, but",
+    "box": [
+     265,
+     150,
+     462,
+     172
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 8,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00001/p0000008_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "130 252 743 410 textline 130 419 689 612 textline 130 559 561 734 textline 130 0 442 137 formula 130 144 868 281 formula 130 743 241 868 formula 130 900 261 999 formula"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 8,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000008.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000008.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 8,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000008_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00001/p0000008_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "essential",
+    "box": [
+     833,
+     468,
+     1042,
+     477
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 9,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00001/p0000009_s05.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "130 200 251 306 textline 757 287 833 377 textline 0 638 205 931 499 725 arc 536 59 0 638 segment 536 59 945 222 segment 945 222 999 910 segment 0 638 499 725 segment 499 725 999 910 segment 72 863 360 910 segment 536 59 vertex 945 222 vertex 0 638 vertex 499 725 vertex 72 863 vertex 360 910 vertex 999 910 vertex"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 9,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000009.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000009.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 10,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00002/p0000010_s09.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "41 6 125 99 textline 124 561 242 640 textline 764 640 977 732 textline 497 907 665 999 textline 355 264 148 264 355 264 arc 156 0 487 375 segment 156 0 144 364 segment 144 364 487 375 segment 144 364 22 623 segment 487 375 246 882 segment 487 375 806 837 segment 22 623 246 882 segment 806 837 246 882 segment 156 0 vertex 144 364 vertex 487 375 vertex 22 623 vertex 806 837 vertex 246 882 vertex"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 10,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000010.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000010.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 11,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000011_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000011_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "\"You can.\" \"I do it, Mister",
+    "box": [
+     988,
+     135,
+     1193,
+     155
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 11,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00002/p0000011_s14.png"
+    },
+    "prompt": "Where are the level 1 objects in flowchart? Detect multiple textline, formula, enclosure.",
+    "target": "83 298 287 402 textline 651 577 853 681 textline 152 598 237 696 textline 132 861 221 929 textline 119 66 280 135 formula 734 838 810 903 formula 61 50 339 151 enclosure 0 238 370 463 enclosure 550 526 954 732 enclosure 32 525 357 769 enclosure 544 807 999 933 enclosure 11 843 343 947 enclosure"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 11,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000011.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000011.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 13,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000013_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000013_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "problems and",
+    "box": [
+     1203,
+     1194,
+     1500,
+     1208
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 12,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00002/p0000012_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "702 55 911 203 textblock 66 274 253 581 textblock 376 393 561 679 textblock 720 524 907 768 textblock 380 747 602 939 textblock 714 811 940 951 textblock 102 709 315 923 geometry 49 72 335 225 table"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 12,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000012.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000012.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 14,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000014_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00002/p0000014_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "mews house.",
+    "box": [
+     76,
+     249,
+     475,
+     284
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 13,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00002/p0000013_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "123 285 133 398 arrow 530 361 772 175 arrow 752 816 631 887 arrow"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 13,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000013.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000013.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 14,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00002/p0000014_s01.png"
+    },
+    "prompt": "Where are the level 1 objects in textblock? Detect multiple textline, formula, enclosure, line mark.",
+    "target": "4 200 864 355 textline 4 506 995 668 textline 4 675 226 799 textline 4 373 463 507 formula 0 643 999 723 line mark"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 14,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000014.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000014.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 15,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00003/p0000015_s10.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "654 671 867 760 textline 916 655 539 655 916 655 arc 499 0 916 467 segment 499 0 82 467 segment 82 467 916 467 segment 916 467 916 999 segment 82 467 916 999 segment 499 0 vertex 82 467 vertex 916 467 vertex 916 999 vertex"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 15,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000015.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000015.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 15,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000015_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000015_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "furniture, fabrics",
+    "box": [
+     93,
+     285,
+     244,
+     303
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 16,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00003/p0000016_s11.png"
+    },
+    "prompt": "Where are the level 1 objects in geometry? Detect multiple textline, arc, segment, vertex.",
+    "target": "0 269 491 760 982 269 arc 0 269 982 269 segment 982 269 vertex 0 269 vertex"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 16,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000016.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000016.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 16,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000016_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000016_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "A simple",
+    "box": [
+     1151,
+     207,
+     1234,
+     321
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 17,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00003/p0000017_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "49 61 209 359 textblock 261 54 445 238 textblock 468 59 626 283 textblock 669 56 788 278 textblock 814 48 958 327 textblock 290 322 432 677 textblock 495 342 616 444 textblock 654 351 789 649 textblock 825 396 947 647 textblock 69 433 229 661 textblock 495 510 617 647 textblock 656 683 786 919 textblock 835 710 951 947 textblock 59 717 187 926 textblock 292 748 429 930 textblock 473 737 599 909 textblock"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 17,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000017.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000017.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 17,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000017_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000017_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "cess of the",
+    "box": [
+     174,
+     96,
+     239,
+     200
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 18,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00003/p0000018_s00.png"
+    },
+    "prompt": "Where are the level 2 objects? Detect multiple textblock, drawing, geometry, table, flowchart.",
+    "target": "53 48 227 213 textblock 603 53 919 143 textblock 45 314 233 591 textblock 296 345 513 531 textblock 619 429 758 647 textblock 298 568 497 717 textblock 599 691 767 949 textblock 809 710 953 932 textblock 273 122 557 244 table 615 227 924 379 table"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 18,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000018.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000018.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 18,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000018_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000018_m00_text.png"
+    },
+    "shapes": [
+     "underline"
+    ],
+    "labels": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "text_label": "the car at the point",
+    "box": [
+     1173,
+     143,
+     1473,
+     157
+    ]
+   },
+   {
+    "split": "val",
+    "kind": "sample",
+    "page": 19,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/samples/images/00003/p0000019_s00.png"
+    },
+    "prompt": "Where are the arrows? Detect multiple arrow.",
+    "target": "439 87 438 93 arrow 439 147 437 152 arrow 496 175 527 177 arrow 593 198 599 233 arrow 453 217 459 234 arrow 705 229 769 168 arrow 530 252 504 252 arrow 373 394 292 244 arrow 548 569 568 676 arrow 115 738 115 760 arrow 112 820 112 836 arrow 157 867 208 863 arrow 261 891 263 911 arrow 111 899 112 920 arrow 206 933 153 935 arrow"
+   },
+   {
+    "split": "val",
+    "kind": "page",
+    "page": 19,
+    "remote": {
+     "image": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000019.png",
+     "json": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/pages/page0000019.json"
+    }
+   },
+   {
+    "split": "val",
+    "kind": "mark",
+    "page": 19,
+    "remote": {
+     "input": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000019_m00_input.png",
+     "text": "/home/ubuntu/regen/20261104-232637-sample/dataset/val/marks/images/00003/p0000019_m00_text.png"
+    },
+    "shapes": [
+     "rectangle"
+    ],
+    "labels": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "text_label": "\"I do.\"",
+    "box": [
+     1230,
+     136,
+     1346,
+     198
+    ]
+   }
+  ],
+  "runner_alive": false,
+  "load": [
+   0.8,
+   1.6,
+   1.5
+  ],
+  "cpus": 4,
+  "disk_used_gb": 37.3,
+  "disk_total_gb": 102.9
+ },
+ "pause_reason": "finished",
+ "paused": true,
+ "mode": "sample"
+}
